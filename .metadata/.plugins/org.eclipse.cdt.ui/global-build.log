@@ -100,3 +100,164 @@ Info: Nothing to build for clase2-1
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase2-1.o" "..\\src\\clase2-1.c" 
 gcc -o clase2-1.exe "src\\clase2-1.o" 
+20:03:27 **** Rebuild of configuration Debug for project clase2-1 ****
+Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o src/clase2-1.o ../src/clase2-1.c 
+gcc -o clase2-1.exe src/clase2-1.o 
+Info: Nothing to build for clase2-1
+21:33:22 **** Build of configuration Debug for project clase3 ****
+make all 
+Building file: ../src/clase3.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase3.d" -MT"src/clase3.o" -o "src/clase3.o" "../src/clase3.c"
+../src/clase3.c: In function ‘main’:
+../src/clase3.c:25:62: warning: passing argument 4 of ‘calculaMaximoMinimoPromedio’ makes pointer from integer without a cast [-Wint-conversion]
+  if(calculaMaximoMinimoPromedio(&maximo, &minimo, &promedio, cantidad) == 0){
+                                                              ^~~~~~~~
+../src/clase3.c:14:5: note: expected ‘int *’ but argument is of type ‘int’
+ int calculaMaximoMinimoPromedio(int *maximo, int *minimo, int *promedio, int *cantidad);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/clase3.c: At top level:
+../src/clase3.c:31:5: error: conflicting types for ‘calculaMaximoMinimoPromedio’
+ int calculaMaximoMinimoPromedio(int *maximo, int *minimo, int *promedio, int cantidad){
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/clase3.c:14:5: note: previous declaration of ‘calculaMaximoMinimoPromedio’ was here
+ int calculaMaximoMinimoPromedio(int *maximo, int *minimo, int *promedio, int *cantidad);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/clase3.c: In function ‘calculaMaximoMinimoPromedio’:
+../src/clase3.c:44:4: error: invalid type argument of unary ‘*’ (have ‘int’)
+   (*cantidad)++;
+    ^~~~~~~~~
+../src/clase3.c:59:18: error: invalid type argument of unary ‘*’ (have ‘int’)
+  (*promedio) /= (*cantidad);
+                  ^~~~~~~~~
+../src/clase3.c:33:7: warning: unused variable ‘pregunta’ [-Wunused-variable]
+  char pregunta;
+       ^~~~~~~~
+src/subdir.mk:18: fallo en las instrucciones para el objetivo 'src/clase3.o'
+make: *** [src/clase3.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+Info: Nothing to build for clase2-1
+21:33:39 **** Incremental Build of configuration Debug for project clase3 ****
+make all 
+Building file: ../src/clase3.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase3.d" -MT"src/clase3.o" -o "src/clase3.o" "../src/clase3.c"
+../src/clase3.c: In function ‘main’:
+../src/clase3.c:25:62: warning: passing argument 4 of ‘calculaMaximoMinimoPromedio’ makes pointer from integer without a cast [-Wint-conversion]
+  if(calculaMaximoMinimoPromedio(&maximo, &minimo, &promedio, cantidad) == 0){
+                                                              ^~~~~~~~
+../src/clase3.c:14:5: note: expected ‘int *’ but argument is of type ‘int’
+ int calculaMaximoMinimoPromedio(int *maximo, int *minimo, int *promedio, int *cantidad);
+src/subdir.mk:18: fallo en las instrucciones para el objetivo 'src/clase3.o'
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/clase3.c: At top level:
+../src/clase3.c:31:5: error: conflicting types for ‘calculaMaximoMinimoPromedio’
+ int calculaMaximoMinimoPromedio(int *maximo, int *minimo, int *promedio, int cantidad){
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/clase3.c:14:5: note: previous declaration of ‘calculaMaximoMinimoPromedio’ was here
+ int calculaMaximoMinimoPromedio(int *maximo, int *minimo, int *promedio, int *cantidad);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/clase3.c: In function ‘calculaMaximoMinimoPromedio’:
+../src/clase3.c:44:4: error: invalid type argument of unary ‘*’ (have ‘int’)
+   (*cantidad)++;
+    ^~~~~~~~~
+../src/clase3.c:59:18: error: invalid type argument of unary ‘*’ (have ‘int’)
+  (*promedio) /= (*cantidad);
+                  ^~~~~~~~~
+../src/clase3.c:33:7: warning: unused variable ‘pregunta’ [-Wunused-variable]
+  char pregunta;
+       ^~~~~~~~
+make: *** [src/clase3.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+Info: Nothing to build for clase2-1
+21:34:06 **** Incremental Build of configuration Debug for project clase3 ****
+make all 
+Building file: ../src/clase3.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase3.d" -MT"src/clase3.o" -o "src/clase3.o" "../src/clase3.c"
+../src/clase3.c: In function ‘calculaMaximoMinimoPromedio’:
+../src/clase3.c:44:4: error: invalid type argument of unary ‘*’ (have ‘int’)
+   (*cantidad)++;
+    ^~~~~~~~~
+../src/clase3.c:59:18: error: invalid type argument of unary ‘*’ (have ‘int’)
+  (*promedio) /= (*cantidad);
+src/subdir.mk:18: fallo en las instrucciones para el objetivo 'src/clase3.o'
+                  ^~~~~~~~~
+../src/clase3.c:33:7: warning: unused variable ‘pregunta’ [-Wunused-variable]
+  char pregunta;
+       ^~~~~~~~
+make: *** [src/clase3.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+Info: Nothing to build for clase2-1
+21:40:56 **** Incremental Build of configuration Debug for project clase3 ****
+make all 
+Building file: ../src/clase3.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase3.d" -MT"src/clase3.o" -o "src/clase3.o" "../src/clase3.c"
+Finished building: ../src/clase3.c
+ 
+Building target: clase3
+Invoking: GCC C Linker
+gcc  -o "clase3"  ./src/clase3.o   
+Finished building target: clase3
+ 
+Info: Nothing to build for clase2-1
+21:43:05 **** Incremental Build of configuration Debug for project clase3 ****
+make all 
+make: No se hace nada para 'all'.
+21:57:27 **** Incremental Build of configuration Debug for project clase3 ****
+make all 
+Building file: ../src/clase3.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase3.d" -MT"src/clase3.o" -o "src/clase3.o" "../src/clase3.c"
+../src/clase3.c: In function ‘main’:
+../src/clase3.c:26:59: warning: format ‘%d’ expects argument of type ‘int’, but argument 4 has type ‘double’ [-Wformat=]
+   printf("El maximo es %d el minimo es %d el promedio es %d", maximo, minimo, promedio);
+                                                           ^
+Finished building: ../src/clase3.c
+ 
+Building target: clase3
+Invoking: GCC C Linker
+gcc  -o "clase3"  ./src/clase3.o   
+Finished building target: clase3
+ 
+21:58:16 **** Incremental Build of configuration Debug for project clase3 ****
+make all 
+make: No se hace nada para 'all'.
+21:59:06 **** Incremental Build of configuration Debug for project clase3 ****
+make all 
+make: No se hace nada para 'all'.
+22:00:18 **** Incremental Build of configuration Debug for project clase3 ****
+make all 
+Building file: ../src/clase3.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase3.d" -MT"src/clase3.o" -o "src/clase3.o" "../src/clase3.c"
+../src/clase3.c: In function ‘main’:
+../src/clase3.c:26:59: warning: format ‘%d’ expects argument of type ‘int’, but argument 4 has type ‘double’ [-Wformat=]
+   printf("El maximo es %d el minimo es %d el promedio es %d", maximo, minimo, promedio);
+                                                           ^
+Finished building: ../src/clase3.c
+ 
+Building target: clase3
+Invoking: GCC C Linker
+gcc  -o "clase3"  ./src/clase3.o   
+Finished building target: clase3
+ 
+22:11:42 **** Incremental Build of configuration Debug for project clase3 ****
+make all 
+Building file: ../src/clase3.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase3.d" -MT"src/clase3.o" -o "src/clase3.o" "../src/clase3.c"
+../src/clase3.c: In function ‘main’:
+../src/clase3.c:26:59: warning: format ‘%d’ expects argument of type ‘int’, but argument 4 has type ‘double’ [-Wformat=]
+   printf("El maximo es %d el minimo es %d el promedio es %d", maximo, minimo, promedio);
+                                                           ^
+Finished building: ../src/clase3.c
+ 
+Building target: clase3
+Invoking: GCC C Linker
+gcc  -o "clase3"  ./src/clase3.o   
+Finished building target: clase3
+ 

@@ -1,7 +1,1 @@
-22:38:39 **** Incremental Build of configuration Debug for project clase2-1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase2-1.o" "..\\src\\clase2-1.c" 
-gcc -o clase2-1.exe "src\\clase2-1.o" 
-
-22:38:40 Build Finished. 0 errors, 0 warnings. (took 1s.20ms)
-
+Info: Nothing to build for clase2-1
