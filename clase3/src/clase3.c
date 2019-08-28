@@ -23,7 +23,7 @@ int main(void) {
 	scanf("%d", &cantidad);
 
 	if(calculaMaximoMinimoPromedio(&maximo, &minimo, &promedio, cantidad) == 0){
-		printf("El maximo es %d el minimo es %d el promedio es %d", maximo, minimo, promedio);
+		printf("El maximo es %d el minimo es %d el promedio es %f", maximo, minimo, promedio);
 	}
 	return EXIT_SUCCESS;
 }
@@ -34,6 +34,8 @@ int calculaMaximoMinimoPromedio(int *maximo, int *minimo, float *promedio, int c
 	int numero;
 	int i;
 	int suma = 0;
+	int maximoTemp;
+	int minimoTemp;
 
 	for(i = 0; i < cantidad; i++){
 		printf("Ingrese un numero\n");
@@ -43,16 +45,18 @@ int calculaMaximoMinimoPromedio(int *maximo, int *minimo, float *promedio, int c
 
 		if(flag == 0){
 			flag = 1;
-			*maximo = numero;
-			*minimo = numero;
-		}else if(numero > *maximo){
-			*maximo = numero;
-		}else if(numero < *minimo){
-			*minimo = numero;
+			maximoTemp = numero;
+			minimoTemp = numero;
+		}else if(numero > maximoTemp){
+			maximoTemp = numero;
+		}else if(numero < minimoTemp){
+			minimoTemp = numero;
 		}
 
 	}
 
+	*maximo = maximoTemp;
+	*minimo = minimoTemp;
 	*promedio = (float)suma / cantidad;
 	retorno = 0;
 
