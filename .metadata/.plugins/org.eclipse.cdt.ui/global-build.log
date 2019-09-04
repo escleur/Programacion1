@@ -47,3 +47,18 @@ Info: Nothing to build for clase2-1
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase3.o" "..\\src\\clase3.c" 
 gcc -o clase3.exe "src\\clase3.o" 
+19:26:34 **** Build of configuration Debug for project clase5 ****
+make all 
+Building file: ../src/clase5.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase5.d" -MT"src/clase5.o" -o "src/clase5.o" "../src/clase5.c"
+Finished building: ../src/clase5.c
+ 
+Building target: clase5
+Invoking: GCC C Linker
+gcc  -o "clase5"  ./src/clase5.o   
+Finished building target: clase5
+ 
+19:26:41 **** Incremental Build of configuration Debug for project clase5 ****
+make all 
+make: No se hace nada para 'all'.
