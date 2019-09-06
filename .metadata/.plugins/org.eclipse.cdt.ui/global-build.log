@@ -62,3 +62,169 @@ Finished building target: clase5
 19:26:41 **** Incremental Build of configuration Debug for project clase5 ****
 make all 
 make: No se hace nada para 'all'.
+19:23:54 **** Build of configuration Debug for project clase6 ****
+make all 
+Building file: ../src/clase6.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase6.d" -MT"src/clase6.o" -o "src/clase6.o" "../src/clase6.c"
+../src/clase6.c: In function ‘burbuja’:
+../src/clase6.c:211:4: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+    if(array[i] < array[i+1])
+    ^~
+../src/clase6.c:213:5: note: ...this statement, but the latter is misleadingly indented as if it is guarded by the ‘if’
+     array[i] = array[i+1];
+     ^~~~~
+../src/clase6.c:218:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/clase6.c
+ 
+Building target: clase6
+Invoking: GCC C Linker
+gcc  -o "clase6"  ./src/clase6.o   
+Finished building target: clase6
+ 
+19:24:02 **** Incremental Build of configuration Debug for project clase6 ****
+make all 
+make: No se hace nada para 'all'.
+19:27:37 **** Incremental Build of configuration Debug for project clase6 ****
+make all 
+Building file: ../src/clase6.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase6.d" -MT"src/clase6.o" -o "src/clase6.o" "../src/clase6.c"
+../src/clase6.c: In function ‘burbuja’:
+../src/clase6.c:211:4: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+    if(array[i] < array[i+1])
+    ^~
+../src/clase6.c:213:5: note: ...this statement, but the latter is misleadingly indented as if it is guarded by the ‘if’
+     array[i] = array[i+1];
+     ^~~~~
+../src/clase6.c:218:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/clase6.c
+ 
+Building target: clase6
+Invoking: GCC C Linker
+gcc  -o "clase6"  ./src/clase6.o   
+Finished building target: clase6
+ 
+19:28:14 **** Incremental Build of configuration Debug for project clase6 ****
+make all 
+Building file: ../src/clase6.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase6.d" -MT"src/clase6.o" -o "src/clase6.o" "../src/clase6.c"
+../src/clase6.c: In function ‘burbuja’:
+../src/clase6.c:219:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/clase6.c
+ 
+Building target: clase6
+Invoking: GCC C Linker
+gcc  -o "clase6"  ./src/clase6.o   
+Finished building target: clase6
+ 
+19:28:18 **** Incremental Build of configuration Debug for project clase6 ****
+make all 
+make: No se hace nada para 'all'.
+19:28:32 **** Incremental Build of configuration Debug for project clase6 ****
+make all 
+Building file: ../src/clase6.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase6.d" -MT"src/clase6.o" -o "src/clase6.o" "../src/clase6.c"
+../src/clase6.c: In function ‘burbuja’:
+../src/clase6.c:219:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/clase6.c
+ 
+Building target: clase6
+Invoking: GCC C Linker
+gcc  -o "clase6"  ./src/clase6.o   
+Finished building target: clase6
+ 
+20:04:33 **** Incremental Build of configuration Debug for project clase6 ****
+make all 
+Building file: ../src/clase6.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase6.d" -MT"src/clase6.o" -o "src/clase6.o" "../src/clase6.c"
+Finished building: ../src/clase6.c
+ 
+Building target: clase6
+Invoking: GCC C Linker
+gcc  -o "clase6"  ./src/clase6.o   
+Finished building target: clase6
+ 
+20:05:36 **** Incremental Build of configuration Debug for project clase6 ****
+make all 
+make: No se hace nada para 'all'.
+20:05:40 **** Incremental Build of configuration Debug for project clase6 ****
+make all 
+make: No se hace nada para 'all'.
+20:16:52 **** Incremental Build of configuration Debug for project clase6 ****
+make all 
+Building file: ../src/clase6.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase6.d" -MT"src/clase6.o" -o "src/clase6.o" "../src/clase6.c"
+Finished building: ../src/clase6.c
+ 
+Building target: clase6
+Invoking: GCC C Linker
+gcc  -o "clase6"  ./src/clase6.o   
+Finished building target: clase6
+ 
+21:20:42 **** Incremental Build of configuration Debug for project clase6 ****
+make all 
+Building file: ../src/clase6.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase6.d" -MT"src/clase6.o" -o "src/clase6.o" "../src/clase6.c"
+../src/clase6.c: In function ‘getSring’:
+../src/clase6.c:270:10: warning: implicit declaration of function ‘strlen’ [-Wimplicit-function-declaration]
+   buffer[strlen(buffer)-1] = '\0';
+          ^~~~~~
+../src/clase6.c:270:10: warning: incompatible implicit declaration of built-in function ‘strlen’
+../src/clase6.c:270:10: note: include ‘<string.h>’ or provide a declaration of ‘strlen’
+../src/clase6.c:271:12: error: array subscript is not an integer
+src/subdir.mk:18: fallo en las instrucciones para el objetivo 'src/clase6.o'
+   if(strlen[buffer]<=maximo && strlen[buffer]>=minimo)
+            ^
+../src/clase6.c:271:38: error: array subscript is not an integer
+   if(strlen[buffer]<=maximo && strlen[buffer]>=minimo)
+                                      ^
+../src/clase6.c:273:4: warning: implicit declaration of function ‘strncpy’ [-Wimplicit-function-declaration]
+    strncpy(pResultado, buffer, maximo+1)
+    ^~~~~~~
+../src/clase6.c:273:4: warning: incompatible implicit declaration of built-in function ‘strncpy’
+../src/clase6.c:273:4: note: include ‘<string.h>’ or provide a declaration of ‘strncpy’
+../src/clase6.c:274:4: error: expected ‘;’ before ‘retorno’
+    retorno = 0;
+    ^~~~~~~
+../src/clase6.c:280:2: error: expected declaration or statement at end of input
+  return retorno;
+  ^~~~~~
+make: *** [src/clase6.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+21:29:18 **** Incremental Build of configuration Debug for project clase6 ****
+make all 
+Building file: ../src/clase6.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase6.d" -MT"src/clase6.o" -o "src/clase6.o" "../src/clase6.c"
+../src/clase6.c: In function ‘getString’:
+../src/clase6.c:274:12: warning: implicit declaration of function ‘strlen’ [-Wimplicit-function-declaration]
+     buffer[strlen(buffer)-1] = '\0';
+            ^~~~~~
+../src/clase6.c:274:12: warning: incompatible implicit declaration of built-in function ‘strlen’
+../src/clase6.c:274:12: note: include ‘<string.h>’ or provide a declaration of ‘strlen’
+../src/clase6.c:277:6: warning: implicit declaration of function ‘strncpy’ [-Wimplicit-function-declaration]
+      strncpy(pResultado,buffer,maximo+1);
+      ^~~~~~~
+../src/clase6.c:277:6: warning: incompatible implicit declaration of built-in function ‘strncpy’
+../src/clase6.c:277:6: note: include ‘<string.h>’ or provide a declaration of ‘strncpy’
+Finished building: ../src/clase6.c
+ 
+Building target: clase6
+Invoking: GCC C Linker
+gcc  -o "clase6"  ./src/clase6.o   
+Finished building target: clase6
+ 
