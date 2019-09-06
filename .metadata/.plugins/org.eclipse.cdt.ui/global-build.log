@@ -228,3 +228,195 @@ Invoking: GCC C Linker
 gcc  -o "clase6"  ./src/clase6.o   
 Finished building target: clase6
  
+00:03:23 **** Build of configuration Debug for project clase6 ****
+make all 
+Building file: ../src/clase6.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase6.d" -MT"src/clase6.d" -o "src/clase6.o" "../src/clase6.c"
+../src/clase6.c: In function ‘insercion’:
+../src/clase6.c:237:18: error: expected ‘;’ before ‘)’ token
+  for(i=1;i<limite)
+                  ^
+../src/clase6.c: In function ‘getString’:
+../src/clase6.c:282:5: warning: implicit declaration of function ‘strlen’ [-Wimplicit-function-declaration]
+     buffer[strlen(buffer)-1] = '\0';
+     ^
+../src/clase6.c:282:12: warning: incompatible implicit declaration of built-in function ‘strlen’ [enabled by default]
+     buffer[strlen(buffer)-1] = '\0';
+            ^
+../src/clase6.c:285:6: warning: implicit declaration of function ‘strncpy’ [-Wimplicit-function-declaration]
+      strncpy(pResultado,buffer,maximo+1);
+      ^
+../src/clase6.c:285:6: warning: incompatible implicit declaration of built-in function ‘strncpy’ [enabled by default]
+make: *** [src/clase6.o] Error 1
+00:16:19 **** Incremental Build of configuration Debug for project clase6 ****
+make all 
+Building file: ../src/clase6.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase6.d" -MT"src/clase6.d" -o "src/clase6.o" "../src/clase6.c"
+../src/clase6.c: In function ‘insercion’:
+../src/clase6.c:237:18: error: expected ‘;’ before ‘)’ token
+  for(i=1;i<limite)
+                  ^
+../src/clase6.c: In function ‘getString’:
+../src/clase6.c:282:5: warning: implicit declaration of function ‘strlen’ [-Wimplicit-function-declaration]
+     buffer[strlen(buffer)-1] = '\0';
+     ^
+../src/clase6.c:282:12: warning: incompatible implicit declaration of built-in function ‘strlen’ [enabled by default]
+     buffer[strlen(buffer)-1] = '\0';
+            ^
+../src/clase6.c:285:6: warning: implicit declaration of function ‘strncpy’ [-Wimplicit-function-declaration]
+      strncpy(pResultado,buffer,maximo+1);
+      ^
+../src/clase6.c:285:6: warning: incompatible implicit declaration of built-in function ‘strncpy’ [enabled by default]
+make: *** [src/clase6.o] Error 1
+00:16:26 **** Incremental Build of configuration Debug for project clase6 ****
+make all 
+Building file: ../src/clase6.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase6.d" -MT"src/clase6.d" -o "src/clase6.o" "../src/clase6.c"
+../src/clase6.c: In function ‘getString’:
+../src/clase6.c:275:5: warning: implicit declaration of function ‘strlen’ [-Wimplicit-function-declaration]
+     buffer[strlen(buffer)-1] = '\0';
+     ^
+../src/clase6.c:275:12: warning: incompatible implicit declaration of built-in function ‘strlen’ [enabled by default]
+     buffer[strlen(buffer)-1] = '\0';
+            ^
+../src/clase6.c:278:6: warning: implicit declaration of function ‘strncpy’ [-Wimplicit-function-declaration]
+      strncpy(pResultado,buffer,maximo+1);
+      ^
+../src/clase6.c:278:6: warning: incompatible implicit declaration of built-in function ‘strncpy’ [enabled by default]
+Finished building: ../src/clase6.c
+ 
+Building target: clase6
+Invoking: GCC C Linker
+gcc  -o "clase6"  ./src/clase6.o   
+Finished building target: clase6
+ 
+00:17:19 **** Clean-only build of configuration Debug for project clase6 ****
+make clean 
+rm -rf  ./src/clase6.o  ./src/clase6.d  clase6
+ 
+00:17:23 **** Build of configuration Debug for project clase6 ****
+make all 
+Building file: ../src/clase6.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase6.d" -MT"src/clase6.d" -o "src/clase6.o" "../src/clase6.c"
+../src/clase6.c: In function ‘getString’:
+../src/clase6.c:275:5: warning: implicit declaration of function ‘strlen’ [-Wimplicit-function-declaration]
+     buffer[strlen(buffer)-1] = '\0';
+     ^
+../src/clase6.c:275:12: warning: incompatible implicit declaration of built-in function ‘strlen’ [enabled by default]
+     buffer[strlen(buffer)-1] = '\0';
+            ^
+../src/clase6.c:278:6: warning: implicit declaration of function ‘strncpy’ [-Wimplicit-function-declaration]
+      strncpy(pResultado,buffer,maximo+1);
+      ^
+../src/clase6.c:278:6: warning: incompatible implicit declaration of built-in function ‘strncpy’ [enabled by default]
+Finished building: ../src/clase6.c
+ 
+Building target: clase6
+Invoking: GCC C Linker
+gcc  -o "clase6"  ./src/clase6.o   
+Finished building target: clase6
+ 
+00:18:34 **** Incremental Build of configuration Debug for project clase6 ****
+make all 
+make: Nothing to be done for `all'.
+00:23:30 **** Clean-only build of configuration Debug for project clase6 ****
+make clean 
+rm -rf  ./src/clase6.o  ./src/clase6.d  clase6
+ 
+00:23:46 **** Build of configuration Debug for project clase6 ****
+make all 
+Building file: ../src/clase6.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase6.d" -MT"src/clase6.d" -o "src/clase6.o" "../src/clase6.c"
+../src/clase6.c: In function ‘main’:
+../src/clase6.c:49:7: warning: unused variable ‘nombre’ [-Wunused-variable]
+  char nombre[20];
+       ^
+../src/clase6.c: In function ‘getString’:
+../src/clase6.c:275:5: warning: implicit declaration of function ‘strlen’ [-Wimplicit-function-declaration]
+     buffer[strlen(buffer)-1] = '\0';
+     ^
+../src/clase6.c:275:12: warning: incompatible implicit declaration of built-in function ‘strlen’ [enabled by default]
+     buffer[strlen(buffer)-1] = '\0';
+            ^
+../src/clase6.c:278:6: warning: implicit declaration of function ‘strncpy’ [-Wimplicit-function-declaration]
+      strncpy(pResultado,buffer,maximo+1);
+      ^
+../src/clase6.c:278:6: warning: incompatible implicit declaration of built-in function ‘strncpy’ [enabled by default]
+Finished building: ../src/clase6.c
+ 
+Building target: clase6
+Invoking: GCC C Linker
+gcc  -o "clase6"  ./src/clase6.o   
+Finished building target: clase6
+ 
+00:25:13 **** Incremental Build of configuration Debug for project clase6 ****
+make all 
+make: Nothing to be done for `all'.
+00:33:58 **** Incremental Build of configuration Debug for project clase6 ****
+make all 
+make: Nothing to be done for `all'.
+00:34:31 **** Incremental Build of configuration Debug for project clase6 ****
+make all 
+Building file: ../src/clase6.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase6.d" -MT"src/clase6.d" -o "src/clase6.o" "../src/clase6.c"
+../src/clase6.c: In function ‘main’:
+../src/clase6.c:49:7: warning: unused variable ‘nombre’ [-Wunused-variable]
+  char nombre[20];
+       ^
+../src/clase6.c: In function ‘getString’:
+../src/clase6.c:275:5: warning: implicit declaration of function ‘strlen’ [-Wimplicit-function-declaration]
+     buffer[strlen(buffer)-1] = '\0';
+     ^
+../src/clase6.c:275:12: warning: incompatible implicit declaration of built-in function ‘strlen’ [enabled by default]
+     buffer[strlen(buffer)-1] = '\0';
+            ^
+../src/clase6.c:278:6: warning: implicit declaration of function ‘strncpy’ [-Wimplicit-function-declaration]
+      strncpy(pResultado,buffer,maximo+1);
+      ^
+../src/clase6.c:278:6: warning: incompatible implicit declaration of built-in function ‘strncpy’ [enabled by default]
+Finished building: ../src/clase6.c
+ 
+Building target: clase6
+Invoking: GCC C Linker
+gcc  -o "clase6"  ./src/clase6.o   
+Finished building target: clase6
+ 
+00:34:41 **** Incremental Build of configuration Debug for project clase6 ****
+make all 
+make: Nothing to be done for `all'.
+00:37:41 **** Incremental Build of configuration Debug for project clase6 ****
+make all 
+make: Nothing to be done for `all'.
+00:43:54 **** Incremental Build of configuration Debug for project clase6 ****
+make all 
+Building file: ../src/clase6.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase6.d" -MT"src/clase6.d" -o "src/clase6.o" "../src/clase6.c"
+../src/clase6.c: In function ‘main’:
+../src/clase6.c:49:7: warning: unused variable ‘nombre’ [-Wunused-variable]
+  char nombre[20];
+       ^
+../src/clase6.c: In function ‘getString’:
+../src/clase6.c:276:5: warning: implicit declaration of function ‘strlen’ [-Wimplicit-function-declaration]
+     buffer[strlen(buffer)-1] = '\0';
+     ^
+../src/clase6.c:276:12: warning: incompatible implicit declaration of built-in function ‘strlen’ [enabled by default]
+     buffer[strlen(buffer)-1] = '\0';
+            ^
+../src/clase6.c:279:6: warning: implicit declaration of function ‘strncpy’ [-Wimplicit-function-declaration]
+      strncpy(pResultado,buffer,maximo+1);
+      ^
+../src/clase6.c:279:6: warning: incompatible implicit declaration of built-in function ‘strncpy’ [enabled by default]
+Finished building: ../src/clase6.c
+ 
+Building target: clase6
+Invoking: GCC C Linker
+gcc  -o "clase6"  ./src/clase6.o   
+Finished building target: clase6
+ 

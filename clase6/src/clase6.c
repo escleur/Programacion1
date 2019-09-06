@@ -47,7 +47,7 @@ int main(void)
 	int test;
 
 	char nombre[20];
-	getString(nombre, "Ingrese su nombre", "error",0,15,2);
+	//getString(nombre, "Ingrese su nombre", "error",0,15,2);
 
 	//cantidadDatos = getArrayInt(edadesEmpleados,QTY_EMPLEADOS,"Edad?\n","Error\n",0,200,2);
 	if(cantidadDatos > 0)
@@ -231,20 +231,14 @@ void burbuja(int array[], int limite){
 void insercion(int array[], int limite){
 	int i;
 	int j;
-	int flagOrdeno=1;
+	int flagOrdeno;
 	int swap;
-
-	for(i=1;i<limite)
-
-
-
-
-
 
 
 	for(i=1; i<limite; i++){
 		j=i;
-		while(flagOrdeno == 1 || j==1){
+		flagOrdeno = 1;
+		while(flagOrdeno != 0 && j!=0){
 			flagOrdeno = 0;
 
 			if(array[j-1] > array[j]){
