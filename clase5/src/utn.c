@@ -7,15 +7,15 @@
 
 
 #include <stdio.h>
-#include <stdio_ext.h>
+//#include <stdio_ext.h>
 #include <stdlib.h>
 #include <string.h>
 #include "utn.h"
 
 //Linux
-#define PURGAR __fpurge(stdin);
+//#define PURGAR __fpurge(stdin);
 //Windows
-//#define PURGAR fflush(stdin);
+#define PURGAR fflush(stdin);
 
 
 int getInt(	int *resultado,
@@ -54,7 +54,6 @@ int getInt(	int *resultado,
 }
 int getArrayInt(	int *array,
 					int limite,
-					int *resultado,
 					char *mensaje,
 					char *mensajeError,
 					int minimo,
@@ -62,17 +61,16 @@ int getArrayInt(	int *array,
 					int reintentos){
 	int retorno = -1;
 	char respuesta;
-	int i;
+	int i=0;
 	int buffer;
 	if( array != NULL &&
 		limite > 0 &&
-		resultado != NULL &&
 		mensaje != NULL &&
 		mensajeError != NULL &&
 		minimo < maximo &&
 		reintentos >= 0){
 		do{
-			if(getInt(*buffer, mensaje, mensajeError, minimo, maximo, reintentos)==0)
+			if(getInt(&buffer, mensaje, mensajeError, minimo, maximo, reintentos)==0)
 			{
 				array[i] = buffer;
 				i++;
@@ -80,10 +78,11 @@ int getArrayInt(	int *array,
 
 
 			}
-
+			getChar(&respuesta, "Ingrese 's' para continuar ingresando enteros", "ERROR", 'a', 'z', 2 );
 		}while(respuesta=='s' && limite > 0);
-
+		retorno = i;
 	}
+	return retorno;
 }
 int getFloat(float *resultado,
 			 char *mensaje,

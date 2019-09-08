@@ -420,3 +420,192 @@ Invoking: GCC C Linker
 gcc  -o "clase6"  ./src/clase6.o   
 Finished building target: clase6
  
+20:57:39 **** Rebuild of configuration Debug for project miBiblioteca ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\miBiblioteca.o" "..\\src\\miBiblioteca.c" 
+..\src\miBiblioteca.c: In function 'main':
+..\src\miBiblioteca.c:21:15: warning: passing argument 1 of 'getString' from incompatible pointer type [-Wincompatible-pointer-types]
+  if(getString(&resultado,"Ingrese su nombre?\n","Error\n",2,50,2)==0)
+               ^~~~~~~~~~
+In file included from ..\src\miBiblioteca.c:13:
+..\src\utn.h:34:22: note: expected 'char *' but argument is of type 'char (*)[60]'
+ int getString (char *resultado,
+                ~~~~~~^~~~~~~~~
+gcc -o miBiblioteca.exe "src\\miBiblioteca.o" "src\\utn.o" 
+Info: Nothing to build for miBiblioteca
+21:09:05 **** Incremental Build of configuration Debug for project miBiblioteca ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\miBiblioteca.o" "..\\src\\miBiblioteca.c" 
+gcc -o miBiblioteca.exe "src\\miBiblioteca.o" "src\\utn.o" 
+Info: Nothing to build for miBiblioteca
+22:15:34 **** Build of configuration Debug for project clase5 ****
+make all 
+Cannot run program "make": Launching failed
+
+Error: Program "make" not found in PATH
+PATH=[C:/Program Files/Java/jre1.8.0_221/bin/server;C:/Program Files/Java/jre1.8.0_221/bin;C:/Program Files/Java/jre1.8.0_221/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Java\jdk-10.0.2\bin;C:\Program Files\Git\cmd;C:\MinGW\bin;C:\Users\gas\Desktop]
+22:15:35 **** Incremental Build of configuration Debug for project miBiblioteca ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\miBiblioteca.o" "..\\src\\miBiblioteca.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
+gcc -o miBiblioteca.exe "src\\miBiblioteca.o" "src\\utn.o" 
+22:15:55 **** Incremental Build of configuration Debug for project clase5 ****
+make all 
+Cannot run program "make": Launching failed
+
+Error: Program "make" not found in PATH
+PATH=[C:/Program Files/Java/jre1.8.0_221/bin/server;C:/Program Files/Java/jre1.8.0_221/bin;C:/Program Files/Java/jre1.8.0_221/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Java\jdk-10.0.2\bin;C:\Program Files\Git\cmd;C:\MinGW\bin;C:\Users\gas\Desktop]
+Info: Nothing to build for miBiblioteca
+22:18:54 **** Incremental Build of configuration Debug for project clase5 ****
+make all 
+Cannot run program "make": Launching failed
+
+Error: Program "make" not found in PATH
+PATH=[C:/Program Files/Java/jre1.8.0_221/bin/server;C:/Program Files/Java/jre1.8.0_221/bin;C:/Program Files/Java/jre1.8.0_221/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Java\jdk-10.0.2\bin;C:\Program Files\Git\cmd;C:\MinGW\bin;C:\Users\gas\Desktop]
+Info: Nothing to build for miBiblioteca
+22:19:45 **** Incremental Build of configuration Debug for project clase5 ****
+make all 
+Cannot run program "make": Launching failed
+
+Error: Program "make" not found in PATH
+PATH=[C:/Program Files/Java/jre1.8.0_221/bin/server;C:/Program Files/Java/jre1.8.0_221/bin;C:/Program Files/Java/jre1.8.0_221/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Java\jdk-10.0.2\bin;C:\Program Files\Git\cmd;C:\MinGW\bin;C:\Users\gas\Desktop]
+22:22:11 **** Incremental Build of configuration Debug for project clase5 ****
+make all 
+Cannot run program "make": Launching failed
+
+Error: Program "make" not found in PATH
+PATH=[C:/Program Files/Java/jre1.8.0_221/bin/server;C:/Program Files/Java/jre1.8.0_221/bin;C:/Program Files/Java/jre1.8.0_221/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Java\jdk-10.0.2\bin;C:\Program Files\Git\cmd;C:\MinGW\bin;C:\Users\gas\Desktop]
+22:23:48 **** Incremental Build of configuration Debug for project clase5 ****
+make all 
+Cannot run program "make": Launching failed
+
+Error: Program "make" not found in PATH
+PATH=[C:/Program Files/Java/jre1.8.0_221/bin/server;C:/Program Files/Java/jre1.8.0_221/bin;C:/Program Files/Java/jre1.8.0_221/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Java\jdk-10.0.2\bin;C:\Program Files\Git\cmd;C:\MinGW\bin;C:\Users\gas\Desktop]
+22:25:57 **** Rebuild of configuration Debug for project clase5 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
+..\src\utn.c:10:10: fatal error: stdio_ext.h: No such file or directory
+ #include <stdio_ext.h>
+          ^~~~~~~~~~~~~
+compilation terminated.
+22:26:46 **** Incremental Build of configuration Debug for project clase5 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase5.o" "..\\src\\clase5.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
+..\src\utn.c: In function 'getArrayInt':
+..\src\utn.c:75:14: error: invalid type argument of unary '*' (have 'int')
+    if(getInt(*buffer, mensaje, mensajeError, minimo, maximo, reintentos)==0)
+              ^~~~~~~
+..\src\utn.c:63:6: warning: unused variable 'retorno' [-Wunused-variable]
+  int retorno = -1;
+      ^~~~~~~
+..\src\utn.c:87:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+22:32:43 **** Incremental Build of configuration Debug for project clase5 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
+..\src\utn.c: In function 'getArrayInt':
+..\src\utn.c:75:14: error: invalid type argument of unary '*' (have 'int')
+    if(getInt(*buffer, mensaje, mensajeError, minimo, maximo, reintentos)==0)
+              ^~~~~~~
+..\src\utn.c:83:4: error: too few arguments to function 'getChar'
+    getChar()
+    ^~~~~~~
+In file included from ..\src\utn.c:13:
+..\src\utn.h:27:5: note: declared here
+ int getChar( char *resultado,
+     ^~~~~~~
+..\src\utn.c:83:13: error: expected ';' before '}' token
+    getChar()
+             ^
+             ;
+   }while(respuesta=='s' && limite > 0);
+   ~          
+22:33:26 **** Incremental Build of configuration Debug for project clase5 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
+..\src\utn.c: In function 'getArrayInt':
+..\src\utn.c:75:14: error: invalid type argument of unary '*' (have 'int')
+    if(getInt(*buffer, mensaje, mensajeError, minimo, maximo, reintentos)==0)
+              ^~~~~~~
+..\src\utn.c:83:4: error: too few arguments to function 'getChar'
+    getChar()
+    ^~~~~~~
+In file included from ..\src\utn.c:13:
+..\src\utn.h:27:5: note: declared here
+ int getChar( char *resultado,
+     ^~~~~~~
+..\src\utn.c:83:13: error: expected ';' before '}' token
+    getChar()
+             ^
+             ;
+   }while(respuesta=='s' && limite > 0);
+   ~          
+22:33:36 **** Incremental Build of configuration Debug for project clase5 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
+..\src\utn.c: In function 'getArrayInt':
+..\src\utn.c:83:4: error: too few arguments to function 'getChar'
+    getChar()
+    ^~~~~~~
+In file included from ..\src\utn.c:13:
+..\src\utn.h:27:5: note: declared here
+ int getChar( char *resultado,
+     ^~~~~~~
+..\src\utn.c:83:13: error: expected ';' before '}' token
+    getChar()
+             ^
+             ;
+   }while(respuesta=='s' && limite > 0);
+   ~          
+22:36:28 **** Incremental Build of configuration Debug for project clase5 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
+gcc -o clase5.exe "src\\clase5.o" "src\\utn.o" 
+23:21:20 **** Incremental Build of configuration Debug for project clase5 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase5.o" "..\\src\\clase5.c" 
+..\src\clase5.c: In function 'main':
+..\src\clase5.c:20:23: warning: passing argument 2 of 'getArrayInt' makes pointer from integer without a cast [-Wint-conversion]
+ #define QTY_EMPLEADOS 100
+                       ^~~
+..\src\clase5.c:27:50: note: in expansion of macro 'QTY_EMPLEADOS'
+  cantidadEmpleados = getArrayInt(edadesEmpleados,QTY_EMPLEADOS,"Ingrese la edad", "ERROR", 0, 100, 2);
+                                                  ^~~~~~~~~~~~~
+In file included from ..\src\clase5.c:13:
+..\src\utn.h:21:10: note: expected 'char *' but argument is of type 'int'
+    char *mensaje,
+    ~~~~~~^~~~~~~
+..\src\clase5.c:27:83: warning: passing argument 4 of 'getArrayInt' makes integer from pointer without a cast [-Wint-conversion]
+  cantidadEmpleados = getArrayInt(edadesEmpleados,QTY_EMPLEADOS,"Ingrese la edad", "ERROR", 0, 100, 2);
+                                                                                   ^~~~~~~
+In file included from ..\src\clase5.c:13:
+..\src\utn.h:23:8: note: expected 'int' but argument is of type 'char *'
+    int minimo,
+    ~~~~^~~~~~
+..\src\clase5.c:27:22: error: too many arguments to function 'getArrayInt'
+  cantidadEmpleados = getArrayInt(edadesEmpleados,QTY_EMPLEADOS,"Ingrese la edad", "ERROR", 0, 100, 2);
+                      ^~~~~~~~~~~
+In file included from ..\src\clase5.c:13:
+..\src\utn.h:20:5: note: declared here
+ int getArrayInt( int *resultado,
+     ^~~~~~~~~~~
+23:23:09 **** Incremental Build of configuration Debug for project clase5 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase5.o" "..\\src\\clase5.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
+..\src\utn.c: In function 'getArrayInt':
+..\src\utn.c:68:3: error: 'resultado' undeclared (first use in this function)
+   resultado != NULL &&
+   ^~~~~~~~~
+..\src\utn.c:68:3: note: each undeclared identifier is reported only once for each function it appears in
+23:23:42 **** Incremental Build of configuration Debug for project clase5 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
+gcc -o clase5.exe "src\\clase5.o" "src\\utn.o" 
+23:28:43 **** Incremental Build of configuration Debug for project clase5 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
+gcc -o clase5.exe "src\\clase5.o" "src\\utn.o" 

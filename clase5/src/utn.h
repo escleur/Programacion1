@@ -17,6 +17,14 @@ int getInt(	int *resultado,
 			int maximo,
 			int reintentos);
 
+int getArrayInt(int *array,
+			int limite,
+			char *mensaje,
+			char *mensajeError,
+			int minimo,
+			int maximo,
+			int reintentos);
+
 int getFloat(float *resultado,
 			 char *mensaje,
 			 char *mensajeError,
