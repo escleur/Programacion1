@@ -972,3 +972,260 @@ Invoking: GCC C Linker
 gcc  -o "clase7"  ./src/clase7.o   
 Finished building target: clase7
  
+00:39:31 **** Build of configuration Debug for project clase7 ****
+make all 
+Building file: ../src/clase7.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase7.d" -MT"src/clase7.d" -o "src/clase7.o" "../src/clase7.c"
+../src/clase7.c: In function ‘main’:
+../src/clase7.c:110:3: warning: passing argument 1 of ‘getInt’ from incompatible pointer type [enabled by default]
+   getInt(&arrayDni[i], "Ingrese el dni", "Error", 0, 99999999, 2);
+   ^
+../src/clase7.c:35:5: note: expected ‘int *’ but argument is of type ‘char *’
+ int getInt( int *pResultado,
+     ^
+../src/clase7.c:113:2: warning: implicit declaration of function ‘insercionStringInt’ [-Wimplicit-function-declaration]
+  insercionStringInt(arrayNombres, QTY_NOMBRES, arrayDni );
+  ^
+../src/clase7.c:114:2: warning: implicit declaration of function ‘imprimirArrayStringInt’ [-Wimplicit-function-declaration]
+  imprimirArrayStringInt(arrayNombres, QTY_NOMBRES, arrayDni);
+  ^
+Finished building: ../src/clase7.c
+ 
+Building target: clase7
+Invoking: GCC C Linker
+gcc  -o "clase7"  ./src/clase7.o   
+./src/clase7.o: In function `main':
+/home/gabriel/programacion1clases/Programacion1/clase7/Debug/../src/clase7.c:113: undefined reference to `insercionStringInt'
+/home/gabriel/programacion1clases/Programacion1/clase7/Debug/../src/clase7.c:114: undefined reference to `imprimirArrayStringInt'
+collect2: error: ld returned 1 exit status
+make: *** [clase7] Error 1
+00:58:50 **** Incremental Build of configuration Debug for project clase7 ****
+make all 
+Building file: ../src/clase7.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase7.d" -MT"src/clase7.d" -o "src/clase7.o" "../src/clase7.c"
+../src/clase7.c: In function ‘main’:
+../src/clase7.c:110:3: warning: passing argument 1 of ‘getInt’ from incompatible pointer type [enabled by default]
+   getInt(&arrayDni[i], "Ingrese el dni", "Error", 0, 99999999, 2);
+   ^
+../src/clase7.c:35:5: note: expected ‘int *’ but argument is of type ‘char *’
+ int getInt( int *pResultado,
+     ^
+Finished building: ../src/clase7.c
+ 
+Building target: clase7
+Invoking: GCC C Linker
+gcc  -o "clase7"  ./src/clase7.o   
+Finished building target: clase7
+ 
+01:17:28 **** Incremental Build of configuration Debug for project clase7 ****
+make all 
+Building file: ../src/clase7.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase7.d" -MT"src/clase7.d" -o "src/clase7.o" "../src/clase7.c"
+../src/clase7.c: In function ‘main’:
+../src/clase7.c:114:3: warning: passing argument 1 of ‘getInt’ from incompatible pointer type [enabled by default]
+   getInt(&arrayDni[i], "Ingrese el dni", "Error", 0, 99999999, 2);
+   ^
+../src/clase7.c:39:5: note: expected ‘int *’ but argument is of type ‘char *’
+ int getInt( int *pResultado,
+     ^
+../src/clase7.c:118:2: warning: passing argument 3 of ‘imprimirArrayStringInt’ from incompatible pointer type [enabled by default]
+  imprimirArrayStringInt(arrayNombres, QTY_NOMBRES, arrayDni);
+  ^
+../src/clase7.c:36:5: note: expected ‘int *’ but argument is of type ‘char *’
+ int imprimirArrayStringInt(char array[][QTY_CHARS], int cantidad, int arrayInt[]);
+     ^
+Finished building: ../src/clase7.c
+ 
+Building target: clase7
+Invoking: GCC C Linker
+gcc  -o "clase7"  ./src/clase7.o   
+Finished building target: clase7
+ 
+01:17:50 **** Incremental Build of configuration Debug for project clase7 ****
+make all 
+make: Nothing to be done for `all'.
+01:37:30 **** Incremental Build of configuration Debug for project clase7 ****
+make all 
+Building file: ../src/clase7.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase7.d" -MT"src/clase7.d" -o "src/clase7.o" "../src/clase7.c"
+../src/clase7.c: In function ‘getLong’:
+../src/clase7.c:58:4: warning: format ‘%d’ expects argument of type ‘int *’, but argument 2 has type ‘long int *’ [-Wformat=]
+    if(scanf("%d",&buffer)==1)
+    ^
+../src/clase7.c: In function ‘main’:
+../src/clase7.c:153:2: warning: implicit declaration of function ‘imprimirArrayStringInt’ [-Wimplicit-function-declaration]
+  imprimirArrayStringInt(arrayNombres, QTY_NOMBRES, arrayDni);
+  ^
+Finished building: ../src/clase7.c
+ 
+Building target: clase7
+Invoking: GCC C Linker
+gcc  -o "clase7"  ./src/clase7.o   
+./src/clase7.o: In function `main':
+/home/gabriel/programacion1clases/Programacion1/clase7/Debug/../src/clase7.c:153: undefined reference to `imprimirArrayStringInt'
+collect2: error: ld returned 1 exit status
+make: *** [clase7] Error 1
+01:38:45 **** Incremental Build of configuration Debug for project clase7 ****
+make all 
+Building target: clase7
+Invoking: GCC C Linker
+gcc  -o "clase7"  ./src/clase7.o   
+./src/clase7.o: In function `main':
+/home/gabriel/programacion1clases/Programacion1/clase7/Debug/../src/clase7.c:153: undefined reference to `imprimirArrayStringInt'
+collect2: error: ld returned 1 exit status
+make: *** [clase7] Error 1
+01:40:32 **** Incremental Build of configuration Debug for project clase7 ****
+make all 
+Building file: ../src/clase7.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase7.d" -MT"src/clase7.d" -o "src/clase7.o" "../src/clase7.c"
+../src/clase7.c: In function ‘getLong’:
+../src/clase7.c:58:4: warning: format ‘%d’ expects argument of type ‘int *’, but argument 2 has type ‘long int *’ [-Wformat=]
+    if(scanf("%d",&buffer)==1)
+    ^
+../src/clase7.c: In function ‘main’:
+../src/clase7.c:153:2: warning: implicit declaration of function ‘imprimirArrayStringInt’ [-Wimplicit-function-declaration]
+  imprimirArrayStringInt(arrayNombres, QTY_NOMBRES, arrayDni);
+  ^
+../src/clase7.c: At top level:
+../src/clase7.c:161:5: error: conflicting types for ‘imprimirArrayStringLong’
+ int imprimirArrayStringLong(char array[][QTY_CHARS], int cantidad, int arrayLong[]){
+     ^
+../src/clase7.c:36:5: note: previous declaration of ‘imprimirArrayStringLong’ was here
+ int imprimirArrayStringLong(char array[][QTY_CHARS], int cantidad, long arrayLong[]);
+     ^
+make: *** [src/clase7.o] Error 1
+01:40:57 **** Incremental Build of configuration Debug for project clase7 ****
+make all 
+Building file: ../src/clase7.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase7.d" -MT"src/clase7.d" -o "src/clase7.o" "../src/clase7.c"
+../src/clase7.c: In function ‘getLong’:
+../src/clase7.c:58:4: warning: format ‘%d’ expects argument of type ‘int *’, but argument 2 has type ‘long int *’ [-Wformat=]
+    if(scanf("%d",&buffer)==1)
+    ^
+../src/clase7.c: In function ‘main’:
+../src/clase7.c:153:2: warning: implicit declaration of function ‘imprimirArrayStringInt’ [-Wimplicit-function-declaration]
+  imprimirArrayStringInt(arrayNombres, QTY_NOMBRES, arrayDni);
+  ^
+Finished building: ../src/clase7.c
+ 
+Building target: clase7
+Invoking: GCC C Linker
+gcc  -o "clase7"  ./src/clase7.o   
+./src/clase7.o: In function `main':
+/home/gabriel/programacion1clases/Programacion1/clase7/Debug/../src/clase7.c:153: undefined reference to `imprimirArrayStringInt'
+collect2: error: ld returned 1 exit status
+make: *** [clase7] Error 1
+01:42:13 **** Incremental Build of configuration Debug for project clase7 ****
+make all 
+Building file: ../src/clase7.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase7.d" -MT"src/clase7.d" -o "src/clase7.o" "../src/clase7.c"
+../src/clase7.c: In function ‘getLong’:
+../src/clase7.c:58:4: warning: format ‘%d’ expects argument of type ‘int *’, but argument 2 has type ‘long int *’ [-Wformat=]
+    if(scanf("%d",&buffer)==1)
+    ^
+Finished building: ../src/clase7.c
+ 
+Building target: clase7
+Invoking: GCC C Linker
+gcc  -o "clase7"  ./src/clase7.o   
+Finished building target: clase7
+ 
+01:42:24 **** Incremental Build of configuration Debug for project clase7 ****
+make all 
+make: Nothing to be done for `all'.
+17:31:27 **** Incremental Build of configuration Debug for project clase7 ****
+make all 
+Building file: ../src/clase7.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase7.d" -MT"src/clase7.d" -o "src/clase7.o" "../src/clase7.c"
+../src/clase7.c: In function ‘getLong’:
+../src/clase7.c:59:4: warning: format ‘%d’ expects argument of type ‘int *’, but argument 2 has type ‘long int *’ [-Wformat=]
+    if(scanf("%d",&buffer)==1)
+    ^
+../src/clase7.c: In function ‘main’:
+../src/clase7.c:153:2: warning: passing argument 3 of ‘insercionStringInt’ makes integer from pointer without a cast [enabled by default]
+  insercionStringInt(arrayNombres, QTY_NOMBRES, arrayDni );
+  ^
+../src/clase7.c:38:6: note: expected ‘int’ but argument is of type ‘int *’
+ void insercionStringInt(char array[][QTY_CHARS], int limite, int arrayInt);
+      ^
+../src/clase7.c: At top level:
+../src/clase7.c:213:6: error: conflicting types for ‘insercionStringInt’
+ void insercionStringInt(char array[][QTY_CHARS], int limite, int arrayInt[]){
+      ^
+../src/clase7.c:38:6: note: previous declaration of ‘insercionStringInt’ was here
+ void insercionStringInt(char array[][QTY_CHARS], int limite, int arrayInt);
+      ^
+make: *** [src/clase7.o] Error 1
+17:32:41 **** Incremental Build of configuration Debug for project clase7 ****
+make all 
+Building file: ../src/clase7.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase7.d" -MT"src/clase7.d" -o "src/clase7.o" "../src/clase7.c"
+../src/clase7.c: In function ‘getLong’:
+../src/clase7.c:59:4: warning: format ‘%d’ expects argument of type ‘int *’, but argument 2 has type ‘long int *’ [-Wformat=]
+    if(scanf("%d",&buffer)==1)
+    ^
+Finished building: ../src/clase7.c
+ 
+Building target: clase7
+Invoking: GCC C Linker
+gcc  -o "clase7"  ./src/clase7.o   
+./src/clase7.o: In function `main':
+/home/gabriel/programacion1clases/Programacion1/clase7/Debug/../src/clase7.c:154: undefined reference to `imprimirArrayStringInt'
+collect2: error: ld returned 1 exit status
+make: *** [clase7] Error 1
+17:33:44 **** Incremental Build of configuration Debug for project clase7 ****
+make all 
+Building file: ../src/clase7.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase7.d" -MT"src/clase7.d" -o "src/clase7.o" "../src/clase7.c"
+Finished building: ../src/clase7.c
+ 
+Building target: clase7
+Invoking: GCC C Linker
+gcc  -o "clase7"  ./src/clase7.o   
+./src/clase7.o: In function `main':
+/home/gabriel/programacion1clases/Programacion1/clase7/Debug/../src/clase7.c:154: undefined reference to `imprimirArrayStringInt'
+collect2: error: ld returned 1 exit status
+make: *** [clase7] Error 1
+17:36:13 **** Incremental Build of configuration Debug for project clase7 ****
+make all 
+Building file: ../src/clase7.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase7.d" -MT"src/clase7.d" -o "src/clase7.o" "../src/clase7.c"
+Finished building: ../src/clase7.c
+ 
+Building target: clase7
+Invoking: GCC C Linker
+gcc  -o "clase7"  ./src/clase7.o   
+Finished building target: clase7
+ 
+17:36:22 **** Incremental Build of configuration Debug for project clase7 ****
+make all 
+make: Nothing to be done for `all'.
+17:37:25 **** Incremental Build of configuration Debug for project clase7 ****
+make all 
+make: Nothing to be done for `all'.
+17:38:33 **** Incremental Build of configuration Debug for project clase7 ****
+make all 
+Building file: ../src/clase7.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase7.d" -MT"src/clase7.d" -o "src/clase7.o" "../src/clase7.c"
+Finished building: ../src/clase7.c
+ 
+Building target: clase7
+Invoking: GCC C Linker
+gcc  -o "clase7"  ./src/clase7.o   
+Finished building target: clase7
+ 
+17:38:42 **** Incremental Build of configuration Debug for project clase7 ****
+make all 
+make: Nothing to be done for `all'.

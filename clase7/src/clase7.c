@@ -20,7 +20,7 @@
 
 #define EXIT_ERROR -1
 #define QTY_CHARS 50
-#define QTY_NOMBRES 10
+#define QTY_NOMBRES 3
 
 int getString (char *pResultado,
 		      char *pMensaje,
@@ -32,6 +32,46 @@ int getString (char *pResultado,
 int imprimirArrayString(char aNombre[][QTY_CHARS], int cantidad);
 
 void insercionString(char array[][QTY_CHARS], int limite);
+
+int imprimirArrayStringInt(char array[][QTY_CHARS], int cantidad, int arrayLong[]);
+
+void insercionStringInt(char array[][QTY_CHARS], int limite, int arrayInt[]);
+
+/*int getLong(	long *pResultado,
+			char *pMensaje,
+			char *pMensajeError,
+			long minimo,
+			long maximo,
+			int reintentos)
+{
+	int retorno = EXIT_ERROR;
+	long buffer;
+	if(	pResultado != NULL &&
+		pMensaje	!= NULL &&
+		pMensajeError != NULL &&
+		minimo < maximo &&
+		reintentos >= 0)
+	{
+		do
+		{
+			printf("%s", pMensaje);
+			PURGAR
+			if(scanf("%d",&buffer)==1)
+			{
+				if(buffer >= minimo && buffer <= maximo)
+				{
+					retorno = EXIT_SUCCESS;
+					*pResultado = buffer;
+					break;
+				}
+			}
+			printf("%s",pMensajeError);
+			reintentos--;
+		}while(reintentos >= 0);
+	}
+	return retorno;
+}*/
+
 int getInt(	int *pResultado,
 			char *pMensaje,
 			char *pMensajeError,
@@ -103,7 +143,7 @@ int getString (char *pResultado,
 int main(void) {
 
 	char arrayNombres[QTY_NOMBRES][QTY_CHARS];
-	char arrayDni[QTY_NOMBRES];
+	int arrayDni[QTY_NOMBRES];
 	int i;
 	for(i=0;i<QTY_NOMBRES;i++){
 		getString (arrayNombres[i], "Ingrese un nombre", "Error", 0, 49, 2);
@@ -116,6 +156,19 @@ int main(void) {
 	return EXIT_SUCCESS;
 
 
+
+}
+
+int imprimirArrayStringInt(char array[][QTY_CHARS], int cantidad, int arrayInt[]){
+	int i;
+	int retorno = -1;
+	if(array!=NULL && arrayInt!=NULL && cantidad > 0){
+		retorno = 0;
+		for(i=0;i<cantidad;i++){
+			printf("%s     %d\n",array[i], arrayInt[i]);
+		}
+	}
+	return retorno;
 
 }
 
@@ -157,4 +210,39 @@ void insercionString(char array[][QTY_CHARS], int limite){
 	}
 }
 
+void insercionStringInt(char array[][QTY_CHARS], int limite, int arrayInt[]){
+	int i;
+	int j;
+	int flagOrdeno;
+	char swap[QTY_CHARS];
+	int swapInt;
+
+	for(i=1; i<limite; i++){
+		j=i;
+		flagOrdeno = 1;
+		while(flagOrdeno != 0 && j!=0){
+			flagOrdeno = 0;
+
+			if(strcmp(array[j-1], array[j]) > 0){
+				strcpy(swap, array[j-1]);
+				strcpy(array[j-1], array[j]);
+				strcpy(array[j], swap);
+				swapInt = arrayInt[j-1];
+				arrayInt[j-1] = arrayInt[j];
+				arrayInt[j] = swapInt;
+				flagOrdeno = 1;
+			}else if(strcmp(array[j-1], array[j])==0 && arrayInt[j-1] > arrayInt[j]){
+				strcpy(swap, array[j-1]);
+				strcpy(array[j-1], array[j]);
+				strcpy(array[j], swap);
+				swapInt = arrayInt[j-1];
+				arrayInt[j-1] = arrayInt[j];
+				arrayInt[j] = swapInt;
+				flagOrdeno = 1;
+
+			}
+			j--;
+		}
+	}
+}
 
