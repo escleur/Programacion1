@@ -1330,3 +1330,113 @@ Invoking: GCC C Linker
 gcc  -o "clase8"  ./src/clase8.o ./src/utn.o   
 Finished building target: clase8
  
+00:51:52 **** Build of configuration Debug for project clase8 ****
+make all 
+Building file: ../src/clase8.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase8.d" -MT"src/clase8.d" -o "src/clase8.o" "../src/clase8.c"
+../src/clase8.c: In function ‘main’:
+../src/clase8.c:31:19: error: array type has incomplete element type
+  struct sEmpleado aEmpleados[1000];
+                   ^
+../src/clase8.c:32:19: error: storage size of ‘bEmpleado’ isn’t known
+  struct sEmpleado bEmpleado;
+                   ^
+../src/clase8.c:51:2: warning: implicit declaration of function ‘ordenarArrayEmpleados’ [-Wimplicit-function-declaration]
+  ordenarArrayEmpleados(aEmpleados, 3, 0);
+  ^
+../src/clase8.c:52:2: warning: implicit declaration of function ‘imprimirArrayEmpleados’ [-Wimplicit-function-declaration]
+  imprimirArrayEmpleados(aEmpleados, 3);
+  ^
+../src/clase8.c:32:19: warning: unused variable ‘bEmpleado’ [-Wunused-variable]
+  struct sEmpleado bEmpleado;
+                   ^
+../src/clase8.c:31:19: warning: unused variable ‘aEmpleados’ [-Wunused-variable]
+  struct sEmpleado aEmpleados[1000];
+                   ^
+make: *** [src/clase8.o] Error 1
+01:04:11 **** Incremental Build of configuration Debug for project clase8 ****
+make all 
+Building file: ../src/clase8.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase8.d" -MT"src/clase8.d" -o "src/clase8.o" "../src/clase8.c"
+Finished building: ../src/clase8.c
+ 
+Building file: ../src/empleado.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/empleado.d" -MT"src/empleado.d" -o "src/empleado.o" "../src/empleado.c"
+../src/empleado.c: In function ‘ordenarArrayEmpleados’:
+../src/empleado.c:39:6: warning: implicit declaration of function ‘strncmp’ [-Wimplicit-function-declaration]
+      if(strncmp(aEmpleados[i].apellido,aEmpleados[i+1].apellido,QTY_CARACTERES)>0)
+      ^
+Finished building: ../src/empleado.c
+ 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.d" -o "src/utn.o" "../src/utn.c"
+Finished building: ../src/utn.c
+ 
+Building target: clase8
+Invoking: GCC C Linker
+gcc  -o "clase8"  ./src/clase8.o ./src/empleado.o ./src/utn.o   
+Finished building target: clase8
+ 
+01:04:35 **** Incremental Build of configuration Debug for project clase8 ****
+make all 
+Building file: ../src/clase8.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase8.d" -MT"src/clase8.d" -o "src/clase8.o" "../src/clase8.c"
+Finished building: ../src/clase8.c
+ 
+Building file: ../src/empleado.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/empleado.d" -MT"src/empleado.d" -o "src/empleado.o" "../src/empleado.c"
+../src/empleado.c: In function ‘ordenarArrayEmpleados’:
+../src/empleado.c:39:6: warning: implicit declaration of function ‘strncmp’ [-Wimplicit-function-declaration]
+      if(strncmp(aEmpleados[i].apellido,aEmpleados[i+1].apellido,QTY_CARACTERES)>0)
+      ^
+Finished building: ../src/empleado.c
+ 
+Building target: clase8
+Invoking: GCC C Linker
+gcc  -o "clase8"  ./src/clase8.o ./src/empleado.o ./src/utn.o   
+Finished building target: clase8
+ 
+01:05:11 **** Incremental Build of configuration Debug for project clase8 ****
+make all 
+make: Nothing to be done for `all'.
+01:16:58 **** Incremental Build of configuration Debug for project clase8 ****
+make all 
+Building file: ../src/empleado.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/empleado.d" -MT"src/empleado.d" -o "src/empleado.o" "../src/empleado.c"
+../src/empleado.c: In function ‘ordenarArrayEmpleados’:
+../src/empleado.c:39:6: warning: implicit declaration of function ‘strncmp’ [-Wimplicit-function-declaration]
+      if(strncmp(aEmpleados[i].apellido,aEmpleados[i+1].apellido,QTY_CARACTERES)>0)
+      ^
+Finished building: ../src/empleado.c
+ 
+Building target: clase8
+Invoking: GCC C Linker
+gcc  -o "clase8"  ./src/clase8.o ./src/empleado.o ./src/utn.o   
+Finished building target: clase8
+ 
+01:18:53 **** Incremental Build of configuration Debug for project clase8 ****
+make all 
+Building file: ../src/empleado.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/empleado.d" -MT"src/empleado.d" -o "src/empleado.o" "../src/empleado.c"
+../src/empleado.c: In function ‘ordenarArrayEmpleados’:
+../src/empleado.c:39:7: warning: implicit declaration of function ‘strncmp’ [-Wimplicit-function-declaration]
+       (strncmp(aEmpleados[i].apellido,aEmpleados[i+1].apellido,QTY_CARACTERES)>0
+       ^
+Finished building: ../src/empleado.c
+ 
+Building target: clase8
+Invoking: GCC C Linker
+gcc  -o "clase8"  ./src/clase8.o ./src/empleado.o ./src/utn.o   
+Finished building target: clase8
+ 
+01:19:02 **** Incremental Build of configuration Debug for project clase8 ****
+make all 
+make: Nothing to be done for `all'.

@@ -42,3 +42,32 @@ int getString(	char *pResultado,
 	}
 	return retorno;
 }
+
+int getDni(	char *pResultado,
+			char *pMensaje,
+			char *pMensajeError,
+			int minimo,
+			int maximo,
+			int reintentos)
+{
+	int retorno = -1;
+	char buffer[4096];
+	if(	pResultado != NULL &&
+		pMensaje != NULL &&
+		pMensajeError != NULL &&
+		minimo <= maximo &&
+		reintentos >= 0)
+	{
+		retorno = getString(buffer, pMensaje, pMensajeError, minimo, maximo, 0);
+		if(retorno == 0){
+			esDni(buffer);
+		}
+	}
+	return retorno;
+
+
+}
+
+int esDni(char *buffer){
+	return 0;
+}

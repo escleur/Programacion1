@@ -2149,3 +2149,12 @@ org.eclipse.core.runtime.CoreException: No property tester contributes a propert
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1441)
+!SESSION 2019-09-13 00:33:06.602 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.7.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-09-13 00:35:02.308
+!MESSAGE Indexed 'clase8' (2 sources, 42 headers) in 0.89 sec: 1,293 declarations; 2,402 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
