@@ -20,7 +20,7 @@
 
 #define EXIT_ERROR -1
 #define QTY_CHARS 50
-#define QTY_NOMBRES 3
+#define QTY_NOMBRES 5
 
 int getString (char *pResultado,
 		      char *pMensaje,
@@ -223,18 +223,18 @@ void insercionStringInt(char array[][QTY_CHARS], int limite, int arrayInt[]){
 		while(flagOrdeno != 0 && j!=0){
 			flagOrdeno = 0;
 
-			if(strcmp(array[j-1], array[j]) > 0){
-				strcpy(swap, array[j-1]);
-				strcpy(array[j-1], array[j]);
-				strcpy(array[j], swap);
+			if(strncmp(array[j-1], array[j], QTY_CHARS) > 0){
+				strncpy(swap, array[j-1], QTY_CHARS);
+				strncpy(array[j-1], array[j], QTY_CHARS);
+				strncpy(array[j], swap, QTY_CHARS);
 				swapInt = arrayInt[j-1];
 				arrayInt[j-1] = arrayInt[j];
 				arrayInt[j] = swapInt;
 				flagOrdeno = 1;
-			}else if(strcmp(array[j-1], array[j])==0 && arrayInt[j-1] > arrayInt[j]){
-				strcpy(swap, array[j-1]);
-				strcpy(array[j-1], array[j]);
-				strcpy(array[j], swap);
+			}else if(strncmp(array[j-1], array[j], QTY_CHARS)==0 && arrayInt[j-1] > arrayInt[j]){
+				strncpy(swap, array[j-1], QTY_CHARS);
+				strncpy(array[j-1], array[j], QTY_CHARS);
+				strncpy(array[j], swap, QTY_CHARS);
 				swapInt = arrayInt[j-1];
 				arrayInt[j-1] = arrayInt[j];
 				arrayInt[j] = swapInt;

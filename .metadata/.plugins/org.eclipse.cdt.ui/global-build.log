@@ -1229,3 +1229,104 @@ Finished building target: clase7
 17:38:42 **** Incremental Build of configuration Debug for project clase7 ****
 make all 
 make: Nothing to be done for `all'.
+21:06:08 **** Build of configuration Debug for project clase7 ****
+make all 
+Building file: ../src/clase7.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase7.d" -MT"src/clase7.o" -o "src/clase7.o" "../src/clase7.c"
+Finished building: ../src/clase7.c
+ 
+Building target: clase7
+Invoking: GCC C Linker
+gcc  -o "clase7"  ./src/clase7.o   
+Finished building target: clase7
+ 
+21:06:09 **** Build of configuration Debug for project clase8 ****
+make all 
+Building file: ../src/clase8.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase8.d" -MT"src/clase8.o" -o "src/clase8.o" "../src/clase8.c"
+Finished building: ../src/clase8.c
+ 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+Finished building: ../src/utn.c
+ 
+Building target: clase8
+Invoking: GCC C Linker
+gcc  -o "clase8"  ./src/clase8.o ./src/utn.o   
+Finished building target: clase8
+ 
+21:06:17 **** Incremental Build of configuration Debug for project clase8 ****
+make all 
+make: No se hace nada para 'all'.
+21:08:40 **** Incremental Build of configuration Debug for project clase7 ****
+make all 
+make: No se hace nada para 'all'.
+21:08:41 **** Incremental Build of configuration Debug for project clase8 ****
+make all 
+Building file: ../src/clase8.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase8.d" -MT"src/clase8.o" -o "src/clase8.o" "../src/clase8.c"
+Finished building: ../src/clase8.c
+ 
+Building target: clase8
+Invoking: GCC C Linker
+gcc  -o "clase8"  ./src/clase8.o ./src/utn.o   
+Finished building target: clase8
+ 
+21:08:45 **** Incremental Build of configuration Debug for project clase8 ****
+make all 
+make: No se hace nada para 'all'.
+21:14:15 **** Incremental Build of configuration Debug for project clase7 ****
+make all 
+make: No se hace nada para 'all'.
+21:14:16 **** Incremental Build of configuration Debug for project clase8 ****
+make all 
+make: No se hace nada para 'all'.
+21:14:20 **** Incremental Build of configuration Debug for project clase8 ****
+make all 
+Building file: ../src/clase8.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase8.d" -MT"src/clase8.o" -o "src/clase8.o" "../src/clase8.c"
+Finished building: ../src/clase8.c
+ 
+Building target: clase8
+Invoking: GCC C Linker
+gcc  -o "clase8"  ./src/clase8.o ./src/utn.o   
+Finished building target: clase8
+ 
+21:38:39 **** Incremental Build of configuration Debug for project clase7 ****
+make all 
+make: No se hace nada para 'all'.
+21:38:39 **** Incremental Build of configuration Debug for project clase8 ****
+make all 
+Building file: ../src/clase8.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase8.d" -MT"src/clase8.o" -o "src/clase8.o" "../src/clase8.c"
+Finished building: ../src/clase8.c
+ 
+Building target: clase8
+Invoking: GCC C Linker
+gcc  -o "clase8"  ./src/clase8.o ./src/utn.o   
+Finished building target: clase8
+ 
+21:38:43 **** Incremental Build of configuration Debug for project clase8 ****
+make all 
+make: No se hace nada para 'all'.
+21:39:57 **** Incremental Build of configuration Debug for project clase8 ****
+make all 
+make: No se hace nada para 'all'.
+21:40:31 **** Incremental Build of configuration Debug for project clase8 ****
+make all 
+Building file: ../src/clase8.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/clase8.d" -MT"src/clase8.o" -o "src/clase8.o" "../src/clase8.c"
+Finished building: ../src/clase8.c
+ 
+Building target: clase8
+Invoking: GCC C Linker
+gcc  -o "clase8"  ./src/clase8.o ./src/utn.o   
+Finished building target: clase8
+ 
