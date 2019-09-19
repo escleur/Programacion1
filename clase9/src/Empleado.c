@@ -103,6 +103,43 @@ int altaEmpleadoPorId(struct sEmpleado *aArray, int cantidad,struct sEmpleado em
 }
 
 int buscarEmpleadoPorId(struct sEmpleado *aArray, int cantidad,int id){
+	int retorno = -1;
+	int i;
+	if(aArray!=NULL && cantidad > 0 ){
+		for(i=0;i<cantidad;i++){
+			if(aArray[i].idEmpleado == id){
+				retorno = id;
+				break;
+			}
+		}
+	}
+	return retorno;
+}
 
+int bajaEmpleadoPorId(struct sEmpleado *aArray, int cantidad,int id){
+	int retorno = -1;
+	int index;
+	if(aArray!=NULL && cantidad > 0){
+		index = buscarEmpleadoPorId(aArray, cantidad, id);
+		if(index != -1){
+			aArray[index].status = STATUS_EMPTY;
+			retorno = 0;
+		}
+	}
+	return retorno;
+}
+
+int modificarEmpleadoPorId(struct sEmpleado *aArray, int cantidad,struct sEmpleado empleado){
+	int retorno = -1;
+	int index;
+	if(aArray!=NULL && cantidad>0){
+		index = buscarEmpleadoPorId(aArray, cantidad, empleado.idEmpleado);
+		if(index!=NULL){
+			aArray[index] = empleado;
+			aArray[index].status = STATUS_NOT_EMPTY;
+			retorno = 0;
+		}
+	}
+	return retorno;
 }
 

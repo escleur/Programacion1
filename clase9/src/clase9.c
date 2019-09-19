@@ -23,6 +23,21 @@ int main(void)
 	struct sEmpleado bEmpleado;
 	int i;
 	int idEmpleado = 0;
+	char opcion;
+	do{
+		printf( "1. Alta\n"
+				"2. Baja\n"
+				"3. Modificacion\n"
+				"4. Listado\n"
+				"5. Ordenar\n"
+				"6. Salir\n");
+
+
+
+	}while(opcion!=6);
+
+
+
 
 	for(i=0;i<3;i++){
 
