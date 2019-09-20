@@ -23,7 +23,7 @@ int main(void)
 	struct sEmpleado bEmpleado;
 	int i;
 	int idEmpleado = 0;
-	char opcion;
+	int opcion;
 	do{
 		printf( "1. Alta\n"
 				"2. Baja\n"
