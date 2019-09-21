@@ -62,7 +62,7 @@ int imprimirArrayPantallas(struct sPantalla *aArray, int cantidad){
 	if(aArray != NULL && cantidad>0)
 	{
 		retorno = 0;
-		printf("id         Nombre        Direccion         Precio          Tipo\n");
+		printf("id     Nombre    Direccion    Precio     Tipo\n");
 		for(i=0;i<cantidad;i++)
 		{
 			if(aArray[i].status == STATUS_NOT_EMPTY){
@@ -108,7 +108,7 @@ int buscarPantallaPorId(struct sPantalla *aArray, int cantidad,int id){
 	if(aArray!=NULL && cantidad > 0 ){
 		for(i=0;i<cantidad;i++){
 			if(aArray[i].id == id && aArray[i].status == STATUS_NOT_EMPTY){
-				retorno = id;
+				retorno = i;
 				break;
 			}
 		}
@@ -149,7 +149,7 @@ int modificarPantallaPorId(struct sPantalla *aArray, int cantidad,struct sPantal
 	int index;
 	if(aArray!=NULL && cantidad>0){
 		index = buscarPantallaPorId(aArray, cantidad, item.id);
-		if(index!=NULL){
+		if(index!=-1){
 			aArray[index] = item;
 			aArray[index].status = STATUS_NOT_EMPTY;
 			retorno = 0;
