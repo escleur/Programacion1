@@ -1,43 +1,41 @@
-00:40:39 **** Incremental Build of configuration Debug for project parcial1 ****
+21:04:10 **** Build of configuration Debug for project parcial1 ****
 make all 
 Building file: ../src/Pantalla.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Pantalla.d" -MT"src/Pantalla.d" -o "src/Pantalla.o" "../src/Pantalla.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Pantalla.d" -MT"src/Pantalla.o" -o "src/Pantalla.o" "../src/Pantalla.c"
 Finished building: ../src/Pantalla.c
+ 
+Building file: ../src/Publicidad.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Publicidad.d" -MT"src/Publicidad.o" -o "src/Publicidad.o" "../src/Publicidad.c"
+Finished building: ../src/Publicidad.c
  
 Building file: ../src/parcial1.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/parcial1.d" -MT"src/parcial1.d" -o "src/parcial1.o" "../src/parcial1.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/parcial1.d" -MT"src/parcial1.o" -o "src/parcial1.o" "../src/parcial1.c"
 ../src/parcial1.c: In function ‘main’:
-../src/parcial1.c:19:2: warning: implicit declaration of function ‘test’ [-Wimplicit-function-declaration]
+../src/parcial1.c:25:2: warning: implicit declaration of function ‘test’ [-Wimplicit-function-declaration]
   test(aPantallas,QTY_PANTALLAS);
-  ^
+  ^~~~
 ../src/parcial1.c: At top level:
-../src/parcial1.c:128:6: warning: conflicting types for ‘test’ [enabled by default]
+../src/parcial1.c:174:6: warning: conflicting types for ‘test’
  void test(struct sPantalla p[], int cantidad)
-      ^
-../src/parcial1.c:19:2: note: previous implicit declaration of ‘test’ was here
+      ^~~~
+../src/parcial1.c:25:2: note: previous implicit declaration of ‘test’ was here
   test(aPantallas,QTY_PANTALLAS);
-  ^
+  ^~~~
 Finished building: ../src/parcial1.c
  
-Building target: parcial1
-Invoking: GCC C Linker
-gcc  -o "parcial1"  ./src/Pantalla.o ./src/parcial1.o ./src/utn.o   
-Finished building target: parcial1
- 
-00:40:51 **** Incremental Build of configuration Debug for project parcial1 ****
-make all 
-make: Nothing to be done for `all'.
-00:49:17 **** Incremental Build of configuration Debug for project parcial1 ****
-make all 
-Building file: ../src/Pantalla.c
+Building file: ../src/utn.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Pantalla.d" -MT"src/Pantalla.d" -o "src/Pantalla.o" "../src/Pantalla.c"
-Finished building: ../src/Pantalla.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+Finished building: ../src/utn.c
  
 Building target: parcial1
 Invoking: GCC C Linker
-gcc  -o "parcial1"  ./src/Pantalla.o ./src/parcial1.o ./src/utn.o   
+gcc  -o "parcial1"  ./src/Pantalla.o ./src/Publicidad.o ./src/parcial1.o ./src/utn.o   
 Finished building target: parcial1
  
+21:04:21 **** Incremental Build of configuration Debug for project parcial1 ****
+make all 
+make: No se hace nada para 'all'.

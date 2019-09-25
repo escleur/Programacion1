@@ -5,16 +5,19 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../src/Pantalla.c \
+../src/Publicidad.c \
 ../src/parcial1.c \
 ../src/utn.c 
 
 OBJS += \
 ./src/Pantalla.o \
+./src/Publicidad.o \
 ./src/parcial1.o \
 ./src/utn.o 
 
 C_DEPS += \
 ./src/Pantalla.d \
+./src/Publicidad.d \
 ./src/parcial1.d \
 ./src/utn.d 
 
@@ -23,7 +26,7 @@ C_DEPS += \
 src/%.o: ../src/%.c
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C Compiler'
-	gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
+	gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 

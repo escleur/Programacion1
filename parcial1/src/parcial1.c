@@ -4,12 +4,18 @@
 #include <string.h>
 #include "utn.h"
 #include "Pantalla.h"
+#include "Publicidad.h"
 
 int main(void) {
 
 	struct sPantalla aPantallas[QTY_PANTALLAS];
 
 	struct sPantalla bPantalla;
+
+	struct sPublicidad aPublicidad[QTY_PUBLICIDAD];
+
+	struct sPublicidad bPublicidad;
+
 
 	int opcion;
 	char conf;
@@ -22,6 +28,8 @@ int main(void) {
 		printf( "1. Alta de pantallas\n"
 				"2. Modificacion de pantallas\n"
 				"3. Baja de pantallas\n"
+				"4. Alta publicidad\n"
+				"5. Modificar publicidad\n"
 				"9. Listado de pantallas\n"
 				"0. Salir\n");
 
@@ -108,7 +116,55 @@ int main(void) {
 				printf("Error al dar baja, verifique que el id existe\n");
 			}
 			break;
+		case 4:
+			printf("Alta de publicidad\n");
+			if (buscarLugarLibrePublicidad(aPublicidad, QTY_PUBLICIDAD) == -1) {
+				printf("Error no hay mas lugar para publicidad\n");
+				break;
+			}
+			if (getString(bPublicidad.cuit, "Ingrese el cuit\n", "Error", 1,
+					49, 2) == -1) {
+				printf("Error en el cuit\n");
+				break;
+			}
+			if (getInt(&bPublicidad.dias, "Ingrese la cantidad de dias\n", "Error",
+					1, 1000, 2) == -1) {
+				printf("Error en la cantidad de dias\n");
+				break;
+			}
+			if (getString(bPantalla.direccion, "Ingrese el nombre del archivo\n",
+					"Error", 1, 49, 2) == -1) {
+				printf("Error en el nombre del archivo\n");
+				break;
+			}
+			imprimirArrayPantallas(aPantallas, QTY_PANTALLAS);
+			if (getInt(&bPublicidad.id, "Ingrese el id de la pantalla\n", "Error",
+					1, 1000000, 2) == -1) {
+				printf("Error en el id\n");
+				break;
+			}
+			if(buscarPantallaPorId(aPantallas,QTY_PANTALLAS, bPublicidad.id)== -1){
+				printf("Error id de pantalla inexistente");
+				break;
+			}
 
+
+			if (altaPublicidadPorId(aPublicidad, QTY_PUBLICIDAD, bPublicidad) == 0) {
+				printf("Alta exitosa\n");
+			} else {
+				printf("Error al hacer el alta\n");
+
+			}
+
+			break;
+		case 5:
+			printf("Modificacion de publicidad");
+			if (getString(bPublicidad.cuit, "Ingrese el cuit\n", "Error", 1,
+					49, 2) == -1) {
+				printf("Error en el cuit\n");
+				break;
+			}
+			listarPantallasPorCuit(aPantallas,QTY_PANTALLAS,aPublicidad,QTY_PUBLICIDAD, bPublicidad.cuit );
 
 
 
