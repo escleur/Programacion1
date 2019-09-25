@@ -7,7 +7,7 @@
 
 #ifndef PUBLICIDAD_H_
 #define PUBLICIDAD_H_
-
+#include "Pantalla.h"
 #define QTY_PUBLICIDAD 1000
 #define QTY_CARACTERES 50
 
@@ -29,8 +29,10 @@ int initLugarLibrePublicidad(struct sPublicidad *aArray, int cantidad);
 
 int imprimirArrayPublicidad(struct sPublicidad *aArray, int cantidad);
 int ordenarArrayPublicidad(struct sPublicidad *aArray, int cantidad);
-int listarPantallasPorCuit(struct sPantallas *aPantallas,int QTY_PANTALLAS,struct sPublicidad *aPublicidad,int QTY_PUBLICIDAD, int cuit );
+int listarPantallasPorCuit(struct sPantalla *aPantallas,int cantidadPantallas,struct sPublicidad *aPublicidad,int cantidadPublicidad, char *cuit );
+int imprimirPantallaConCuit(struct sPantalla *aPantallas, int cantidadPantallas,int idPantalla,char *cuit);
 
+int buscarPublicidadPorCuit(struct sPublicidad *aArray, int cantidad,char *cuit);
 int buscarLugarLibrePublicidad(struct sPublicidad *aArray, int cantidad);
 int buscarPublicidadPorId(struct sPublicidad *aArray, int cantidad,int id);
 int altaPublicidadPorId(struct sPublicidad *aArray, int cantidad,struct sPublicidad item);

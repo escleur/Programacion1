@@ -23,6 +23,7 @@ int main(void) {
 
 	initLugarLibrePantalla(aPantallas, QTY_PANTALLAS);
 	test(aPantallas,QTY_PANTALLAS);
+	test2(aPublicidad, QTY_PANTALLAS);
 	do {
 
 		printf( "1. Alta de pantallas\n"
@@ -167,7 +168,7 @@ int main(void) {
 			listarPantallasPorCuit(aPantallas,QTY_PANTALLAS,aPublicidad,QTY_PUBLICIDAD, bPublicidad.cuit );
 
 
-
+			break;
 		case 9:
 			imprimirArrayPantallas(aPantallas, QTY_PANTALLAS);
 			break;
@@ -199,3 +200,21 @@ void test(struct sPantalla p[], int cantidad)
 
 }
 
+void test2(struct sPublicidad p[], int cantidad)
+{
+	char aCuit[][50]={"26194002","26194002","777","26194002","44434"};
+	int aDias[]={5,3,7,9,5};
+	char aNombreArchivo[][50]={"caballo","promo 2","propa","gato","promo3"};
+	int aIdPantalla[]={4,2,4,1,2};
+	struct sPublicidad bPublicidad;
+	int i;
+	for(i=0;i<5;i++){
+		strncpy(bPublicidad.cuit,aCuit[i],50);
+		bPublicidad.dias = aDias[i];
+		strncpy(bPublicidad.nombreArchivo,aNombreArchivo[i],50);
+		bPublicidad.idPantalla = aIdPantalla[i];
+
+		altaPublicidadPorId(p, QTY_PUBLICIDAD, bPublicidad);
+	}
+
+}

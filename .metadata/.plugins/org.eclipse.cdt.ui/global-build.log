@@ -39,3 +39,513 @@ Finished building target: parcial1
 21:04:21 **** Incremental Build of configuration Debug for project parcial1 ****
 make all 
 make: No se hace nada para 'all'.
+00:46:03 **** Build of configuration Debug for project parcial1 ****
+make all 
+Building file: ../src/Publicidad.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Publicidad.d" -MT"src/Publicidad.d" -o "src/Publicidad.o" "../src/Publicidad.c"
+In file included from ../src/Publicidad.c:12:0:
+../src/Publicidad.h:32:87: warning: ‘struct sPantallas’ declared inside parameter list [enabled by default]
+ int listarPantallasPorCuit(struct sPantallas *aPantallas,int cantidadPantallas,struct sPublicidad *aPublicidad,int cantidadPublicidad, char *cuit );
+                                                                                       ^
+../src/Publicidad.h:32:87: warning: its scope is only this definition or declaration, which is probably not what you want [enabled by default]
+In file included from ../src/Publicidad.c:12:0:
+../src/Publicidad.h:33:98: error: ‘posicionActual’ undeclared here (not in a function)
+ int imprimirPantallaConCuit(struct sPantallas *aPantallas, int cantidadPantallas,int aPublicidad[posicionActual].idPantalla,char *cuit);
+                                                                                                  ^
+../src/Publicidad.h:33:113: error: expected ‘;’, ‘,’ or ‘)’ before ‘.’ token
+ int imprimirPantallaConCuit(struct sPantallas *aPantallas, int cantidadPantallas,int aPublicidad[posicionActual].idPantalla,char *cuit);
+                                                                                                                 ^
+../src/Publicidad.c:135:87: warning: ‘struct sPantallas’ declared inside parameter list [enabled by default]
+ int listarPantallasPorCuit(struct sPantallas *aPantallas,int cantidadPantallas,struct sPublicidad *aPublicidad,int cantidadPublicidad, char *cuit )
+                                                                                       ^
+../src/Publicidad.c:135:5: error: conflicting types for ‘listarPantallasPorCuit’
+ int listarPantallasPorCuit(struct sPantallas *aPantallas,int cantidadPantallas,struct sPublicidad *aPublicidad,int cantidadPublicidad, char *cuit )
+     ^
+In file included from ../src/Publicidad.c:12:0:
+../src/Publicidad.h:32:5: note: previous declaration of ‘listarPantallasPorCuit’ was here
+ int listarPantallasPorCuit(struct sPantallas *aPantallas,int cantidadPantallas,struct sPublicidad *aPublicidad,int cantidadPublicidad, char *cuit );
+     ^
+../src/Publicidad.c: In function ‘listarPantallasPorCuit’:
+../src/Publicidad.c:144:4: warning: implicit declaration of function ‘buscarPublicidadPorCuit’ [-Wimplicit-function-declaration]
+    posicionActual = buscarPublicidadPorCuit(aPublicidad+posicionActual+1, cantidadPublicidad-posicionActual-1, cuit);
+    ^
+../src/Publicidad.c:145:4: warning: implicit declaration of function ‘imprimirPantallaConCuit’ [-Wimplicit-function-declaration]
+    imprimirPantallaConCuit(aPantallas, cantidadPantallas, aPublicidad[posicionActual].idPantalla, cuit);
+    ^
+../src/Publicidad.c:140:6: warning: unused variable ‘retorno’ [-Wunused-variable]
+  int retorno = -1;
+      ^
+../src/Publicidad.c: At top level:
+../src/Publicidad.c:151:36: warning: ‘struct sPantallas’ declared inside parameter list [enabled by default]
+ int imprimirPantallaConCuit(struct sPantallas *aPantallas, int cantidadPantallas,int idPantalla,char *cuit){
+                                    ^
+../src/Publicidad.c: In function ‘imprimirPantallaConCuit’:
+../src/Publicidad.c:154:2: warning: passing argument 1 of ‘buscarPantallaPorId’ from incompatible pointer type [enabled by default]
+  index=buscarPantallaPorId(aPantallas, cantidadPantallas, idPantalla);
+  ^
+In file included from ../src/Publicidad.c:13:0:
+../src/Pantalla.h:34:5: note: expected ‘struct sPantalla *’ but argument is of type ‘struct sPantallas *’
+ int buscarPantallaPorId(struct sPantalla *aArray, int cantidad,int id);
+     ^
+../src/Publicidad.c:156:3: error: invalid use of undefined type ‘struct sPantallas’
+   printf("id - %d - nombre - %s - direccion - %s - precio - %f - cuit - %s \n",aPantallas[index].id,aPantallas[index].nombre,aPantallas[index].direccion,aPantallas[index].precio,cuit );
+   ^
+../src/Publicidad.c:156:90: error: dereferencing pointer to incomplete type
+   printf("id - %d - nombre - %s - direccion - %s - precio - %f - cuit - %s \n",aPantallas[index].id,aPantallas[index].nombre,aPantallas[index].direccion,aPantallas[index].precio,cuit );
+                                                                                          ^
+../src/Publicidad.c:156:3: error: invalid use of undefined type ‘struct sPantallas’
+   printf("id - %d - nombre - %s - direccion - %s - precio - %f - cuit - %s \n",aPantallas[index].id,aPantallas[index].nombre,aPantallas[index].direccion,aPantallas[index].precio,cuit );
+   ^
+../src/Publicidad.c:156:111: error: dereferencing pointer to incomplete type
+   printf("id - %d - nombre - %s - direccion - %s - precio - %f - cuit - %s \n",aPantallas[index].id,aPantallas[index].nombre,aPantallas[index].direccion,aPantallas[index].precio,cuit );
+                                                                                                               ^
+../src/Publicidad.c:156:3: error: invalid use of undefined type ‘struct sPantallas’
+   printf("id - %d - nombre - %s - direccion - %s - precio - %f - cuit - %s \n",aPantallas[index].id,aPantallas[index].nombre,aPantallas[index].direccion,aPantallas[index].precio,cuit );
+   ^
+../src/Publicidad.c:156:136: error: dereferencing pointer to incomplete type
+   printf("id - %d - nombre - %s - direccion - %s - precio - %f - cuit - %s \n",aPantallas[index].id,aPantallas[index].nombre,aPantallas[index].direccion,aPantallas[index].precio,cuit );
+                                                                                                                                        ^
+../src/Publicidad.c:156:3: error: invalid use of undefined type ‘struct sPantallas’
+   printf("id - %d - nombre - %s - direccion - %s - precio - %f - cuit - %s \n",aPantallas[index].id,aPantallas[index].nombre,aPantallas[index].direccion,aPantallas[index].precio,cuit );
+   ^
+../src/Publicidad.c:156:164: error: dereferencing pointer to incomplete type
+   printf("id - %d - nombre - %s - direccion - %s - precio - %f - cuit - %s \n",aPantallas[index].id,aPantallas[index].nombre,aPantallas[index].direccion,aPantallas[index].precio,cuit );
+                                                                                                                                                                    ^
+make: *** [src/Publicidad.o] Error 1
+00:58:28 **** Incremental Build of configuration Debug for project parcial1 ****
+make all 
+Building file: ../src/Publicidad.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Publicidad.d" -MT"src/Publicidad.d" -o "src/Publicidad.o" "../src/Publicidad.c"
+In file included from ../src/Publicidad.c:12:0:
+../src/Publicidad.h:32:87: warning: ‘struct sPantallas’ declared inside parameter list [enabled by default]
+ int listarPantallasPorCuit(struct sPantallas *aPantallas,int cantidadPantallas,struct sPublicidad *aPublicidad,int cantidadPublicidad, char *cuit );
+                                                                                       ^
+../src/Publicidad.h:32:87: warning: its scope is only this definition or declaration, which is probably not what you want [enabled by default]
+In file included from ../src/Publicidad.c:12:0:
+../src/Publicidad.h:33:98: error: ‘posicionActual’ undeclared here (not in a function)
+ int imprimirPantallaConCuit(struct sPantallas *aPantallas, int cantidadPantallas,int aPublicidad[posicionActual].idPantalla,char *cuit);
+                                                                                                  ^
+../src/Publicidad.h:33:113: error: expected ‘;’, ‘,’ or ‘)’ before ‘.’ token
+ int imprimirPantallaConCuit(struct sPantallas *aPantallas, int cantidadPantallas,int aPublicidad[posicionActual].idPantalla,char *cuit);
+                                                                                                                 ^
+../src/Publicidad.c:135:5: error: conflicting types for ‘listarPantallasPorCuit’
+ int listarPantallasPorCuit(struct sPantalla *aPantallas,int cantidadPantallas,struct sPublicidad *aPublicidad,int cantidadPublicidad, char *cuit )
+     ^
+In file included from ../src/Publicidad.c:12:0:
+../src/Publicidad.h:32:5: note: previous declaration of ‘listarPantallasPorCuit’ was here
+ int listarPantallasPorCuit(struct sPantallas *aPantallas,int cantidadPantallas,struct sPublicidad *aPublicidad,int cantidadPublicidad, char *cuit );
+     ^
+../src/Publicidad.c: In function ‘listarPantallasPorCuit’:
+../src/Publicidad.c:145:4: warning: implicit declaration of function ‘buscarPublicidadPorCuit’ [-Wimplicit-function-declaration]
+    posicionActual = buscarPublicidadPorCuit(aPublicidad+posicionActual+1, cantidadPublicidad-posicionActual-1, cuit);
+    ^
+../src/Publicidad.c:146:4: warning: implicit declaration of function ‘imprimirPantallaConCuit’ [-Wimplicit-function-declaration]
+    imprimirPantallaConCuit(aPantallas, cantidadPantallas, aPublicidad[posicionActual].idPantalla, cuit);
+    ^
+make: *** [src/Publicidad.o] Error 1
+00:59:12 **** Incremental Build of configuration Debug for project parcial1 ****
+make all 
+Building file: ../src/Publicidad.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Publicidad.d" -MT"src/Publicidad.d" -o "src/Publicidad.o" "../src/Publicidad.c"
+In file included from ../src/Publicidad.c:12:0:
+../src/Publicidad.h:32:86: warning: ‘struct sPantalla’ declared inside parameter list [enabled by default]
+ int listarPantallasPorCuit(struct sPantalla *aPantallas,int cantidadPantallas,struct sPublicidad *aPublicidad,int cantidadPublicidad, char *cuit );
+                                                                                      ^
+../src/Publicidad.h:32:86: warning: its scope is only this definition or declaration, which is probably not what you want [enabled by default]
+In file included from ../src/Publicidad.c:12:0:
+../src/Publicidad.h:33:97: error: ‘posicionActual’ undeclared here (not in a function)
+ int imprimirPantallaConCuit(struct sPantalla *aPantallas, int cantidadPantallas,int aPublicidad[posicionActual].idPantalla,char *cuit);
+                                                                                                 ^
+../src/Publicidad.h:33:112: error: expected ‘;’, ‘,’ or ‘)’ before ‘.’ token
+ int imprimirPantallaConCuit(struct sPantalla *aPantallas, int cantidadPantallas,int aPublicidad[posicionActual].idPantalla,char *cuit);
+                                                                                                                ^
+../src/Publicidad.c:135:5: error: conflicting types for ‘listarPantallasPorCuit’
+ int listarPantallasPorCuit(struct sPantalla *aPantallas,int cantidadPantallas,struct sPublicidad *aPublicidad,int cantidadPublicidad, char *cuit )
+     ^
+In file included from ../src/Publicidad.c:12:0:
+../src/Publicidad.h:32:5: note: previous declaration of ‘listarPantallasPorCuit’ was here
+ int listarPantallasPorCuit(struct sPantalla *aPantallas,int cantidadPantallas,struct sPublicidad *aPublicidad,int cantidadPublicidad, char *cuit );
+     ^
+../src/Publicidad.c: In function ‘listarPantallasPorCuit’:
+../src/Publicidad.c:145:4: warning: implicit declaration of function ‘buscarPublicidadPorCuit’ [-Wimplicit-function-declaration]
+    posicionActual = buscarPublicidadPorCuit(aPublicidad+posicionActual+1, cantidadPublicidad-posicionActual-1, cuit);
+    ^
+../src/Publicidad.c:146:4: warning: implicit declaration of function ‘imprimirPantallaConCuit’ [-Wimplicit-function-declaration]
+    imprimirPantallaConCuit(aPantallas, cantidadPantallas, aPublicidad[posicionActual].idPantalla, cuit);
+    ^
+make: *** [src/Publicidad.o] Error 1
+01:03:12 **** Incremental Build of configuration Debug for project parcial1 ****
+make all 
+Building file: ../src/Publicidad.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Publicidad.d" -MT"src/Publicidad.d" -o "src/Publicidad.o" "../src/Publicidad.c"
+In file included from ../src/Publicidad.c:12:0:
+../src/Publicidad.h:32:86: warning: ‘struct sPantalla’ declared inside parameter list [enabled by default]
+ int listarPantallasPorCuit(struct sPantalla *aPantallas,int cantidadPantallas,struct sPublicidad *aPublicidad,int cantidadPublicidad, char *cuit );
+                                                                                      ^
+../src/Publicidad.h:32:86: warning: its scope is only this definition or declaration, which is probably not what you want [enabled by default]
+In file included from ../src/Publicidad.c:12:0:
+../src/Publicidad.h:33:36: warning: ‘struct sPantalla’ declared inside parameter list [enabled by default]
+ int imprimirPantallaConCuit(struct sPantalla *aPantallas, int cantidadPantallas,int idPantalla,char *cuit);
+                                    ^
+../src/Publicidad.c:135:5: error: conflicting types for ‘listarPantallasPorCuit’
+ int listarPantallasPorCuit(struct sPantalla *aPantallas,int cantidadPantallas,struct sPublicidad *aPublicidad,int cantidadPublicidad, char *cuit )
+     ^
+In file included from ../src/Publicidad.c:12:0:
+../src/Publicidad.h:32:5: note: previous declaration of ‘listarPantallasPorCuit’ was here
+ int listarPantallasPorCuit(struct sPantalla *aPantallas,int cantidadPantallas,struct sPublicidad *aPublicidad,int cantidadPublicidad, char *cuit );
+     ^
+../src/Publicidad.c: In function ‘listarPantallasPorCuit’:
+../src/Publicidad.c:145:4: warning: implicit declaration of function ‘buscarPublicidadPorCuit’ [-Wimplicit-function-declaration]
+    posicionActual = buscarPublicidadPorCuit(aPublicidad+posicionActual+1, cantidadPublicidad-posicionActual-1, cuit);
+    ^
+../src/Publicidad.c:146:4: warning: passing argument 1 of ‘imprimirPantallaConCuit’ from incompatible pointer type [enabled by default]
+    imprimirPantallaConCuit(aPantallas, cantidadPantallas, aPublicidad[posicionActual].idPantalla, cuit);
+    ^
+In file included from ../src/Publicidad.c:12:0:
+../src/Publicidad.h:33:5: note: expected ‘struct sPantalla *’ but argument is of type ‘struct sPantalla *’
+ int imprimirPantallaConCuit(struct sPantalla *aPantallas, int cantidadPantallas,int idPantalla,char *cuit);
+     ^
+../src/Publicidad.c: At top level:
+../src/Publicidad.c:152:5: error: conflicting types for ‘imprimirPantallaConCuit’
+ int imprimirPantallaConCuit(struct sPantalla *aPantallas, int cantidadPantallas,int idPantalla,char *cuit){
+     ^
+In file included from ../src/Publicidad.c:12:0:
+../src/Publicidad.h:33:5: note: previous declaration of ‘imprimirPantallaConCuit’ was here
+ int imprimirPantallaConCuit(struct sPantalla *aPantallas, int cantidadPantallas,int idPantalla,char *cuit);
+     ^
+make: *** [src/Publicidad.o] Error 1
+01:09:37 **** Incremental Build of configuration Debug for project parcial1 ****
+make all 
+Building file: ../src/Publicidad.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Publicidad.d" -MT"src/Publicidad.d" -o "src/Publicidad.o" "../src/Publicidad.c"
+In file included from ../src/Publicidad.c:12:0:
+../src/Publicidad.h:32:86: warning: ‘struct sPantalla’ declared inside parameter list [enabled by default]
+ int listarPantallasPorCuit(struct sPantalla *aPantallas,int cantidadPantallas,struct sPublicidad *aPublicidad,int cantidadPublicidad, char *cuit );
+                                                                                      ^
+../src/Publicidad.h:32:86: warning: its scope is only this definition or declaration, which is probably not what you want [enabled by default]
+In file included from ../src/Publicidad.c:12:0:
+../src/Publicidad.h:33:36: warning: ‘struct sPantalla’ declared inside parameter list [enabled by default]
+ int imprimirPantallaConCuit(struct sPantalla *aPantallas, int cantidadPantallas,int idPantalla,char *cuit);
+                                    ^
+../src/Publicidad.c:135:5: error: conflicting types for ‘listarPantallasPorCuit’
+ int listarPantallasPorCuit(struct sPantalla *aPantallas,int cantidadPantallas,struct sPublicidad *aPublicidad,int cantidadPublicidad, char *cuit )
+     ^
+In file included from ../src/Publicidad.c:12:0:
+../src/Publicidad.h:32:5: note: previous declaration of ‘listarPantallasPorCuit’ was here
+ int listarPantallasPorCuit(struct sPantalla *aPantallas,int cantidadPantallas,struct sPublicidad *aPublicidad,int cantidadPublicidad, char *cuit );
+     ^
+../src/Publicidad.c: In function ‘listarPantallasPorCuit’:
+../src/Publicidad.c:146:4: warning: passing argument 1 of ‘imprimirPantallaConCuit’ from incompatible pointer type [enabled by default]
+    imprimirPantallaConCuit(aPantallas, cantidadPantallas, aPublicidad[posicionActual].idPantalla, cuit);
+    ^
+In file included from ../src/Publicidad.c:12:0:
+../src/Publicidad.h:33:5: note: expected ‘struct sPantalla *’ but argument is of type ‘struct sPantalla *’
+ int imprimirPantallaConCuit(struct sPantalla *aPantallas, int cantidadPantallas,int idPantalla,char *cuit);
+     ^
+../src/Publicidad.c: At top level:
+../src/Publicidad.c:152:5: error: conflicting types for ‘imprimirPantallaConCuit’
+ int imprimirPantallaConCuit(struct sPantalla *aPantallas, int cantidadPantallas,int idPantalla,char *cuit){
+     ^
+In file included from ../src/Publicidad.c:12:0:
+../src/Publicidad.h:33:5: note: previous declaration of ‘imprimirPantallaConCuit’ was here
+ int imprimirPantallaConCuit(struct sPantalla *aPantallas, int cantidadPantallas,int idPantalla,char *cuit);
+     ^
+make: *** [src/Publicidad.o] Error 1
+01:11:28 **** Incremental Build of configuration Debug for project parcial1 ****
+make all 
+Building file: ../src/Publicidad.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Publicidad.d" -MT"src/Publicidad.d" -o "src/Publicidad.o" "../src/Publicidad.c"
+In file included from ../src/Publicidad.c:12:0:
+../src/Publicidad.h:32:86: warning: ‘struct sPantalla’ declared inside parameter list [enabled by default]
+ int listarPantallasPorCuit(struct sPantalla *aPantallas,int cantidadPantallas,struct sPublicidad *aPublicidad,int cantidadPublicidad, char *cuit );
+                                                                                      ^
+../src/Publicidad.h:32:86: warning: its scope is only this definition or declaration, which is probably not what you want [enabled by default]
+In file included from ../src/Publicidad.c:12:0:
+../src/Publicidad.h:33:36: warning: ‘struct sPantalla’ declared inside parameter list [enabled by default]
+ int imprimirPantallaConCuit(struct sPantalla *aPantallas, int cantidadPantallas,int idPantalla,char *cuit);
+                                    ^
+../src/Publicidad.c:135:5: error: conflicting types for ‘listarPantallasPorCuit’
+ int listarPantallasPorCuit(struct sPantalla *aPantallas,int cantidadPantallas,struct sPublicidad *aPublicidad,int cantidadPublicidad, char *cuit )
+     ^
+In file included from ../src/Publicidad.c:12:0:
+../src/Publicidad.h:32:5: note: previous declaration of ‘listarPantallasPorCuit’ was here
+ int listarPantallasPorCuit(struct sPantalla *aPantallas,int cantidadPantallas,struct sPublicidad *aPublicidad,int cantidadPublicidad, char *cuit );
+     ^
+../src/Publicidad.c: In function ‘listarPantallasPorCuit’:
+../src/Publicidad.c:146:4: warning: passing argument 1 of ‘imprimirPantallaConCuit’ from incompatible pointer type [enabled by default]
+    imprimirPantallaConCuit(aPantallas, cantidadPantallas, aPublicidad[posicionActual].idPantalla, cuit);
+    ^
+In file included from ../src/Publicidad.c:12:0:
+../src/Publicidad.h:33:5: note: expected ‘struct sPantalla *’ but argument is of type ‘struct sPantalla *’
+ int imprimirPantallaConCuit(struct sPantalla *aPantallas, int cantidadPantallas,int idPantalla,char *cuit);
+     ^
+../src/Publicidad.c: At top level:
+../src/Publicidad.c:152:5: error: conflicting types for ‘imprimirPantallaConCuit’
+ int imprimirPantallaConCuit(struct sPantalla *aPantallas, int cantidadPantallas,int idPantalla,char *cuit){
+     ^
+In file included from ../src/Publicidad.c:12:0:
+../src/Publicidad.h:33:5: note: previous declaration of ‘imprimirPantallaConCuit’ was here
+ int imprimirPantallaConCuit(struct sPantalla *aPantallas, int cantidadPantallas,int idPantalla,char *cuit);
+     ^
+make: *** [src/Publicidad.o] Error 1
+01:23:39 **** Incremental Build of configuration Debug for project parcial1 ****
+make all 
+Building file: ../src/Publicidad.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Publicidad.d" -MT"src/Publicidad.d" -o "src/Publicidad.o" "../src/Publicidad.c"
+In file included from ../src/Publicidad.c:12:0:
+../src/Publicidad.h:32:86: warning: ‘struct sPantalla’ declared inside parameter list [enabled by default]
+ int listarPantallasPorCuit(struct sPantalla *aPantallas,int cantidadPantallas,struct sPublicidad *aPublicidad,int cantidadPublicidad, char *cuit );
+                                                                                      ^
+../src/Publicidad.h:32:86: warning: its scope is only this definition or declaration, which is probably not what you want [enabled by default]
+In file included from ../src/Publicidad.c:12:0:
+../src/Publicidad.h:33:36: warning: ‘struct sPantalla’ declared inside parameter list [enabled by default]
+ int imprimirPantallaConCuit(struct sPantalla *aPantallas, int cantidadPantallas,int idPantalla,char *cuit);
+                                    ^
+../src/Publicidad.c:135:5: error: conflicting types for ‘listarPantallasPorCuit’
+ int listarPantallasPorCuit(struct sPantalla *aPantallas,int cantidadPantallas,struct sPublicidad *aPublicidad,int cantidadPublicidad, char *cuit )
+     ^
+In file included from ../src/Publicidad.c:12:0:
+../src/Publicidad.h:32:5: note: previous declaration of ‘listarPantallasPorCuit’ was here
+ int listarPantallasPorCuit(struct sPantalla *aPantallas,int cantidadPantallas,struct sPublicidad *aPublicidad,int cantidadPublicidad, char *cuit );
+     ^
+../src/Publicidad.c: In function ‘listarPantallasPorCuit’:
+../src/Publicidad.c:146:4: warning: passing argument 1 of ‘imprimirPantallaConCuit’ from incompatible pointer type [enabled by default]
+    imprimirPantallaConCuit(aPantallas, cantidadPantallas, aPublicidad[posicionActual].idPantalla, cuit);
+    ^
+In file included from ../src/Publicidad.c:12:0:
+../src/Publicidad.h:33:5: note: expected ‘struct sPantalla *’ but argument is of type ‘struct sPantalla *’
+ int imprimirPantallaConCuit(struct sPantalla *aPantallas, int cantidadPantallas,int idPantalla,char *cuit);
+     ^
+../src/Publicidad.c: At top level:
+../src/Publicidad.c:152:5: error: conflicting types for ‘imprimirPantallaConCuit’
+ int imprimirPantallaConCuit(struct sPantalla *aPantallas, int cantidadPantallas,int idPantalla,char *cuit){
+     ^
+In file included from ../src/Publicidad.c:12:0:
+../src/Publicidad.h:33:5: note: previous declaration of ‘imprimirPantallaConCuit’ was here
+ int imprimirPantallaConCuit(struct sPantalla *aPantallas, int cantidadPantallas,int idPantalla,char *cuit);
+     ^
+make: *** [src/Publicidad.o] Error 1
+01:31:00 **** Incremental Build of configuration Debug for project parcial1 ****
+make all 
+Building file: ../src/Publicidad.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Publicidad.d" -MT"src/Publicidad.d" -o "src/Publicidad.o" "../src/Publicidad.c"
+Finished building: ../src/Publicidad.c
+ 
+Building file: ../src/parcial1.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/parcial1.d" -MT"src/parcial1.d" -o "src/parcial1.o" "../src/parcial1.c"
+../src/parcial1.c: In function ‘main’:
+../src/parcial1.c:25:2: warning: implicit declaration of function ‘test’ [-Wimplicit-function-declaration]
+  test(aPantallas,QTY_PANTALLAS);
+  ^
+../src/parcial1.c: At top level:
+../src/parcial1.c:183:6: warning: conflicting types for ‘test’ [enabled by default]
+ void test(struct sPantalla p[], int cantidad)
+      ^
+../src/parcial1.c:25:2: note: previous implicit declaration of ‘test’ was here
+  test(aPantallas,QTY_PANTALLAS);
+  ^
+Finished building: ../src/parcial1.c
+ 
+Building target: parcial1
+Invoking: GCC C Linker
+gcc  -o "parcial1"  ./src/Pantalla.o ./src/Publicidad.o ./src/parcial1.o ./src/utn.o   
+Finished building target: parcial1
+ 
+01:31:51 **** Incremental Build of configuration Debug for project parcial1 ****
+make all 
+Building file: ../src/Publicidad.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Publicidad.d" -MT"src/Publicidad.d" -o "src/Publicidad.o" "../src/Publicidad.c"
+Finished building: ../src/Publicidad.c
+ 
+Building target: parcial1
+Invoking: GCC C Linker
+gcc  -o "parcial1"  ./src/Pantalla.o ./src/Publicidad.o ./src/parcial1.o ./src/utn.o   
+Finished building target: parcial1
+ 
+01:38:59 **** Incremental Build of configuration Debug for project parcial1 ****
+make all 
+Building file: ../src/parcial1.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/parcial1.d" -MT"src/parcial1.d" -o "src/parcial1.o" "../src/parcial1.c"
+../src/parcial1.c: In function ‘main’:
+../src/parcial1.c:25:2: warning: implicit declaration of function ‘test’ [-Wimplicit-function-declaration]
+  test(aPantallas,QTY_PANTALLAS);
+  ^
+../src/parcial1.c: At top level:
+../src/parcial1.c:183:6: warning: conflicting types for ‘test’ [enabled by default]
+ void test(struct sPantalla p[], int cantidad)
+      ^
+../src/parcial1.c:25:2: note: previous implicit declaration of ‘test’ was here
+  test(aPantallas,QTY_PANTALLAS);
+  ^
+Finished building: ../src/parcial1.c
+ 
+Building target: parcial1
+Invoking: GCC C Linker
+gcc  -o "parcial1"  ./src/Pantalla.o ./src/Publicidad.o ./src/parcial1.o ./src/utn.o   
+Finished building target: parcial1
+ 
+01:57:27 **** Incremental Build of configuration Debug for project parcial1 ****
+make all 
+Building file: ../src/Publicidad.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Publicidad.d" -MT"src/Publicidad.d" -o "src/Publicidad.o" "../src/Publicidad.c"
+Finished building: ../src/Publicidad.c
+ 
+Building target: parcial1
+Invoking: GCC C Linker
+gcc  -o "parcial1"  ./src/Pantalla.o ./src/Publicidad.o ./src/parcial1.o ./src/utn.o   
+Finished building target: parcial1
+ 
+02:06:16 **** Incremental Build of configuration Debug for project parcial1 ****
+make all 
+Building file: ../src/parcial1.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/parcial1.d" -MT"src/parcial1.d" -o "src/parcial1.o" "../src/parcial1.c"
+../src/parcial1.c: In function ‘main’:
+../src/parcial1.c:25:2: warning: implicit declaration of function ‘test’ [-Wimplicit-function-declaration]
+  test(aPantallas,QTY_PANTALLAS);
+  ^
+../src/parcial1.c:26:2: warning: implicit declaration of function ‘test2’ [-Wimplicit-function-declaration]
+  test2(aPublicidad, QTY_PANTALLAS)
+  ^
+../src/parcial1.c:27:2: error: expected ‘;’ before ‘do’
+  do {
+  ^
+../src/parcial1.c:22:6: warning: unused variable ‘id’ [-Wunused-variable]
+  int id;
+      ^
+../src/parcial1.c:21:7: warning: unused variable ‘conf’ [-Wunused-variable]
+  char conf;
+       ^
+../src/parcial1.c:20:6: warning: unused variable ‘opcion’ [-Wunused-variable]
+  int opcion;
+      ^
+../src/parcial1.c:17:21: warning: unused variable ‘bPublicidad’ [-Wunused-variable]
+  struct sPublicidad bPublicidad;
+                     ^
+../src/parcial1.c:13:19: warning: unused variable ‘bPantalla’ [-Wunused-variable]
+  struct sPantalla bPantalla;
+                   ^
+../src/parcial1.c: At top level:
+../src/parcial1.c:184:6: warning: conflicting types for ‘test’ [enabled by default]
+ void test(struct sPantalla p[], int cantidad)
+      ^
+../src/parcial1.c:25:2: note: previous implicit declaration of ‘test’ was here
+  test(aPantallas,QTY_PANTALLAS);
+  ^
+../src/parcial1.c:203:6: warning: conflicting types for ‘test2’ [enabled by default]
+ void test2(struct sPublicidad p[], int cantidad)
+      ^
+../src/parcial1.c:26:2: note: previous implicit declaration of ‘test2’ was here
+  test2(aPublicidad, QTY_PANTALLAS)
+  ^
+make: *** [src/parcial1.o] Error 1
+02:06:59 **** Incremental Build of configuration Debug for project parcial1 ****
+make all 
+Building file: ../src/parcial1.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/parcial1.d" -MT"src/parcial1.d" -o "src/parcial1.o" "../src/parcial1.c"
+../src/parcial1.c: In function ‘main’:
+../src/parcial1.c:25:2: warning: implicit declaration of function ‘test’ [-Wimplicit-function-declaration]
+  test(aPantallas,QTY_PANTALLAS);
+  ^
+../src/parcial1.c:26:2: warning: implicit declaration of function ‘test2’ [-Wimplicit-function-declaration]
+  test2(aPublicidad, QTY_PANTALLAS);
+  ^
+../src/parcial1.c: At top level:
+../src/parcial1.c:184:6: warning: conflicting types for ‘test’ [enabled by default]
+ void test(struct sPantalla p[], int cantidad)
+      ^
+../src/parcial1.c:25:2: note: previous implicit declaration of ‘test’ was here
+  test(aPantallas,QTY_PANTALLAS);
+  ^
+../src/parcial1.c:203:6: warning: conflicting types for ‘test2’ [enabled by default]
+ void test2(struct sPublicidad p[], int cantidad)
+      ^
+../src/parcial1.c:26:2: note: previous implicit declaration of ‘test2’ was here
+  test2(aPublicidad, QTY_PANTALLAS);
+  ^
+Finished building: ../src/parcial1.c
+ 
+Building target: parcial1
+Invoking: GCC C Linker
+gcc  -o "parcial1"  ./src/Pantalla.o ./src/Publicidad.o ./src/parcial1.o ./src/utn.o   
+Finished building target: parcial1
+ 
+02:07:13 **** Incremental Build of configuration Debug for project parcial1 ****
+make all 
+make: Nothing to be done for `all'.
+02:24:37 **** Incremental Build of configuration Debug for project parcial1 ****
+make all 
+Building file: ../src/Publicidad.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Publicidad.d" -MT"src/Publicidad.d" -o "src/Publicidad.o" "../src/Publicidad.c"
+Finished building: ../src/Publicidad.c
+ 
+Building target: parcial1
+Invoking: GCC C Linker
+gcc  -o "parcial1"  ./src/Pantalla.o ./src/Publicidad.o ./src/parcial1.o ./src/utn.o   
+Finished building target: parcial1
+ 
+02:24:46 **** Incremental Build of configuration Debug for project parcial1 ****
+make all 
+make: Nothing to be done for `all'.
+02:31:11 **** Incremental Build of configuration Debug for project parcial1 ****
+make all 
+make: Nothing to be done for `all'.
+02:31:20 **** Incremental Build of configuration Debug for project parcial1 ****
+make all 
+make: Nothing to be done for `all'.
+02:37:17 **** Incremental Build of configuration Debug for project parcial1 ****
+make all 
+Building file: ../src/Publicidad.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Publicidad.d" -MT"src/Publicidad.d" -o "src/Publicidad.o" "../src/Publicidad.c"
+Finished building: ../src/Publicidad.c
+ 
+Building target: parcial1
+Invoking: GCC C Linker
+gcc  -o "parcial1"  ./src/Pantalla.o ./src/Publicidad.o ./src/parcial1.o ./src/utn.o   
+Finished building target: parcial1
+ 
+17:13:23 **** Incremental Build of configuration Debug for project parcial1 ****
+make all 
+make: Nothing to be done for `all'.
+17:14:00 **** Incremental Build of configuration Debug for project parcial1 ****
+make all 
+make: Nothing to be done for `all'.
+17:25:15 **** Incremental Build of configuration Debug for project parcial1 ****
+make all 
+Building file: ../src/Publicidad.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Publicidad.d" -MT"src/Publicidad.d" -o "src/Publicidad.o" "../src/Publicidad.c"
+Finished building: ../src/Publicidad.c
+ 
+Building target: parcial1
+Invoking: GCC C Linker
+gcc  -o "parcial1"  ./src/Pantalla.o ./src/Publicidad.o ./src/parcial1.o ./src/utn.o   
+Finished building target: parcial1
+ 
+17:30:27 **** Incremental Build of configuration Debug for project parcial1 ****
+make all 
+Building file: ../src/Publicidad.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Publicidad.d" -MT"src/Publicidad.d" -o "src/Publicidad.o" "../src/Publicidad.c"
+Finished building: ../src/Publicidad.c
+ 
+Building target: parcial1
+Invoking: GCC C Linker
+gcc  -o "parcial1"  ./src/Pantalla.o ./src/Publicidad.o ./src/parcial1.o ./src/utn.o   
+Finished building target: parcial1
+ 

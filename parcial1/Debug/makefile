@@ -35,9 +35,10 @@ parcial1: $(OBJS) $(USER_OBJS)
 
 # Other Targets
 clean:
-	-$(RM) $(EXECUTABLES)$(OBJS)$(C_DEPS) parcial1
+	-$(RM) $(OBJS)$(C_DEPS)$(EXECUTABLES) parcial1
 	-@echo ' '
 
 .PHONY: all clean dependents
+.SECONDARY:
 
 -include ../makefile.targets
