@@ -131,6 +131,33 @@ int altaPublicidadPorId(struct sPublicidad *aArray, int cantidad,struct sPublici
 	return retorno;
 }
 
+
+int listarPantallasPorCuit(struct sPantalla *aPantallas,int cantidadPantallas,struct sPublicidad *aPublicidad,int cantidadPublicidad, char *cuit )
+{
+	int retorno = -1;
+	int i;
+	if(aPantallas != NULL && cantidadPantallas>0 && aPublicidad != NULL && cantidadPublicidad >0 && cuit != NULL){
+		for(i=0;i<cantidadPublicidad;i++){
+			if(strncmp(aPublicidad[i].cuit, cuit, 50) == 0 && aPublicidad[i].status == STATUS_NOT_EMPTY){
+				imprimirPantallaConCuit(aPantallas, cantidadPantallas, aPublicidad[i].idPantalla, cuit);
+			}
+		}
+
+	}
+}
+int imprimirPantallaConCuit(struct sPantalla *aPantallas, int cantidadPantallas,int idPantalla,char *cuit){
+	int index;
+	int retorno = -1;
+	index=buscarPantallaPorId(aPantallas, cantidadPantallas, idPantalla);
+	if(index != -1){
+		printf("id - %d - nombre - %s - direccion - %s - precio - %f - tipo - %d- cuit - %s \n"
+				,aPantallas[index].id,aPantallas[index].nombre,aPantallas[index].direccion,aPantallas[index].precio,aPantallas[index].tipo,cuit );
+	}
+
+	return retorno;
+}
+
+/*Anulado
 int listarPantallasPorCuit(struct sPantalla *aPantallas,int cantidadPantallas,struct sPublicidad *aPublicidad,int cantidadPublicidad, char *cuit )
 {
 	int retorno = -1;
@@ -151,17 +178,6 @@ int listarPantallasPorCuit(struct sPantalla *aPantallas,int cantidadPantallas,st
 	}
 	return retorno;
 }
-int imprimirPantallaConCuit(struct sPantalla *aPantallas, int cantidadPantallas,int idPantalla,char *cuit){
-	int index;
-	int retorno = -1;
-	index=buscarPantallaPorId(aPantallas, cantidadPantallas, idPantalla);
-	if(index != -1){
-		printf("id - %d - nombre - %s - direccion - %s - precio - %f - tipo - %d- cuit - %s \n"
-				,aPantallas[index].id,aPantallas[index].nombre,aPantallas[index].direccion,aPantallas[index].precio,aPantallas[index].tipo,cuit );
-	}
-
-	return retorno;
-}
 
 int buscarPublicidadPorCuit(struct sPublicidad *aArray, int cantidad,char *cuit){
 	int retorno = -1;
@@ -176,7 +192,7 @@ int buscarPublicidadPorCuit(struct sPublicidad *aArray, int cantidad,char *cuit)
 	}
 	return retorno;
 }
-
+*/
 /*
 int bajaPantallaPorId(struct sPantalla *aArray, int cantidad,int id){
 	int retorno = -1;
