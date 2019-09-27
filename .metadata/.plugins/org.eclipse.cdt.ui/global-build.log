@@ -1,22 +1,157 @@
-00:20:47 **** Incremental Build of configuration Debug for project parcial1 ****
+21:30:08 **** Incremental Build of configuration Debug for project parcial1 ****
 make all 
 Building file: ../src/Publicidad.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Publicidad.d" -MT"src/Publicidad.d" -o "src/Publicidad.o" "../src/Publicidad.c"
-../src/Publicidad.c: In function ‘listarPantallasPorCuit’:
-../src/Publicidad.c:137:6: warning: unused variable ‘retorno’ [-Wunused-variable]
-  int retorno = -1;
-      ^
-../src/Publicidad.c:147:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Publicidad.d" -MT"src/Publicidad.o" -o "src/Publicidad.o" "../src/Publicidad.c"
+../src/Publicidad.c: In function ‘consultaFacturacion’:
+../src/Publicidad.c:242:41: warning: format ‘%f’ expects argument of type ‘double’, but argument 4 has type ‘int’ [-Wformat=]
+      printf("id %d - nombre %s - monto %f", aPantallas[indexPantalla].id, aPantallas[indexPantalla].nombre,monto);
+                                         ^
 Finished building: ../src/Publicidad.c
+ 
+Building file: ../src/parcial1.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/parcial1.d" -MT"src/parcial1.o" -o "src/parcial1.o" "../src/parcial1.c"
+../src/parcial1.c: In function ‘main’:
+../src/parcial1.c:25:27: warning: passing argument 1 of ‘initLugarLibrePublicidad’ from incompatible pointer type [-Wincompatible-pointer-types]
+  initLugarLibrePublicidad(aPantallas, QTY_PANTALLAS);
+                           ^~~~~~~~~~
+In file included from ../src/parcial1.c:7:0:
+../src/Publicidad.h:28:5: note: expected ‘struct sPublicidad *’ but argument is of type ‘struct sPantalla *’
+ int initLugarLibrePublicidad(struct sPublicidad *aArray, int cantidad);
+     ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/parcial1.c:26:2: warning: implicit declaration of function ‘test’ [-Wimplicit-function-declaration]
+  test(aPantallas,QTY_PANTALLAS);
+  ^~~~
+../src/parcial1.c:27:2: warning: implicit declaration of function ‘test2’ [-Wimplicit-function-declaration]
+  test2(aPublicidad, QTY_PANTALLAS);
+  ^~~~~
+../src/parcial1.c: At top level:
+../src/parcial1.c:194:6: warning: conflicting types for ‘test’
+ void test(struct sPantalla p[], int cantidad)
+      ^~~~
+../src/parcial1.c:26:2: note: previous implicit declaration of ‘test’ was here
+  test(aPantallas,QTY_PANTALLAS);
+  ^~~~
+../src/parcial1.c:213:6: warning: conflicting types for ‘test2’
+ void test2(struct sPublicidad p[], int cantidad)
+      ^~~~~
+../src/parcial1.c:27:2: note: previous implicit declaration of ‘test2’ was here
+  test2(aPublicidad, QTY_PANTALLAS);
+  ^~~~~
+Finished building: ../src/parcial1.c
  
 Building target: parcial1
 Invoking: GCC C Linker
 gcc  -o "parcial1"  ./src/Pantalla.o ./src/Publicidad.o ./src/parcial1.o ./src/utn.o   
 Finished building target: parcial1
  
-00:20:57 **** Incremental Build of configuration Debug for project parcial1 ****
+21:30:28 **** Incremental Build of configuration Debug for project parcial1 ****
 make all 
-make: Nothing to be done for `all'.
+make: No se hace nada para 'all'.
+21:30:58 **** Incremental Build of configuration Debug for project parcial1 ****
+make all 
+make: No se hace nada para 'all'.
+21:31:43 **** Incremental Build of configuration Debug for project parcial1 ****
+make all 
+Building file: ../src/parcial1.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/parcial1.d" -MT"src/parcial1.o" -o "src/parcial1.o" "../src/parcial1.c"
+../src/parcial1.c: In function ‘main’:
+../src/parcial1.c:25:27: warning: passing argument 1 of ‘initLugarLibrePublicidad’ from incompatible pointer type [-Wincompatible-pointer-types]
+  initLugarLibrePublicidad(aPantallas, QTY_PANTALLAS);
+                           ^~~~~~~~~~
+In file included from ../src/parcial1.c:7:0:
+../src/Publicidad.h:28:5: note: expected ‘struct sPublicidad *’ but argument is of type ‘struct sPantalla *’
+ int initLugarLibrePublicidad(struct sPublicidad *aArray, int cantidad);
+     ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/parcial1.c:26:2: warning: implicit declaration of function ‘test’ [-Wimplicit-function-declaration]
+  test(aPantallas,QTY_PANTALLAS);
+  ^~~~
+../src/parcial1.c:27:2: warning: implicit declaration of function ‘test2’ [-Wimplicit-function-declaration]
+  test2(aPublicidad, QTY_PANTALLAS);
+  ^~~~~
+../src/parcial1.c: At top level:
+../src/parcial1.c:195:6: warning: conflicting types for ‘test’
+ void test(struct sPantalla p[], int cantidad)
+      ^~~~
+../src/parcial1.c:26:2: note: previous implicit declaration of ‘test’ was here
+  test(aPantallas,QTY_PANTALLAS);
+  ^~~~
+../src/parcial1.c:214:6: warning: conflicting types for ‘test2’
+ void test2(struct sPublicidad p[], int cantidad)
+      ^~~~~
+../src/parcial1.c:27:2: note: previous implicit declaration of ‘test2’ was here
+  test2(aPublicidad, QTY_PANTALLAS);
+  ^~~~~
+Finished building: ../src/parcial1.c
+ 
+Building target: parcial1
+Invoking: GCC C Linker
+gcc  -o "parcial1"  ./src/Pantalla.o ./src/Publicidad.o ./src/parcial1.o ./src/utn.o   
+Finished building target: parcial1
+ 
+21:33:16 **** Incremental Build of configuration Debug for project parcial1 ****
+make all 
+Building file: ../src/parcial1.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/parcial1.d" -MT"src/parcial1.o" -o "src/parcial1.o" "../src/parcial1.c"
+../src/parcial1.c: In function ‘main’:
+../src/parcial1.c:26:2: warning: implicit declaration of function ‘test’ [-Wimplicit-function-declaration]
+  test(aPantallas,QTY_PANTALLAS);
+  ^~~~
+../src/parcial1.c:27:2: warning: implicit declaration of function ‘test2’ [-Wimplicit-function-declaration]
+  test2(aPublicidad, QTY_PANTALLAS);
+  ^~~~~
+../src/parcial1.c: At top level:
+../src/parcial1.c:195:6: warning: conflicting types for ‘test’
+ void test(struct sPantalla p[], int cantidad)
+      ^~~~
+../src/parcial1.c:26:2: note: previous implicit declaration of ‘test’ was here
+  test(aPantallas,QTY_PANTALLAS);
+  ^~~~
+../src/parcial1.c:214:6: warning: conflicting types for ‘test2’
+ void test2(struct sPublicidad p[], int cantidad)
+      ^~~~~
+../src/parcial1.c:27:2: note: previous implicit declaration of ‘test2’ was here
+  test2(aPublicidad, QTY_PANTALLAS);
+  ^~~~~
+Finished building: ../src/parcial1.c
+ 
+Building target: parcial1
+Invoking: GCC C Linker
+gcc  -o "parcial1"  ./src/Pantalla.o ./src/Publicidad.o ./src/parcial1.o ./src/utn.o   
+Finished building target: parcial1
+ 
+21:34:31 **** Incremental Build of configuration Debug for project parcial1 ****
+make all 
+Building file: ../src/parcial1.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/parcial1.d" -MT"src/parcial1.o" -o "src/parcial1.o" "../src/parcial1.c"
+../src/parcial1.c: In function ‘main’:
+../src/parcial1.c:26:2: warning: implicit declaration of function ‘test’ [-Wimplicit-function-declaration]
+  test(aPantallas,QTY_PANTALLAS);
+  ^~~~
+../src/parcial1.c:27:2: warning: implicit declaration of function ‘test2’ [-Wimplicit-function-declaration]
+  test2(aPublicidad, QTY_PUBLICIDAD);
+  ^~~~~
+../src/parcial1.c: At top level:
+../src/parcial1.c:195:6: warning: conflicting types for ‘test’
+ void test(struct sPantalla p[], int cantidad)
+      ^~~~
+../src/parcial1.c:26:2: note: previous implicit declaration of ‘test’ was here
+  test(aPantallas,QTY_PANTALLAS);
+  ^~~~
+../src/parcial1.c:214:6: warning: conflicting types for ‘test2’
+ void test2(struct sPublicidad p[], int cantidad)
+      ^~~~~
+../src/parcial1.c:27:2: note: previous implicit declaration of ‘test2’ was here
+  test2(aPublicidad, QTY_PUBLICIDAD);
+  ^~~~~
+Finished building: ../src/parcial1.c
+ 
+Building target: parcial1
+Invoking: GCC C Linker
+gcc  -o "parcial1"  ./src/Pantalla.o ./src/Publicidad.o ./src/parcial1.o ./src/utn.o   
+Finished building target: parcial1
+ 

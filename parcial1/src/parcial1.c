@@ -22,8 +22,9 @@ int main(void) {
 	int id;
 
 	initLugarLibrePantalla(aPantallas, QTY_PANTALLAS);
+	initLugarLibrePublicidad(aPublicidad, QTY_PUBLICIDAD);
 	test(aPantallas,QTY_PANTALLAS);
-	test2(aPublicidad, QTY_PANTALLAS);
+	test2(aPublicidad, QTY_PUBLICIDAD);
 	do {
 
 		printf( "1. Alta de pantallas\n"
@@ -168,6 +169,16 @@ int main(void) {
 			listarPantallasPorCuit(aPantallas,QTY_PANTALLAS,aPublicidad,QTY_PUBLICIDAD, bPublicidad.cuit );
 
 
+			break;
+
+
+		case 7:
+			if (getString(bPublicidad.cuit, "Ingrese el cuit\n", "Error", 1,
+					49, 2) == -1) {
+				printf("Error en el cuit\n");
+				break;
+			}
+			consultaFacturacion(aPantallas,QTY_PANTALLAS,aPublicidad,QTY_PUBLICIDAD, bPublicidad.cuit);
 			break;
 		case 9:
 			imprimirArrayPantallas(aPantallas, QTY_PANTALLAS);
