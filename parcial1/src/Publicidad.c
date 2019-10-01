@@ -237,6 +237,11 @@ int modificarPublicidadPorId(struct sPublicidad *aArray, int cantidad,struct sPu
 	return retorno;
 }
 
+<<<<<<< HEAD
+=======
+*/
+
+>>>>>>> 1f6773074bf0855761870fefb6cd32a0e42cd1c1
 int consultaFacturacion(struct sPantalla *aPantallas,int cantidadPantallas,struct sPublicidad *aPublicidad,int cantidadPublicidad,char *cuit){
 	int retorno = -1;
 	int i;
