@@ -137,6 +137,7 @@ int listarPantallasPorCuit(struct sPantalla *aPantallas,int cantidadPantallas,st
 	int retorno = -1;
 	int i;
 	if(aPantallas != NULL && cantidadPantallas>0 && aPublicidad != NULL && cantidadPublicidad >0 && cuit != NULL){
+		retorno = 0;
 		for(i=0;i<cantidadPublicidad;i++){
 			if(strncmp(aPublicidad[i].cuit, cuit, 50) == 0 && aPublicidad[i].status == STATUS_NOT_EMPTY){
 				imprimirPantallaConCuit(aPantallas, cantidadPantallas, aPublicidad[i].idPantalla, cuit);
@@ -144,19 +145,34 @@ int listarPantallasPorCuit(struct sPantalla *aPantallas,int cantidadPantallas,st
 		}
 
 	}
+	return retorno;
 }
 int imprimirPantallaConCuit(struct sPantalla *aPantallas, int cantidadPantallas,int idPantalla,char *cuit){
 	int index;
 	int retorno = -1;
-	index=buscarPantallaPorId(aPantallas, cantidadPantallas, idPantalla);
-	if(index != -1){
-		printf("id - %d - nombre - %s - direccion - %s - precio - %f - tipo - %d- cuit - %s \n"
-				,aPantallas[index].id,aPantallas[index].nombre,aPantallas[index].direccion,aPantallas[index].precio,aPantallas[index].tipo,cuit );
+	if(aPantallas != NULL && cantidadPantallas>0 && idPantalla>=0 && cuit!=NULL){
+		retorno = 0;
+		index=buscarPantallaPorId(aPantallas, cantidadPantallas, idPantalla);
+		if(index != -1){
+			printf("id - %d - nombre - %s - direccion - %s - precio - %f - tipo - %d- cuit - %s \n"
+					,aPantallas[index].id,aPantallas[index].nombre,aPantallas[index].direccion,aPantallas[index].precio,aPantallas[index].tipo,cuit );
+		}
 	}
-
 	return retorno;
 }
-
+int buscarPublicidadPorCuitYIdPantalla(struct sPublicidad *aArray, int cantidad,char *cuit,int idPantalla){
+	int retorno = -1;
+	int i;
+	if(aArray!=NULL && cantidad > 0 ){
+		for(i=0;i<cantidad;i++){
+			if(strncmp(aArray[i].cuit, cuit, 50) == 0 && aArray[i].idPantalla == idPantalla && aArray[i].status == STATUS_NOT_EMPTY){
+				retorno = i;
+				break;
+			}
+		}
+	}
+	return retorno;
+}
 /*Anulado
 int listarPantallasPorCuit(struct sPantalla *aPantallas,int cantidadPantallas,struct sPublicidad *aPublicidad,int cantidadPublicidad, char *cuit )
 {
@@ -206,12 +222,12 @@ int bajaPantallaPorId(struct sPantalla *aArray, int cantidad,int id){
 	}
 	return retorno;
 }
-
-int modificarPantallaPorId(struct sPantalla *aArray, int cantidad,struct sPantalla item){
+*/
+int modificarPublicidadPorId(struct sPublicidad *aArray, int cantidad,struct sPublicidad item){
 	int retorno = -1;
 	int index;
 	if(aArray!=NULL && cantidad>0){
-		index = buscarPantallaPorId(aArray, cantidad, item.id);
+		index = buscarPublicidadPorId(aArray, cantidad, item.id);
 		if(index!=-1){
 			aArray[index] = item;
 			aArray[index].status = STATUS_NOT_EMPTY;
@@ -221,4 +237,26 @@ int modificarPantallaPorId(struct sPantalla *aArray, int cantidad,struct sPantal
 	return retorno;
 }
 
-*/
+int consultaFacturacion(struct sPantalla *aPantallas,int cantidadPantallas,struct sPublicidad *aPublicidad,int cantidadPublicidad,char *cuit){
+	int retorno = -1;
+	int i;
+	int indexPantalla;
+	float monto;
+	if(aPantallas != NULL && cantidadPantallas>0 && aPublicidad != NULL && cantidadPublicidad >0 && cuit != NULL){
+		retorno = 0;
+		for(i=0;i<cantidadPublicidad;i++){
+			if(aPublicidad[i].status == STATUS_NOT_EMPTY && strncmp(aPublicidad[i].cuit, cuit, 50) == 0 ){
+				indexPantalla = buscarPantallaPorId(aPantallas, cantidadPantallas,aPublicidad[i].idPantalla);
+				if(indexPantalla==-1){
+					printf("referencia con pantalla rota\n");
+				}else{
+					monto = aPantallas[indexPantalla].precio * aPublicidad[i].dias;
+					printf("id %d - nombre %s - monto %f\n", aPantallas[indexPantalla].id, aPantallas[indexPantalla].nombre,monto);
+				}
+			}
+		}
+
+	}
+	return retorno;
+}
+

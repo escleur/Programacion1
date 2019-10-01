@@ -6,6 +6,10 @@
 #include "Pantalla.h"
 #include "Publicidad.h"
 
+void cargaForzadaPantallas(struct sPantalla p[], int cantidad);
+void cargaForzadaPublicidad(struct sPublicidad p[], int cantidad);
+
+
 int main(void) {
 
 	struct sPantalla aPantallas[QTY_PANTALLAS];
@@ -20,10 +24,12 @@ int main(void) {
 	int opcion;
 	char conf;
 	int id;
+	int index;
 
 	initLugarLibrePantalla(aPantallas, QTY_PANTALLAS);
-	test(aPantallas,QTY_PANTALLAS);
-	test2(aPublicidad, QTY_PANTALLAS);
+	initLugarLibrePublicidad(aPublicidad, QTY_PUBLICIDAD);
+	cargaForzadaPantallas(aPantallas,QTY_PANTALLAS);
+	cargaForzadaPublicidad(aPublicidad, QTY_PANTALLAS);
 	do {
 
 		printf( "1. Alta de pantallas\n"
@@ -31,6 +37,7 @@ int main(void) {
 				"3. Baja de pantallas\n"
 				"4. Alta publicidad\n"
 				"5. Modificar publicidad\n"
+				"7. Mostrar costo de contrataciones de un cliente\n"
 				"9. Listado de pantallas\n"
 				"0. Salir\n");
 
@@ -111,16 +118,28 @@ int main(void) {
 			printf("Baja\n");
 			getInt(&id,"Ingrese el id para dar de baja\n","Error\n",0,100000,2);
 			getChar(&conf,"Ingrese s para confirmar la baja\n","Error\n",'a', 'z', 2);
-			if(bajaPantallaPorId(aPantallas,QTY_PANTALLAS,id)==0){
-				printf("Baja exitosa\n");
-			}else{
-				printf("Error al dar baja, verifique que el id existe\n");
+			if(conf=='s'){
+				if(bajaPantallaPorId(aPantallas,QTY_PANTALLAS,id)==0){
+					printf("Baja exitosa\n");
+				}else{
+					printf("Error al dar baja, verifique que el id existe\n");
+				}
 			}
 			break;
 		case 4:
 			printf("Alta de publicidad\n");
 			if (buscarLugarLibrePublicidad(aPublicidad, QTY_PUBLICIDAD) == -1) {
 				printf("Error no hay mas lugar para publicidad\n");
+				break;
+			}
+			imprimirArrayPantallas(aPantallas, QTY_PANTALLAS);
+			if (getInt(&bPublicidad.idPantalla, "Ingrese el id de la pantalla\n", "Error",
+					1, 1000000, 2) == -1) {
+				printf("Error en el id\n");
+				break;
+			}
+			if(buscarPantallaPorId(aPantallas,QTY_PANTALLAS, bPublicidad.idPantalla)== -1){
+				printf("Error id de pantalla inexistente");
 				break;
 			}
 			if (getString(bPublicidad.cuit, "Ingrese el cuit\n", "Error", 1,
@@ -133,19 +152,9 @@ int main(void) {
 				printf("Error en la cantidad de dias\n");
 				break;
 			}
-			if (getString(bPantalla.direccion, "Ingrese el nombre del archivo\n",
+			if (getString(bPublicidad.nombreArchivo, "Ingrese el nombre del archivo\n",
 					"Error", 1, 49, 2) == -1) {
 				printf("Error en el nombre del archivo\n");
-				break;
-			}
-			imprimirArrayPantallas(aPantallas, QTY_PANTALLAS);
-			if (getInt(&bPublicidad.id, "Ingrese el id de la pantalla\n", "Error",
-					1, 1000000, 2) == -1) {
-				printf("Error en el id\n");
-				break;
-			}
-			if(buscarPantallaPorId(aPantallas,QTY_PANTALLAS, bPublicidad.id)== -1){
-				printf("Error id de pantalla inexistente");
 				break;
 			}
 
@@ -166,9 +175,38 @@ int main(void) {
 				break;
 			}
 			listarPantallasPorCuit(aPantallas,QTY_PANTALLAS,aPublicidad,QTY_PUBLICIDAD, bPublicidad.cuit );
+			if (getInt(&bPublicidad.idPantalla, "Ingrese el id de la pantalla\n", "Error",
+					1, 1000000, 2) == -1) {
+				printf("Error en el id\n");
+				break;
+			}
 
+			index = buscarPublicidadPorCuitYIdPantalla(aPublicidad, QTY_PUBLICIDAD,bPublicidad.cuit,bPublicidad.idPantalla);
+			if(index==-1){
+				printf("El cuit no tiene esa pantalla");
+				break;
+			}
+			bPublicidad = aPublicidad[index];
+			if (getInt(&bPublicidad.dias, "Ingrese la cantidad de dias\n", "Error",
+					1, 1000, 2) == -1) {
+				printf("Error en la cantidad de dias\n");
+				break;
+			}
+			if( modificarPublicidadPorId(aPublicidad, QTY_PUBLICIDAD,bPublicidad)==-1){
+				printf("Error en la modificacion");
+			}
 
 			break;
+
+		case 7:
+			if (getString(bPublicidad.cuit, "Ingrese el cuit\n", "Error", 1,
+					49, 2) == -1) {
+				printf("Error en el cuit\n");
+				break;
+			}
+			consultaFacturacion(aPantallas,QTY_PANTALLAS,aPublicidad,QTY_PUBLICIDAD, bPublicidad.cuit);
+			break;
+
 		case 9:
 			imprimirArrayPantallas(aPantallas, QTY_PANTALLAS);
 			break;
@@ -181,7 +219,7 @@ int main(void) {
 
 
 
-void test(struct sPantalla p[], int cantidad)
+void cargaForzadaPantallas(struct sPantalla p[], int cantidad)
 {
 	char aNombre[][50]={"Florida","Lavalle","Cabildo","Entre Rios","Callao"};
 	char aDireccion[][50]={"Florida 300","Lavalle 500","Diagonal norte 499","Entre Rios 387","Callao 361"};
@@ -200,7 +238,7 @@ void test(struct sPantalla p[], int cantidad)
 
 }
 
-void test2(struct sPublicidad p[], int cantidad)
+void cargaForzadaPublicidad(struct sPublicidad p[], int cantidad)
 {
 	char aCuit[][50]={"26194002","26194002","777","26194002","44434"};
 	int aDias[]={5,3,7,9,5};
