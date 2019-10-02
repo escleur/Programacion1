@@ -27,7 +27,7 @@ struct sPublicidad
 
 int initLugarLibrePublicidad(struct sPublicidad *aArray, int cantidad);
 
-int imprimirArrayPublicidad(struct sPublicidad *aArray, int cantidad);
+int imprimirArrayPublicidad(struct sPublicidad *aArray, int cantidad,struct sPantalla *aArray2, int cantidad2);
 int ordenarArrayPublicidad(struct sPublicidad *aArray, int cantidad);
 int listarPantallasPorCuit(struct sPantalla *aPantallas,int cantidadPantallas,struct sPublicidad *aPublicidad,int cantidadPublicidad, char *cuit );
 int imprimirPantallaConCuit(struct sPantalla *aPantallas, int cantidadPantallas,int idPantalla,char *cuit);
@@ -40,5 +40,6 @@ int altaPublicidadPorId(struct sPublicidad *aArray, int cantidad,struct sPublici
 int bajaPublicidadPorId(struct sPublicidad *aArray, int cantidad,int id);
 int modificarPublicidadPorId(struct sPublicidad *aArray, int cantidad,struct sPublicidad item);
 int consultaFacturacion(struct sPantalla *aPantallas,int cantidadPantallas,struct sPublicidad *aPublicidad,int cantidadPublicidad,char *cuit);
+int ordenarPublicidad(struct sPublicidad *array, int limite);
 
 #endif /* PUBLICIDAD_H_ */

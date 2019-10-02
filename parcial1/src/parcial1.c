@@ -28,13 +28,8 @@ int main(void) {
 
 	initLugarLibrePantalla(aPantallas, QTY_PANTALLAS);
 	initLugarLibrePublicidad(aPublicidad, QTY_PUBLICIDAD);
-<<<<<<< HEAD
 	cargaForzadaPantallas(aPantallas,QTY_PANTALLAS);
 	cargaForzadaPublicidad(aPublicidad, QTY_PANTALLAS);
-=======
-	test(aPantallas,QTY_PANTALLAS);
-	test2(aPublicidad, QTY_PUBLICIDAD);
->>>>>>> 1f6773074bf0855761870fefb6cd32a0e42cd1c1
 	do {
 
 		printf( "1. Alta de pantallas\n"
@@ -43,10 +38,13 @@ int main(void) {
 				"4. Alta publicidad\n"
 				"5. Modificar publicidad\n"
 				"7. Mostrar costo de contrataciones de un cliente\n"
+				"8. Mostrar contrataciones\n"
 				"9. Listado de pantallas\n"
+				"10. Informe\n"
+				"11. Informe\n"
 				"0. Salir\n");
 
-		getInt(&opcion, "Ingrese la opcion\n", "Error\n", 0, 9, 2);
+		getInt(&opcion, "Ingrese la opcion\n", "Error\n", 0, 11, 2);
 
 		switch (opcion) {
 		case 1:
@@ -203,10 +201,6 @@ int main(void) {
 
 			break;
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 1f6773074bf0855761870fefb6cd32a0e42cd1c1
 		case 7:
 			if (getString(bPublicidad.cuit, "Ingrese el cuit\n", "Error", 1,
 					49, 2) == -1) {
@@ -215,12 +209,14 @@ int main(void) {
 			}
 			consultaFacturacion(aPantallas,QTY_PANTALLAS,aPublicidad,QTY_PUBLICIDAD, bPublicidad.cuit);
 			break;
-<<<<<<< HEAD
-
-=======
->>>>>>> 1f6773074bf0855761870fefb6cd32a0e42cd1c1
+		case 8:
+			imprimirArrayPublicidad(aPublicidad, QTY_PUBLICIDAD,aPantallas, QTY_PANTALLAS);
+			break;
 		case 9:
 			imprimirArrayPantallas(aPantallas, QTY_PANTALLAS);
+			break;
+		case 10:
+			corteControl(aPublicidad, QTY_PUBLICIDAD);
 			break;
 		}
 

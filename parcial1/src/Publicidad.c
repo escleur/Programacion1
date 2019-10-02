@@ -55,25 +55,27 @@ int ordenarArrayPantallas(struct sPantalla *aArray, int cantidad){
 	return retorno;
 }
 */
-/*
-int imprimirArrayPantallas(struct sPantalla *aArray, int cantidad){
+
+int imprimirArrayPublicidad(struct sPublicidad *aArray, int cantidad,struct sPantalla *aArray2, int cantidad2){
 	int i;
+	int indexPantalla;
 	int retorno = -1;
 	if(aArray != NULL && cantidad>0)
 	{
 		retorno = 0;
-		printf("id     Nombre    Direccion    Precio     Tipo\n");
+		printf("id     Nombre de Pantalla    Nombre del Video    Cantidad de Dias     Cuit de cliente\n");
 		for(i=0;i<cantidad;i++)
 		{
 			if(aArray[i].status == STATUS_NOT_EMPTY){
-				printf("%d -- %s -- %s -- %f -- %d \n",aArray[i].id,aArray[i].nombre,aArray[i].direccion,aArray[i].precio,aArray[i].tipo);
+				indexPantalla = buscarPantallaPorId(aArray2,cantidad2,aArray[i].idPantalla);
+				printf("%d -- %s -- %s -- %d -- %s \n",aArray[i].id,aArray2[indexPantalla].nombre,aArray[i].nombreArchivo,aArray[i].dias,aArray[i].cuit);
 			}
 
 		}
 	}
 	return retorno;
 }
-*/
+
 int initLugarLibrePublicidad(struct sPublicidad *aArray, int cantidad){
 	int i;
 	int retorno = -1;
@@ -237,11 +239,6 @@ int modificarPublicidadPorId(struct sPublicidad *aArray, int cantidad,struct sPu
 	return retorno;
 }
 
-<<<<<<< HEAD
-=======
-*/
-
->>>>>>> 1f6773074bf0855761870fefb6cd32a0e42cd1c1
 int consultaFacturacion(struct sPantalla *aPantallas,int cantidadPantallas,struct sPublicidad *aPublicidad,int cantidadPublicidad,char *cuit){
 	int retorno = -1;
 	int i;
@@ -265,3 +262,31 @@ int consultaFacturacion(struct sPantalla *aPantallas,int cantidadPantallas,struc
 	return retorno;
 }
 
+int ordenarPublicidad(struct sPublicidad *array, int limite){
+	int retorno = -1;
+	int i;
+	int j;
+	int flagOrdeno;
+	struct sPublicidad swap;
+
+	if(array != NULL && limite > 0){
+		retorno = 0;
+		for(i=1; i<limite; i++){
+			j=i;
+			flagOrdeno = 1;
+			while(flagOrdeno != 0 && j!=0){
+				flagOrdeno = 0;
+
+				if(strcmp(array[j-1].cuit, array[j].cuit) > 0){
+					swap = array[j-1];
+					array[j-1] = array[j];
+					array[j] = swap;
+					flagOrdeno = 1;
+				}
+				j--;
+			}
+		}
+
+	}
+	return 0;
+}
