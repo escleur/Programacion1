@@ -278,7 +278,7 @@ int ordenarPublicidad(struct sPublicidad *array, int limite){
 				flagOrdeno = 0;
 
 				if((	array[j-1].status == STATUS_EMPTY &&
-						array[j-1].status == STATUS_NOT_EMPTY) ||
+						array[j].status == STATUS_NOT_EMPTY) ||
 						strcmp(array[j-1].cuit, array[j].cuit) > 0){
 					swap = array[j-1];
 					array[j-1] = array[j];
@@ -300,25 +300,36 @@ corteControl(struct sPublicidad *aPublicidad, int cantidadPublicidad, struct sPa
 	float importe=0;
 	int flagPrimero = 1;
 	struct sPublicidad bPublicidadAnterior;
+
 	int contador = 0;
 	if(aPublicidad != NULL && cantidadPublicidad > 0){
 		ordenarPublicidad(aPublicidad, cantidadPublicidad);
 
 		for(i=0;i<cantidadPublicidad;i++){
+
 			if(aPublicidad[i].status == STATUS_EMPTY){
-				break;
+				continue;
 			}
+			if(flagPrimero){
+				bPublicidadAnterior = aPublicidad[i];
 
-			if(strncmp(bPublicidadAnterior.cuit, aPublicidad[i].cuit, 50)==0){
-				contador++;
-				indexPantalla = buscarPantallaPorId(aPantallas, cantidadPantalla);
-				importe += aPublicidad[i].dias * aPantallas[indexPantalla].precio;
+				printf("Cuit: %s - total contrataciones: %d" ,aPublicidad[i].cuit,
+						contarContrataciones(aPublicidad, cantidadPublicidad,aPublicidad[i].cuit));
+				flagPrimero = 0;
+
 			}else{
-				if(!flagPrimero)
-					printf()
-			}
-			if(flagDistinto){
+				if(strncmp(bPublicidadAnterior.cuit, aPublicidad[i].cuit, 50)==0){
 
+
+					indexPantalla = buscarPantallaPorId(aPantallas, cantidadPantalla, aPublicidad[i].idPantalla);
+					importe = aPublicidad[i].dias * aPantallas[indexPantalla].precio;
+					printf("Contratacion: %d Importe %f",aPublicidad[i].id,importe);
+				}else{
+					printf("Cuit: %s - total contrataciones: %d" ,aPublicidad[i].cuit,
+							contarContrataciones(aPublicidad, cantidadPublicidad,aPublicidad[i].cuit));
+					bPublicidadAnterior = aPublicidad[i];
+
+				}
 			}
 		}
 
@@ -327,6 +338,22 @@ corteControl(struct sPublicidad *aPublicidad, int cantidadPublicidad, struct sPa
 }
 
 
+int contarContrataciones(struct sPublicidad *aPublicidad, int cantidadPublicidad,char *cuit)
+{
+	int i;
+	int contador;
+	int retorno = -1;
+	if(aPublicidad != NULL && cantidadPublicidad > 0){
+		for(i=0;i<cantidadPublicidad;i++){
+			if(aPublicidad[i].status == STATUS_NOT_EMPTY && strncmp(cuit, aPublicidad[i].cuit,50)==0){
+				contador++;
+			}
+		}
+		retorno = contador;
+	}
+	return retorno;
+
+}
 
 
 
