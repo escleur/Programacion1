@@ -42,5 +42,6 @@ int modificarPublicidadPorId(struct sPublicidad *aArray, int cantidad,struct sPu
 int consultaFacturacion(struct sPantalla *aPantallas,int cantidadPantallas,struct sPublicidad *aPublicidad,int cantidadPublicidad,char *cuit);
 int ordenarPublicidad(struct sPublicidad *array, int limite);
 int contarContrataciones(struct sPublicidad *aPublicidad, int cantidadPublicidad,char *cuit);
-
+int corteControl(struct sPublicidad *aPublicidad, int cantidadPublicidad, struct sPantalla *aPantallas,int cantidadPantalla);
+int maximoFacturacion(struct sPublicidad *aPublicidad, int cantidadPublicidad, struct sPantalla *aPantallas,int cantidadPantalla);
 #endif /* PUBLICIDAD_H_ */

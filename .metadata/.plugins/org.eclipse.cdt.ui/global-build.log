@@ -1,192 +1,13 @@
-21:07:41 **** Build of configuration Debug for project parcial1 ****
-make all 
-Building file: ../src/Pantalla.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Pantalla.d" -MT"src/Pantalla.o" -o "src/Pantalla.o" "../src/Pantalla.c"
-Finished building: ../src/Pantalla.c
- 
-Building file: ../src/Publicidad.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Publicidad.d" -MT"src/Publicidad.o" -o "src/Publicidad.o" "../src/Publicidad.c"
-../src/Publicidad.c:296:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
- corteControl(struct sPublicidad *aPublicidad, int cantidadPublicidad, struct sPantalla *aPantallas,int cantidadPantalla){
- ^~~~~~~~~~~~
-../src/Publicidad.c: In function ‘corteControl’:
-../src/Publicidad.c:317:7: warning: implicit declaration of function ‘contarContrataciones’ [-Wimplicit-function-declaration]
-       contarContrataciones(aPublicidad, cantidadPublicidad,aPublicidad[i].cuit));
-       ^~~~~~~~~~~~~~~~~~~~
-../src/Publicidad.c:319:5: warning: implicit declaration of function ‘imprimirCliente’ [-Wimplicit-function-declaration]
-     imprimirCliente();
-     ^~~~~~~~~~~~~~~
-../src/Publicidad.c:324:6: warning: implicit declaration of function ‘imprimirDetalle’ [-Wimplicit-function-declaration]
-      imprimirDetalle();
-      ^~~~~~~~~~~~~~~
-../src/Publicidad.c:327:22: error: too few arguments to function ‘buscarPantallaPorId’
-      indexPantalla = buscarPantallaPorId(aPantallas, cantidadPantalla);
-                      ^~~~~~~~~~~~~~~~~~~
-In file included from ../src/Publicidad.h:10:0,
-                 from ../src/Publicidad.c:12:
-../src/Pantalla.h:34:5: note: declared here
- int buscarPantallaPorId(struct sPantalla *aArray, int cantidad,int id);
-     ^~~~~~~~~~~~~~~~~~~
-../src/Publicidad.c:330:5: error: expected ‘;’ before ‘}’ token
-     }else{
-     ^
-../src/Publicidad.c:304:6: warning: unused variable ‘contador’ [-Wunused-variable]
-  int contador = 0;
-      ^~~~~~~~
-make: *** [src/Publicidad.o] Error 1
-src/subdir.mk:27: fallo en las instrucciones para el objetivo 'src/Publicidad.o'
-"make all" terminated with exit code 2. Build might be incomplete.
-21:07:52 **** Incremental Build of configuration Debug for project parcial1 ****
+23:24:09 **** Build of configuration Debug for project parcial1 ****
 make all 
 Building file: ../src/Publicidad.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Publicidad.d" -MT"src/Publicidad.o" -o "src/Publicidad.o" "../src/Publicidad.c"
-../src/Publicidad.c:296:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
- corteControl(struct sPublicidad *aPublicidad, int cantidadPublicidad, struct sPantalla *aPantallas,int cantidadPantalla){
- ^~~~~~~~~~~~
-../src/Publicidad.c: In function ‘corteControl’:
-../src/Publicidad.c:317:7: warning: implicit declaration of function ‘contarContrataciones’ [-Wimplicit-function-declaration]
-       contarContrataciones(aPublicidad, cantidadPublicidad,aPublicidad[i].cuit));
-       ^~~~~~~~~~~~~~~~~~~~
-../src/Publicidad.c:319:5: warning: implicit declaration of function ‘imprimirCliente’ [-Wimplicit-function-declaration]
-     imprimirCliente();
-     ^~~~~~~~~~~~~~~
-../src/Publicidad.c:324:6: warning: implicit declaration of function ‘imprimirDetalle’ [-Wimplicit-function-declaration]
-      imprimirDetalle();
-      ^~~~~~~~~~~~~~~
-../src/Publicidad.c:327:22: error: too few arguments to function ‘buscarPantallaPorId’
-      indexPantalla = buscarPantallaPorId(aPantallas, cantidadPantalla);
-                      ^~~~~~~~~~~~~~~~~~~
-In file included from ../src/Publicidad.h:10:0,
-                 from ../src/Publicidad.c:12:
-../src/Pantalla.h:34:5: note: declared here
- int buscarPantallaPorId(struct sPantalla *aArray, int cantidad,int id);
-     ^~~~~~~~~~~~~~~~~~~
-../src/Publicidad.c:330:5: error: expected ‘;’ before ‘}’ token
-     }else{
-     ^
-../src/Publicidad.c:304:6: warning: unused variable ‘contador’ [-Wunused-variable]
-  int contador = 0;
-      ^~~~~~~~
-make: *** [src/Publicidad.o] Error 1
-src/subdir.mk:27: fallo en las instrucciones para el objetivo 'src/Publicidad.o'
-"make all" terminated with exit code 2. Build might be incomplete.
-21:12:19 **** Incremental Build of configuration Debug for project parcial1 ****
-make all 
-Building file: ../src/Publicidad.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Publicidad.d" -MT"src/Publicidad.o" -o "src/Publicidad.o" "../src/Publicidad.c"
-../src/Publicidad.c:296:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
- corteControl(struct sPublicidad *aPublicidad, int cantidadPublicidad, struct sPantalla *aPantallas,int cantidadPantalla){
- ^~~~~~~~~~~~
-../src/Publicidad.c: In function ‘corteControl’:
-../src/Publicidad.c:322:6: warning: implicit declaration of function ‘imprimirDetalle’ [-Wimplicit-function-declaration]
-      imprimirDetalle();
-      ^~~~~~~~~~~~~~~
-../src/Publicidad.c:325:22: error: too few arguments to function ‘buscarPantallaPorId’
-      indexPantalla = buscarPantallaPorId(aPantallas, cantidadPantalla);
-                      ^~~~~~~~~~~~~~~~~~~
-In file included from ../src/Publicidad.h:10:0,
-                 from ../src/Publicidad.c:12:
-../src/Pantalla.h:34:5: note: declared here
- int buscarPantallaPorId(struct sPantalla *aArray, int cantidad,int id);
-     ^~~~~~~~~~~~~~~~~~~
-../src/Publicidad.c:328:5: error: expected ‘;’ before ‘}’ token
-src/subdir.mk:27: fallo en las instrucciones para el objetivo 'src/Publicidad.o'
-     }else{
-     ^
-../src/Publicidad.c:304:6: warning: unused variable ‘contador’ [-Wunused-variable]
-  int contador = 0;
-      ^~~~~~~~
-make: *** [src/Publicidad.o] Error 1
-"make all" terminated with exit code 2. Build might be incomplete.
-21:15:39 **** Incremental Build of configuration Debug for project parcial1 ****
-make all 
-Building file: ../src/Publicidad.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Publicidad.d" -MT"src/Publicidad.o" -o "src/Publicidad.o" "../src/Publicidad.c"
-../src/Publicidad.c:296:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
- corteControl(struct sPublicidad *aPublicidad, int cantidadPublicidad, struct sPantalla *aPantallas,int cantidadPantalla){
- ^~~~~~~~~~~~
-../src/Publicidad.c: In function ‘corteControl’:
-../src/Publicidad.c:322:6: warning: implicit declaration of function ‘imprimirDetalle’ [-Wimplicit-function-declaration]
-      imprimirDetalle();
-      ^~~~~~~~~~~~~~~
-../src/Publicidad.c:304:6: warning: unused variable ‘contador’ [-Wunused-variable]
-  int contador = 0;
-      ^~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Publicidad.d" -MT"src/Publicidad.d" -o "src/Publicidad.o" "../src/Publicidad.c"
 Finished building: ../src/Publicidad.c
  
 Building file: ../src/parcial1.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/parcial1.d" -MT"src/parcial1.o" -o "src/parcial1.o" "../src/parcial1.c"
-../src/parcial1.c: In function ‘main’:
-../src/parcial1.c:219:4: warning: implicit declaration of function ‘corteControl’ [-Wimplicit-function-declaration]
-    corteControl(aPublicidad, QTY_PUBLICIDAD);
-    ^~~~~~~~~~~~
-Finished building: ../src/parcial1.c
- 
-Building target: parcial1
-Invoking: GCC C Linker
-gcc  -o "parcial1"  ./src/Pantalla.o ./src/Publicidad.o ./src/parcial1.o ./src/utn.o   
-./src/Publicidad.o: En la función `corteControl':
-/home/alumno/sanjurjo/Programacion1/parcial1/Debug/../src/Publicidad.c:322: referencia a `imprimirDetalle' sin definir
-collect2: error: ld returned 1 exit status
-makefile:30: fallo en las instrucciones para el objetivo 'parcial1'
-make: *** [parcial1] Error 1
-"make all" terminated with exit code 2. Build might be incomplete.
-21:16:02 **** Incremental Build of configuration Debug for project parcial1 ****
-make all 
-Building file: ../src/Publicidad.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Publicidad.d" -MT"src/Publicidad.o" -o "src/Publicidad.o" "../src/Publicidad.c"
-../src/Publicidad.c:296:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
- corteControl(struct sPublicidad *aPublicidad, int cantidadPublicidad, struct sPantalla *aPantallas,int cantidadPantalla){
- ^~~~~~~~~~~~
-../src/Publicidad.c: In function ‘corteControl’:
-../src/Publicidad.c:304:6: warning: unused variable ‘contador’ [-Wunused-variable]
-  int contador = 0;
-      ^~~~~~~~
-Finished building: ../src/Publicidad.c
- 
-Building target: parcial1
-Invoking: GCC C Linker
-gcc  -o "parcial1"  ./src/Pantalla.o ./src/Publicidad.o ./src/parcial1.o ./src/utn.o   
-Finished building target: parcial1
- 
-21:17:14 **** Incremental Build of configuration Debug for project parcial1 ****
-make all 
-make: No se hace nada para 'all'.
-21:22:25 **** Incremental Build of configuration Debug for project parcial1 ****
-make all 
-Building file: ../src/Publicidad.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Publicidad.d" -MT"src/Publicidad.o" -o "src/Publicidad.o" "../src/Publicidad.c"
-../src/Publicidad.c:296:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
- corteControl(struct sPublicidad *aPublicidad, int cantidadPublicidad, struct sPantalla *aPantallas,int cantidadPantalla){
- ^~~~~~~~~~~~
-../src/Publicidad.c: In function ‘corteControl’:
-../src/Publicidad.c:304:6: warning: unused variable ‘contador’ [-Wunused-variable]
-  int contador = 0;
-      ^~~~~~~~
-Finished building: ../src/Publicidad.c
- 
-Building target: parcial1
-Invoking: GCC C Linker
-gcc  -o "parcial1"  ./src/Pantalla.o ./src/Publicidad.o ./src/parcial1.o ./src/utn.o   
-Finished building target: parcial1
- 
-21:28:29 **** Incremental Build of configuration Debug for project parcial1 ****
-make all 
-Building file: ../src/parcial1.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/parcial1.d" -MT"src/parcial1.o" -o "src/parcial1.o" "../src/parcial1.c"
-../src/parcial1.c: In function ‘main’:
-../src/parcial1.c:219:4: warning: implicit declaration of function ‘corteControl’ [-Wimplicit-function-declaration]
-    corteControl(aPublicidad, QTY_PUBLICIDAD);
-    ^~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/parcial1.d" -MT"src/parcial1.d" -o "src/parcial1.o" "../src/parcial1.c"
 Finished building: ../src/parcial1.c
  
 Building target: parcial1
@@ -194,21 +15,35 @@ Invoking: GCC C Linker
 gcc  -o "parcial1"  ./src/Pantalla.o ./src/Publicidad.o ./src/parcial1.o ./src/utn.o   
 Finished building target: parcial1
  
-21:30:52 **** Incremental Build of configuration Debug for project parcial1 ****
+23:24:19 **** Incremental Build of configuration Debug for project parcial1 ****
 make all 
-make: No se hace nada para 'all'.
-21:35:06 **** Incremental Build of configuration Debug for project parcial1 ****
+make: Nothing to be done for `all'.
+01:00:32 **** Incremental Build of configuration Debug for project parcial1 ****
 make all 
 Building file: ../src/Publicidad.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Publicidad.d" -MT"src/Publicidad.o" -o "src/Publicidad.o" "../src/Publicidad.c"
-../src/Publicidad.c:296:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
- corteControl(struct sPublicidad *aPublicidad, int cantidadPublicidad, struct sPantalla *aPantallas,int cantidadPantalla){
- ^~~~~~~~~~~~
-../src/Publicidad.c: In function ‘corteControl’:
-../src/Publicidad.c:304:6: warning: unused variable ‘contador’ [-Wunused-variable]
-  int contador = 0;
-      ^~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Publicidad.d" -MT"src/Publicidad.d" -o "src/Publicidad.o" "../src/Publicidad.c"
+../src/Publicidad.c: In function ‘maximoFacturacion’:
+../src/Publicidad.c:376:21: warning: variable ‘maximoPublicidad’ set but not used [-Wunused-but-set-variable]
+  struct sPublicidad maximoPublicidad;
+                     ^
+Finished building: ../src/Publicidad.c
+ 
+Building file: ../src/parcial1.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/parcial1.d" -MT"src/parcial1.d" -o "src/parcial1.o" "../src/parcial1.c"
+Finished building: ../src/parcial1.c
+ 
+Building target: parcial1
+Invoking: GCC C Linker
+gcc  -o "parcial1"  ./src/Pantalla.o ./src/Publicidad.o ./src/parcial1.o ./src/utn.o   
+Finished building target: parcial1
+ 
+01:23:19 **** Incremental Build of configuration Debug for project parcial1 ****
+make all 
+Building file: ../src/Publicidad.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Publicidad.d" -MT"src/Publicidad.d" -o "src/Publicidad.o" "../src/Publicidad.c"
 Finished building: ../src/Publicidad.c
  
 Building target: parcial1
@@ -216,34 +51,20 @@ Invoking: GCC C Linker
 gcc  -o "parcial1"  ./src/Pantalla.o ./src/Publicidad.o ./src/parcial1.o ./src/utn.o   
 Finished building target: parcial1
  
-21:35:26 **** Incremental Build of configuration Debug for project parcial1 ****
-make all 
-make: No se hace nada para 'all'.
-21:37:52 **** Incremental Build of configuration Debug for project parcial1 ****
-make all 
-make: No se hace nada para 'all'.
-21:44:04 **** Incremental Build of configuration Debug for project parcial1 ****
-make all 
-make: No se hace nada para 'all'.
-21:53:39 **** Incremental Build of configuration Debug for project parcial1 ****
+01:43:53 **** Incremental Build of configuration Debug for project parcial1 ****
 make all 
 Building file: ../src/Publicidad.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Publicidad.d" -MT"src/Publicidad.o" -o "src/Publicidad.o" "../src/Publicidad.c"
-../src/Publicidad.c:296:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
- corteControl(struct sPublicidad *aPublicidad, int cantidadPublicidad, struct sPantalla *aPantallas,int cantidadPantalla){
- ^~~~~~~~~~~~
-../src/Publicidad.c: In function ‘corteControl’:
-../src/Publicidad.c:304:6: warning: unused variable ‘contador’ [-Wunused-variable]
-  int contador = 0;
-      ^~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Publicidad.d" -MT"src/Publicidad.d" -o "src/Publicidad.o" "../src/Publicidad.c"
 Finished building: ../src/Publicidad.c
+ 
+Building file: ../src/parcial1.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/parcial1.d" -MT"src/parcial1.d" -o "src/parcial1.o" "../src/parcial1.c"
+Finished building: ../src/parcial1.c
  
 Building target: parcial1
 Invoking: GCC C Linker
 gcc  -o "parcial1"  ./src/Pantalla.o ./src/Publicidad.o ./src/parcial1.o ./src/utn.o   
 Finished building target: parcial1
  
-21:57:29 **** Incremental Build of configuration Debug for project parcial1 ****
-make all 
-make: No se hace nada para 'all'.

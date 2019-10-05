@@ -211,12 +211,12 @@ int buscarPublicidadPorCuit(struct sPublicidad *aArray, int cantidad,char *cuit)
 	return retorno;
 }
 */
-/*
-int bajaPantallaPorId(struct sPantalla *aArray, int cantidad,int id){
+
+int bajaPublicidadPorId(struct sPublicidad *aArray, int cantidad,int id){
 	int retorno = -1;
 	int index;
 	if(aArray!=NULL && cantidad > 0){
-		index = buscarPantallaPorId(aArray, cantidad, id);
+		index = buscarPublicidadPorId(aArray, cantidad, id);
 		if(index != -1){
 			aArray[index].status = STATUS_EMPTY;
 			retorno = 0;
@@ -224,7 +224,7 @@ int bajaPantallaPorId(struct sPantalla *aArray, int cantidad,int id){
 	}
 	return retorno;
 }
-*/
+
 int modificarPublicidadPorId(struct sPublicidad *aArray, int cantidad,struct sPublicidad item){
 	int retorno = -1;
 	int index;
@@ -293,41 +293,49 @@ int ordenarPublicidad(struct sPublicidad *array, int limite){
 	return retorno;
 }
 
-corteControl(struct sPublicidad *aPublicidad, int cantidadPublicidad, struct sPantalla *aPantallas,int cantidadPantalla){
+int corteControl(struct sPublicidad *aPublicidad, int cantidadPublicidad, struct sPantalla *aPantallas,int cantidadPantalla){
 	int retorno = -1;
 	int i;
 	int indexPantalla;
 	float importe=0;
 	int flagPrimero = 1;
 	struct sPublicidad bPublicidadAnterior;
-
-	int contador = 0;
 	if(aPublicidad != NULL && cantidadPublicidad > 0){
+		retorno = 0;
 		ordenarPublicidad(aPublicidad, cantidadPublicidad);
-
-		for(i=0;i<cantidadPublicidad;i++){
-
-			if(aPublicidad[i].status == STATUS_EMPTY){
+		for(i=0;i<cantidadPublicidad;i++)
+		{
+			if(aPublicidad[i].status == STATUS_EMPTY)
+			{
 				continue;
 			}
-			if(flagPrimero){
+			if(flagPrimero)
+			{
 				bPublicidadAnterior = aPublicidad[i];
 
-				printf("Cuit: %s - total contrataciones: %d" ,aPublicidad[i].cuit,
+				printf("Cuit: %s - total contrataciones: %d\n" ,aPublicidad[i].cuit,
 						contarContrataciones(aPublicidad, cantidadPublicidad,aPublicidad[i].cuit));
 				flagPrimero = 0;
+				indexPantalla = buscarPantallaPorId(aPantallas, cantidadPantalla, aPublicidad[i].idPantalla);
+				importe = aPublicidad[i].dias * aPantallas[indexPantalla].precio;
+				printf("Contratacion: %d Importe %f\n",aPublicidad[i].id,importe);
 
-			}else{
-				if(strncmp(bPublicidadAnterior.cuit, aPublicidad[i].cuit, 50)==0){
-
-
+			}else
+			{
+				if(strncmp(bPublicidadAnterior.cuit, aPublicidad[i].cuit, 50)==0)
+				{
 					indexPantalla = buscarPantallaPorId(aPantallas, cantidadPantalla, aPublicidad[i].idPantalla);
 					importe = aPublicidad[i].dias * aPantallas[indexPantalla].precio;
-					printf("Contratacion: %d Importe %f",aPublicidad[i].id,importe);
-				}else{
-					printf("Cuit: %s - total contrataciones: %d" ,aPublicidad[i].cuit,
+					printf("Contratacion: %d Importe %f\n",aPublicidad[i].id,importe);
+				}
+				else
+				{
+					printf("Cuit: %s - total contrataciones: %d\n" ,aPublicidad[i].cuit,
 							contarContrataciones(aPublicidad, cantidadPublicidad,aPublicidad[i].cuit));
 					bPublicidadAnterior = aPublicidad[i];
+					indexPantalla = buscarPantallaPorId(aPantallas, cantidadPantalla, aPublicidad[i].idPantalla);
+					importe = aPublicidad[i].dias * aPantallas[indexPantalla].precio;
+					printf("Contratacion: %d Importe %f\n",aPublicidad[i].id,importe);
 
 				}
 			}
@@ -357,6 +365,65 @@ int contarContrataciones(struct sPublicidad *aPublicidad, int cantidadPublicidad
 
 
 
+int maximoFacturacion(struct sPublicidad *aPublicidad, int cantidadPublicidad, struct sPantalla *aPantallas,int cantidadPantalla){
+	int retorno = -1;
+	int i;
+	int indexPantalla;
+	float importe=0;
+	int flagPrimero = 1;
+	struct sPublicidad bPublicidadAnterior;
+	float maximoImporte;
+	struct sPublicidad maximoPublicidad;
+
+	if(aPublicidad != NULL && cantidadPublicidad > 0){
+		retorno = 0;
+		ordenarPublicidad(aPublicidad, cantidadPublicidad);
+		for(i=0;i<cantidadPublicidad;i++)
+		{
+			if(aPublicidad[i].status == STATUS_EMPTY)
+			{
+				if(importe > maximoImporte){
+					maximoImporte = importe;
+					maximoPublicidad = bPublicidadAnterior;
+				}
+				continue;
+			}
+			if(flagPrimero)
+			{
+				bPublicidadAnterior = aPublicidad[i];
+				flagPrimero = 0;
+
+				indexPantalla = buscarPantallaPorId(aPantallas, cantidadPantalla, aPublicidad[i].idPantalla);
+				importe = aPublicidad[i].dias * aPantallas[indexPantalla].precio;
+				maximoImporte = importe;
+				maximoPublicidad = bPublicidadAnterior;
+			}else
+			{
+				if(strncmp(bPublicidadAnterior.cuit, aPublicidad[i].cuit, 50)==0)
+				{
+					indexPantalla = buscarPantallaPorId(aPantallas, cantidadPantalla, aPublicidad[i].idPantalla);
+					importe += aPublicidad[i].dias * aPantallas[indexPantalla].precio;
+
+				}
+				else
+				{
+					if(importe > maximoImporte){
+						maximoImporte = importe;
+						maximoPublicidad = bPublicidadAnterior;
+					}
+					bPublicidadAnterior = aPublicidad[i];
+					indexPantalla = buscarPantallaPorId(aPantallas, cantidadPantalla, aPublicidad[i].idPantalla);
+					importe = aPublicidad[i].dias * aPantallas[indexPantalla].precio;
+
+				}
+			}
+		}
+		printf("%s -- %f \n",maximoPublicidad.cuit, maximoImporte);
+
+
+	}
+	return retorno;
+}
 
 
 

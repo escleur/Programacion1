@@ -37,6 +37,7 @@ int main(void) {
 				"3. Baja de pantallas\n"
 				"4. Alta publicidad\n"
 				"5. Modificar publicidad\n"
+				"6. Baja de publicidad\n"
 				"7. Mostrar costo de contrataciones de un cliente\n"
 				"8. Mostrar contrataciones\n"
 				"9. Listado de pantallas\n"
@@ -201,6 +202,30 @@ int main(void) {
 
 			break;
 
+		case 6:
+			printf("Baja de publicidad\n");
+			if (getString(bPublicidad.cuit, "Ingrese el cuit\n", "Error", 1,
+					49, 2) == -1) {
+				printf("Error en el cuit\n");
+				break;
+			}
+			listarPantallasPorCuit(aPantallas,QTY_PANTALLAS,aPublicidad,QTY_PUBLICIDAD, bPublicidad.cuit );
+			if (getInt(&bPublicidad.idPantalla, "Ingrese el id de la pantalla\n", "Error",
+					1, 1000000, 2) == -1) {
+				printf("Error en el id\n");
+				break;
+			}
+
+			index = buscarPublicidadPorCuitYIdPantalla(aPublicidad, QTY_PUBLICIDAD,bPublicidad.cuit,bPublicidad.idPantalla);
+			if(index==-1){
+				printf("El cuit no tiene esa pantalla");
+				break;
+			}
+			bPublicidad = aPublicidad[index];
+			if( bajaPublicidadPorId(aPublicidad, QTY_PUBLICIDAD,bPublicidad.id)==-1){
+				printf("Error en la baja");
+			}
+			break;
 		case 7:
 			if (getString(bPublicidad.cuit, "Ingrese el cuit\n", "Error", 1,
 					49, 2) == -1) {
@@ -216,7 +241,10 @@ int main(void) {
 			imprimirArrayPantallas(aPantallas, QTY_PANTALLAS);
 			break;
 		case 10:
-			corteControl(aPublicidad, QTY_PUBLICIDAD);
+			corteControl(aPublicidad, QTY_PUBLICIDAD, aPantallas, QTY_PANTALLAS);
+			break;
+		case 11:
+			maximoFacturacion(aPublicidad, QTY_PUBLICIDAD, aPantallas,QTY_PANTALLAS);
 			break;
 		}
 
