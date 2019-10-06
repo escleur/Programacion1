@@ -33,7 +33,7 @@ static int generarId(void){
 *  puntero NULL o order distinto de 1 o 0] - (0) si Ok
 *
 */
-int sGen_ordenarArray(dGen* list, int len, int order)
+int sGen_OrdenarArray(dGen* list, int len, int order)
 {
 	int retorno = -1;
 	int i;
@@ -77,7 +77,7 @@ int sGen_ordenarArray(dGen* list, int len, int order)
 *  puntero NULL] - (0) si Ok
 *
 */
-int sGen_imprimirArray(dGen *list, int len)
+int sGen_ImprimirArray(dGen *list, int len)
 {
 	int i;
 	int retorno = -1;
@@ -104,7 +104,7 @@ int sGen_imprimirArray(dGen *list, int len)
 *  puntero NULL] - (0) si Ok
 *
 */
-int sGen_initLugarLibre(dGen *list, int len)
+int sGen_InitLugarLibre(dGen *list, int len)
 {
 	int i;
 	int retorno = -1;
@@ -127,7 +127,7 @@ int sGen_initLugarLibre(dGen *list, int len)
 *  puntero NULL] - (primer espacio libre) si Ok
 *
 */
-int sGen_buscarLugarLibre(dGen *list, int len)
+int sGen_BuscarLugarLibre(dGen *list, int len)
 {
 	int retorno = -1;
 	int i;
@@ -154,7 +154,7 @@ int sGen_buscarLugarLibre(dGen *list, int len)
 *  puntero NULL] - (posicion del id) si Ok
 *
 */
-int sGen_buscarPorId(dGen *list, int len,int id)
+int sGen_BuscarPorId(dGen *list, int len,int id)
 {
 	int retorno = -1;
 	int i;
@@ -180,13 +180,13 @@ int sGen_buscarPorId(dGen *list, int len,int id)
 *  puntero NULL] - (0) si Ok
 *
 */
-int sGen_altaPorId(dGen *list, int len, dGen item)
+int sGen_AltaPorId(dGen *list, int len, dGen item)
 {
 	int retorno = -1;
 	int index;
 	if(list!=NULL && len>0)
 	{
-		index = sGen_buscarLugarLibre(list, len);
+		index = sGen_BuscarLugarLibre(list, len);
 		if(index>=0)
 		{
 			list[index] = item;
@@ -207,13 +207,13 @@ int sGen_altaPorId(dGen *list, int len, dGen item)
 *  puntero NULL] - (0) si Ok
 *
 */
-int sGen_bajaPorId(dGen *list, int len,int id)
+int sGen_BajaPorId(dGen *list, int len,int id)
 {
 	int retorno = -1;
 	int index;
 	if(list!=NULL && len > 0)
 	{
-		index = sGen_buscarPorId(list, len, id);
+		index = sGen_BuscarPorId(list, len, id);
 		if(index != -1){
 			list[index].status = STATUS_EMPTY;
 			retorno = 0;
@@ -231,13 +231,13 @@ int sGen_bajaPorId(dGen *list, int len,int id)
 *  puntero NULL] - (0) si Ok
 *
 */
-int sGen_modificarPorId(dGen *list, int len,dGen item)
+int sGen_ModificarPorId(dGen *list, int len,dGen item)
 {
 	int retorno = -1;
 	int index;
 	if(list!=NULL && len>0)
 	{
-		index = buscarPantallaPorId(list, len, item.id);
+		index = sGen_BuscarPorId(list, len, item.id);
 		if(index!=-1)
 		{
 			list[index] = item;
@@ -248,3 +248,18 @@ int sGen_modificarPorId(dGen *list, int len,dGen item)
 	return retorno;
 }
 
+int sGen_GetPorId(dGen *list, int len, dGen *buffer)
+{
+	int retorno = -1;
+	int index;
+	if(list!=NULL && len>0)
+	{
+		index = sGen_BuscarPorId(list, len, buffer->id);
+		if(index != -1)
+		{
+			*buffer = list[index];
+			retorno = 0;
+		}
+	}
+	return retorno;
+}

@@ -25,16 +25,16 @@ typedef struct
 	int tipo;
 } dGen;
 
-int sGen_initLugarLibre(dGen *list, int len);
+int sGen_InitLugarLibre(dGen *list, int len);
 
-int sGen_imprimirArray(dGen *list, int len);
-int sGen_ordenarArray(dGen *list, int len, int orden);
+int sGen_ImprimirArray(dGen *list, int len);
+int sGen_OrdenarArray(dGen *list, int len, int orden);
 
-int sGen_buscarLugarLibre(dGen *list, int len);
-int sGen_buscarPorId(dGen *list, int len,int id);
-int sGen_altaPorId(dGen *list, int len, dGen item);
-int sGen_bajaPorId(dGen *list, int len,int id);
-int sGen_modificarPorId(dGen *list, int len,dGen item);
-
+int sGen_BuscarLugarLibre(dGen *list, int len);
+int sGen_BuscarPorId(dGen *list, int len,int id);
+int sGen_AltaPorId(dGen *list, int len, dGen item);
+int sGen_BajaPorId(dGen *list, int len,int id);
+int sGen_ModificarPorId(dGen *list, int len,dGen item);
+int sGen_GetPorId(dGen *list, int len, dGen *buffer);
 
 #endif /* SGEN_H_ */
