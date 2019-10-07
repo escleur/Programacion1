@@ -1,25 +1,15 @@
-03:08:21 **** Incremental Build of configuration Debug for project fantasma ****
+03:24:01 **** Incremental Build of configuration Debug for project parcial2 ****
 make all 
-Building file: ../src/Generic.c
+Building file: ../src/parcial2.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Generic.d" -MT"src/Generic.d" -o "src/Generic.o" "../src/Generic.c"
-Finished building: ../src/Generic.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/parcial2.d" -MT"src/parcial2.d" -o "src/parcial2.o" "../src/parcial2.c"
+Finished building: ../src/parcial2.c
  
-Building file: ../src/UI.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/UI.d" -MT"src/UI.d" -o "src/UI.o" "../src/UI.c"
-Finished building: ../src/UI.c
- 
-Building file: ../src/fantasma.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fantasma.d" -MT"src/fantasma.d" -o "src/fantasma.o" "../src/fantasma.c"
-Finished building: ../src/fantasma.c
- 
-Building target: fantasma
+Building target: parcial2
 Invoking: GCC C Linker
-gcc  -o "fantasma"  ./src/Generic.o ./src/UI.o ./src/fantasma.o ./src/utn.o   
-Finished building target: fantasma
+gcc  -o "parcial2"  ./src/Instrumento.o ./src/Musico.o ./src/Orquesta.o ./src/UI.o ./src/parcial2.o ./src/utn.o   
+Finished building target: parcial2
  
-03:08:28 **** Incremental Build of configuration Debug for project fantasma ****
+03:24:20 **** Incremental Build of configuration Debug for project parcial2 ****
 make all 
 make: Nothing to be done for `all'.
