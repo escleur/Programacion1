@@ -27,6 +27,7 @@ int main(void) {
 	Instrumento aInstrumentos[QTY_INSTRUMENTOS];
 	Musico aMusicos[QTY_MUSICOS];
 	int opcion;
+	char opcion2;
 	orquestaInitLugarLibre(aOrquestas, QTY_ORQUESTAS);
 	instrumentoInitLugarLibre(aInstrumentos, QTY_INSTRUMENTOS);
 	musicoInitLugarLibre(aMusicos, QTY_MUSICOS);
@@ -43,6 +44,7 @@ int main(void) {
 				"7. Listado musico\n"
 				"8. Alta de instrumento\n"
 				"9. Listado instrumento\n"
+				"10. Informes\n"
 				"0. Salir\n");
 		getInt(&opcion, "Ingrese la opcion\n", "Error\n", 0, 11, 2);
 		switch(opcion)
@@ -73,6 +75,24 @@ int main(void) {
 			break;
 		case 9:
 			instrumentoImprimirArray(aInstrumentos, QTY_INSTRUMENTOS);
+			break;
+		case 10:
+			printf( "a. Listado orquestas con mas de 5 musicos\n"
+					"b. \n"
+					"c. \n"
+					"d. \n"
+					"e. \n"
+					"f. \n"
+					"g. \n"
+					"h. \n"
+					"\n");
+			getChar(&opcion2, "Ingrese la opcion\n", "Error\n", 'a', 'h', 2);
+			switch(opcion2)
+			{
+			case 'a':
+
+				break;
+			}
 			break;
 		}
 	}while(opcion!=0);

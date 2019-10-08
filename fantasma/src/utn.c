@@ -17,7 +17,65 @@
 //Windows
 //#define PURGAR fflush(stdin);
 
+/**
+ * \brief Solicita un caracter al usuario y devuelve el resultado
+ * 		  informando si la operacion fue exitosa
+ * \param pResultado Es el resultado a devolver
+ * \param pMensaje Es el mensaje a ser mostrado
+ * \param pMensajeError Es el mensaje a ser mostrado cuando se ingreso un valor erroneo
+ * \param minimo El minimo valor aceptado por la funcion como valido
+ * \param maximo El maximo valor aceptado por la funcion como valido
+ * \param reintentos Es la cantidad de reintentos en caso de fallar
+ * \return -1 en caso de error y 0 si la operacion fue exitosa
+ *
+ */
+int getChar(  char *pResultado,
+			  char *pMensaje,
+			  char *pMensajeError,
+			  char minimo,
+			  char maximo,
+			  int reintentos)
+{
+	int retorno = EXIT_ERROR;
+	char buffer;
+	if(	pResultado != NULL &&
+		pMensaje	!= NULL &&
+		pMensajeError != NULL &&
+		minimo < maximo &&
+		reintentos >= 0)
+	{
+		do
+		{
+			printf("%s",pMensaje);
+			PURGAR
+			if(scanf("%c",&buffer)==1)
+			{
+				if(buffer >= minimo && buffer <= maximo)
+				{
+					retorno = EXIT_SUCCESS;
+					*pResultado = buffer;
+					break;
+				}
+			}
+			printf("%s", pMensajeError);
+			reintentos--;
+		}while(reintentos >= 0);
+	}
+	return retorno;
+}
 
+/**
+ * \brief Solicita un entero al usuario y devuelve el resultado
+ * 		  informando si la operacion fue exitosa
+ * \param pResultado Es el resultado a devolver
+ * \param pMensaje Es el mensaje a ser mostrado
+ * \param pMensajeError Es el mensaje a ser mostrado cuando se ingreso un valor erroneo
+ * \param minimo El minimo valor aceptado por la funcion como valido
+ * \param maximo El maximo valor aceptado por la funcion como valido
+ * \param reintentos Es la cantidad de reintentos en caso de fallar
+ * \return -1 en caso de error y 0 si la operacion fue exitosa
+ *
+ */
 int getInt(	int *pResultado,
 			char *pMensaje,
 			char *pMensajeError,
@@ -46,12 +104,25 @@ int getInt(	int *pResultado,
 					break;
 				}
 			}
-			printf("%s",pMensajeError);
+			printf("%s", pMensajeError);
 			reintentos--;
 		}while(reintentos >= 0);
 	}
 	return retorno;
 }
+
+/**
+ * \brief Solicita un flotante al usuario y devuelve el resultado
+ * 		  informando si la operacion fue exitosa
+ * \param pResultado Es el resultado a devolver
+ * \param pMensaje Es el mensaje a ser mostrado
+ * \param pMensajeError Es el mensaje a ser mostrado cuando se ingreso un valor erroneo
+ * \param minimo El minimo valor aceptado por la funcion como valido
+ * \param maximo El maximo valor aceptado por la funcion como valido
+ * \param reintentos Es la cantidad de reintentos en caso de fallar
+ * \return -1 en caso de error y 0 si la operacion fue exitosa
+ *
+ */
 int getFloat(float *pResultado,
 			 char *pMensaje,
 			 char *pMensajeError,
@@ -69,43 +140,9 @@ int getFloat(float *pResultado,
 	{
 		do
 		{
-			printf("%s",pMensaje);
-			PURGAR
-			if(scanf("%f",&buffer)==1)
-			{
-				if(buffer >= minimo && buffer <= maximo)
-				{
-					retorno = EXIT_SUCCESS;
-					*pResultado = buffer;
-					break;
-				}
-			}
-			printf("%s",pMensajeError);
-			reintentos--;
-		}while(reintentos >= 0);
-	}
-	return retorno;
-}
-int getChar(  char *pResultado,
-			  char *pMensaje,
-			  char *pMensajeError,
-			  char minimo,
-			  char maximo,
-			  int reintentos)
-{
-	int retorno = EXIT_ERROR;
-	char buffer;
-	if(	pResultado != NULL &&
-		pMensaje	!= NULL &&
-		pMensajeError != NULL &&
-		minimo < maximo &&
-		reintentos >= 0)
-	{
-		do
-		{
 			printf("%s", pMensaje);
 			PURGAR
-			if(scanf("%c",&buffer)==1)
+			if(scanf("%f",&buffer)==1)
 			{
 				if(buffer >= minimo && buffer <= maximo)
 				{
@@ -120,6 +157,19 @@ int getChar(  char *pResultado,
 	}
 	return retorno;
 }
+
+/**
+ * \brief Solicita un string al usuario y devuelve el resultado
+ * 		  informando si la operacion fue exitosa
+ * \param pResultado Es el resultado a devolver
+ * \param pMensaje Es el mensaje a ser mostrado
+ * \param pMensajeError Es el mensaje a ser mostrado cuando se ingreso un valor erroneo
+ * \param minimo La minima  cantidad de caracteres
+ * \param maximo La maxima cantidad de caracteres
+ * \param reintentos Es la cantidad de reintentos en caso de fallar
+ * \return -1 en caso de error y 0 si la operacion fue exitosa
+ *
+ */
 int getString (char *pResultado,
 		      char *pMensaje,
 			  char *pMensajeError,

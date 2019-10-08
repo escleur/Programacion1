@@ -8,6 +8,7 @@ C_SRCS += \
 ../src/Musico.c \
 ../src/Orquesta.c \
 ../src/UI.c \
+../src/informes.c \
 ../src/parcial2.c \
 ../src/utn.c 
 
@@ -16,6 +17,7 @@ OBJS += \
 ./src/Musico.o \
 ./src/Orquesta.o \
 ./src/UI.o \
+./src/informes.o \
 ./src/parcial2.o \
 ./src/utn.o 
 
@@ -24,6 +26,7 @@ C_DEPS += \
 ./src/Musico.d \
 ./src/Orquesta.d \
 ./src/UI.d \
+./src/informes.d \
 ./src/parcial2.d \
 ./src/utn.d 
 
