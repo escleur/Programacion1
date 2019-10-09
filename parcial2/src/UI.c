@@ -36,7 +36,7 @@ int orquestaUIAlta(Orquesta *list, int len)
 			}
 			break;
 		case 1:
-			if (getString(buffer.nombre, "Ingrese el nombre\n", "Error", 1,
+			if (getNombre(buffer.nombre, "Ingrese el nombre\n", "Error", 1,
 					QTY_CARACTERES-1, 2) == -1) {
 				printf("Error en el nombre\n");
 				step = 100;
@@ -108,7 +108,7 @@ int orquestaUIModificacion(Orquesta *list, int len)
 				step = 100;
 				break;
 			case 1:
-				if (getString(buffer.nombre, "Ingrese el nombre\n", "Error", 1,
+				if (getNombre(buffer.nombre, "Ingrese el nombre\n", "Error", 1,
 						QTY_CARACTERES-1, 2) == -1) {
 					printf("Error en el nombre\n");
 					step = 100;
@@ -182,7 +182,7 @@ int instrumentoUIAlta(Instrumento *list, int len)
 			}
 			break;
 		case 1:
-			if (getString(buffer.nombre, "Ingrese el nombre\n", "Error", 1,
+			if (getNombre(buffer.nombre, "Ingrese el nombre\n", "Error", 1,
 					49, 2) == -1) {
 				printf("Error en el nombre\n");
 				step = 100;
@@ -223,7 +223,7 @@ int musicoUIAlta(Musico *list, int len, Instrumento *list2, int len2, Orquesta *
 	Musico buffer;
 	int step = 0;
 	int retorno = -1;
-	printf("Alta de pantallas\n");
+	printf("Alta de musico\n");
 	do
 	{
 		switch(step){
@@ -239,7 +239,7 @@ int musicoUIAlta(Musico *list, int len, Instrumento *list2, int len2, Orquesta *
 			}
 			break;
 		case 1:
-			if (getString(buffer.nombre, "Ingrese el nombre\n", "Error", 1,
+			if (getNombre(buffer.nombre, "Ingrese el nombre\n", "Error", 1,
 					QTY_CARACTERES-1, 2) == -1) {
 				printf("Error en el nombre\n");
 				step = 100;
@@ -250,9 +250,9 @@ int musicoUIAlta(Musico *list, int len, Instrumento *list2, int len2, Orquesta *
 			}
 			break;
 		case 2:
-			if (getString(buffer.apellido, "Ingrese la direccion\n",
+			if (getNombre(buffer.apellido, "Ingrese el apellido\n",
 					"Error", 1, QTY_CARACTERES-1, 2) == -1) {
-				printf("Error en la direccion\n");
+				printf("Error en el apellido\n");
 				step = 100;
 			}
 			else

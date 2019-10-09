@@ -174,8 +174,8 @@ int chequear(char *frase, int esLetra, int esNumero, char *letras) {
 				continue;
 			}
 			flagEncontro = 0;
-			for(j = 0; i<strlen(letras); j++){
-				if(frase[i] == letras[i])
+			for(j = 0; j<strlen(letras); j++){
+				if(frase[i] == letras[j])
 				{
 					flagEncontro = 1;
 					break;
@@ -185,10 +185,118 @@ int chequear(char *frase, int esLetra, int esNumero, char *letras) {
 				continue;
 			}
 			flagCumple = 0;
+			break;
 		}
 	}
 	return flagCumple;
 }
+
+/**
+ * \brief Solicita un cuil al usuario y devuelve el resultado
+ * 		  informando si la operacion fue exitosa
+ * \param pResultado Es el resultado a devolver
+ * \param pMensaje Es el mensaje a ser mostrado
+ * \param pMensajeError Es el mensaje a ser mostrado cuando se ingreso un valor erroneo
+ * \param minimo La minima  cantidad de caracteres
+ * \param maximo La maxima cantidad de caracteres
+ * \param reintentos Es la cantidad de reintentos en caso de fallar
+ * \return -1 en caso de error y 0 si la operacion fue exitosa
+ *
+ */
+int getCuil(char *pResultado, char *pMensaje, char *pMensajeError, int minimo,
+		int maximo, int reintentos) {
+	int retorno = EXIT_ERROR;
+	char buffer[500];
+	if (pResultado != NULL && pMensaje != NULL && pMensajeError != NULL
+			&& minimo < maximo && reintentos >= 0) {
+		do {
+			printf("%s", pMensaje);
+			PURGAR
+			fgets(buffer, sizeof(buffer), stdin);
+			buffer[strlen(buffer) - 1] = '\0';
+			if (strlen(buffer) >= minimo && strlen(buffer) <= maximo && chequear(buffer, 0, 1, "-")) {
+				strncpy(pResultado, buffer, maximo + 1);
+				retorno = 0;
+				break;
+			}
+			printf("%s", pMensajeError);
+			reintentos--;
+		} while (reintentos >= 0);
+	}
+	return retorno;
+}
+
+/**
+ * \brief Solicita un nombre al usuario y devuelve el resultado
+ * 		  informando si la operacion fue exitosa
+ * \param pResultado Es el resultado a devolver
+ * \param pMensaje Es el mensaje a ser mostrado
+ * \param pMensajeError Es el mensaje a ser mostrado cuando se ingreso un valor erroneo
+ * \param minimo La minima  cantidad de caracteres
+ * \param maximo La maxima cantidad de caracteres
+ * \param reintentos Es la cantidad de reintentos en caso de fallar
+ * \return -1 en caso de error y 0 si la operacion fue exitosa
+ *
+ */
+int getNombre(char *pResultado, char *pMensaje, char *pMensajeError, int minimo,
+		int maximo, int reintentos) {
+	int retorno = EXIT_ERROR;
+	char buffer[500];
+	if (pResultado != NULL && pMensaje != NULL && pMensajeError != NULL
+			&& minimo < maximo && reintentos >= 0) {
+		do {
+			printf("%s", pMensaje);
+			PURGAR
+			fgets(buffer, sizeof(buffer), stdin);
+			buffer[strlen(buffer) - 1] = '\0';
+			if (strlen(buffer) >= minimo && strlen(buffer) <= maximo && chequear(buffer, 1, 0, " ")) {
+				strncpy(pResultado, buffer, maximo + 1);
+				retorno = 0;
+				break;
+			}
+			printf("%s", pMensajeError);
+			reintentos--;
+		} while (reintentos >= 0);
+	}
+	return retorno;
+}
+
+/**
+ * \brief Solicita un telefono al usuario y devuelve el resultado
+ * 		  informando si la operacion fue exitosa
+ * \param pResultado Es el resultado a devolver
+ * \param pMensaje Es el mensaje a ser mostrado
+ * \param pMensajeError Es el mensaje a ser mostrado cuando se ingreso un valor erroneo
+ * \param minimo La minima  cantidad de caracteres
+ * \param maximo La maxima cantidad de caracteres
+ * \param reintentos Es la cantidad de reintentos en caso de fallar
+ * \return -1 en caso de error y 0 si la operacion fue exitosa
+ *
+ */
+int getTelefono(char *pResultado, char *pMensaje, char *pMensajeError, int minimo,
+		int maximo, int reintentos) {
+	int retorno = EXIT_ERROR;
+	char buffer[500];
+	if (pResultado != NULL && pMensaje != NULL && pMensajeError != NULL
+			&& minimo < maximo && reintentos >= 0) {
+		do {
+			printf("%s", pMensaje);
+			PURGAR
+			fgets(buffer, sizeof(buffer), stdin);
+			buffer[strlen(buffer) - 1] = '\0';
+			if (strlen(buffer) >= minimo && strlen(buffer) <= maximo && chequear(buffer, 0, 1, "(+)- ")) {
+				strncpy(pResultado, buffer, maximo + 1);
+				retorno = 0;
+				break;
+			}
+			printf("%s", pMensajeError);
+			reintentos--;
+		} while (reintentos >= 0);
+	}
+	return retorno;
+}
+
+
 
 void burbuja(int array[], int limite) {
 int i;

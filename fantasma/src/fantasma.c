@@ -19,9 +19,12 @@
 int main(void) {
 	dGen aPantallas[QTY_PANTALLAS];
 	int opcion;
+	char tel[21];
 	sGen_InitLugarLibre(aPantallas, QTY_PANTALLAS);
 	//cargaForzadaPantallas(aPantallas,QTY_PANTALLAS);
 	do {
+		getTelefono(&tel,"Ingrese el telefono\n", "Error\n",4,20,10);
+		printf("%s\n",tel);
 		printf( "1. Alta de pantallas\n"
 				"2. Modificacion de pantallas\n"
 				"3. Baja de pantallas\n"

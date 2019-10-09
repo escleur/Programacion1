@@ -38,6 +38,17 @@ int getString (char *pResultado,
 			  int maximo,
 			  int reintentos);
 
+int chequear(char *frase, int esLetra, int esNumero, char *letras);
+
+int getCuil(char *pResultado, char *pMensaje, char *pMensajeError, int minimo,
+		int maximo, int reintentos);
+
+int getNombre(char *pResultado, char *pMensaje, char *pMensajeError, int minimo,
+		int maximo, int reintentos);
+
+int getTelefono(char *pResultado, char *pMensaje, char *pMensajeError, int minimo,
+		int maximo, int reintentos);
+
 void burbuja(int array[], int limite);
 
 void insercion(int array[], int limite);
