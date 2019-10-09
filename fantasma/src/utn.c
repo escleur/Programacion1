@@ -5,7 +5,6 @@
  *      Author: gas
  */
 
-
 #include <stdio.h>
 #include <stdio_ext.h>
 #include <stdlib.h>
@@ -29,29 +28,17 @@
  * \return -1 en caso de error y 0 si la operacion fue exitosa
  *
  */
-int getChar(  char *pResultado,
-			  char *pMensaje,
-			  char *pMensajeError,
-			  char minimo,
-			  char maximo,
-			  int reintentos)
-{
+int getChar(char *pResultado, char *pMensaje, char *pMensajeError, char minimo,
+		char maximo, int reintentos) {
 	int retorno = EXIT_ERROR;
 	char buffer;
-	if(	pResultado != NULL &&
-		pMensaje	!= NULL &&
-		pMensajeError != NULL &&
-		minimo < maximo &&
-		reintentos >= 0)
-	{
-		do
-		{
-			printf("%s",pMensaje);
+	if (pResultado != NULL && pMensaje != NULL && pMensajeError != NULL
+			&& minimo < maximo && reintentos >= 0) {
+		do {
+			printf("%s", pMensaje);
 			PURGAR
-			if(scanf("%c",&buffer)==1)
-			{
-				if(buffer >= minimo && buffer <= maximo)
-				{
+			if (scanf("%c", &buffer) == 1) {
+				if (buffer >= minimo && buffer <= maximo) {
 					retorno = EXIT_SUCCESS;
 					*pResultado = buffer;
 					break;
@@ -59,7 +46,7 @@ int getChar(  char *pResultado,
 			}
 			printf("%s", pMensajeError);
 			reintentos--;
-		}while(reintentos >= 0);
+		} while (reintentos >= 0);
 	}
 	return retorno;
 }
@@ -76,29 +63,17 @@ int getChar(  char *pResultado,
  * \return -1 en caso de error y 0 si la operacion fue exitosa
  *
  */
-int getInt(	int *pResultado,
-			char *pMensaje,
-			char *pMensajeError,
-			int minimo,
-			int maximo,
-			int reintentos)
-{
+int getInt(int *pResultado, char *pMensaje, char *pMensajeError, int minimo,
+		int maximo, int reintentos) {
 	int retorno = EXIT_ERROR;
 	int buffer;
-	if(	pResultado != NULL &&
-		pMensaje	!= NULL &&
-		pMensajeError != NULL &&
-		minimo < maximo &&
-		reintentos >= 0)
-	{
-		do
-		{
+	if (pResultado != NULL && pMensaje != NULL && pMensajeError != NULL
+			&& minimo < maximo && reintentos >= 0) {
+		do {
 			printf("%s", pMensaje);
 			PURGAR
-			if(scanf("%d",&buffer)==1)
-			{
-				if(buffer >= minimo && buffer <= maximo)
-				{
+			if (scanf("%d", &buffer) == 1) {
+				if (buffer >= minimo && buffer <= maximo) {
 					retorno = EXIT_SUCCESS;
 					*pResultado = buffer;
 					break;
@@ -106,7 +81,7 @@ int getInt(	int *pResultado,
 			}
 			printf("%s", pMensajeError);
 			reintentos--;
-		}while(reintentos >= 0);
+		} while (reintentos >= 0);
 	}
 	return retorno;
 }
@@ -123,29 +98,17 @@ int getInt(	int *pResultado,
  * \return -1 en caso de error y 0 si la operacion fue exitosa
  *
  */
-int getFloat(float *pResultado,
-			 char *pMensaje,
-			 char *pMensajeError,
-			 float minimo,
-			 float maximo,
-			 int reintentos)
-{
+int getFloat(float *pResultado, char *pMensaje, char *pMensajeError,
+		float minimo, float maximo, int reintentos) {
 	int retorno = EXIT_ERROR;
 	float buffer;
-	if(	pResultado != NULL &&
-		pMensaje	!= NULL &&
-		pMensajeError != NULL &&
-		minimo < maximo &&
-		reintentos >= 0)
-	{
-		do
-		{
+	if (pResultado != NULL && pMensaje != NULL && pMensajeError != NULL
+			&& minimo < maximo && reintentos >= 0) {
+		do {
 			printf("%s", pMensaje);
 			PURGAR
-			if(scanf("%f",&buffer)==1)
-			{
-				if(buffer >= minimo && buffer <= maximo)
-				{
+			if (scanf("%f", &buffer) == 1) {
+				if (buffer >= minimo && buffer <= maximo) {
 					retorno = EXIT_SUCCESS;
 					*pResultado = buffer;
 					break;
@@ -153,7 +116,7 @@ int getFloat(float *pResultado,
 			}
 			printf("%s", pMensajeError);
 			reintentos--;
-		}while(reintentos >= 0);
+		} while (reintentos >= 0);
 	}
 	return retorno;
 }
@@ -170,78 +133,100 @@ int getFloat(float *pResultado,
  * \return -1 en caso de error y 0 si la operacion fue exitosa
  *
  */
-int getString (char *pResultado,
-		      char *pMensaje,
-			  char *pMensajeError,
-			  int minimo,
-			  int maximo,
-			  int reintentos)
-{
+int getString(char *pResultado, char *pMensaje, char *pMensajeError, int minimo,
+		int maximo, int reintentos) {
 	int retorno = EXIT_ERROR;
 	char buffer[500];
-	if(	pResultado != NULL &&
-		pMensaje	!= NULL &&
-		pMensajeError != NULL &&
-		minimo < maximo &&
-		reintentos >= 0)
-	{
-		do
-		{
-			printf("%s",pMensaje);
+	if (pResultado != NULL && pMensaje != NULL && pMensajeError != NULL
+			&& minimo < maximo && reintentos >= 0) {
+		do {
+			printf("%s", pMensaje);
 			PURGAR
-			fgets(buffer,sizeof(buffer),stdin);
-			buffer[strlen(buffer)-1] = '\0';
-			if(strlen(buffer)>=minimo && strlen(buffer) <= maximo)
-			{
-				strncpy(pResultado,buffer,maximo+1);
+			fgets(buffer, sizeof(buffer), stdin);
+			buffer[strlen(buffer) - 1] = '\0';
+			if (strlen(buffer) >= minimo && strlen(buffer) <= maximo) {
+				strncpy(pResultado, buffer, maximo + 1);
 				retorno = 0;
 				break;
 			}
-			printf("%s",pMensajeError);
+			printf("%s", pMensajeError);
 			reintentos--;
-		}while(reintentos >= 0);
+		} while (reintentos >= 0);
 	}
 	return retorno;
 }
 
-void burbuja(int array[], int limite){
+int chequear(char *frase, int esLetra, int esNumero, char *letras) {
 	int i;
-	int flagOrdeno=1;
-	int swap;
+	int j;
+	int flagCumple = 1;
+	int flagEncontro;
+	if (frase != NULL) {
+		for (i = 0; i < strlen(frase); i++) {
 
-	while(flagOrdeno == 1){
-		flagOrdeno = 0;
-		for(i=0; i<limite-1; i++){
-			if(array[i] > array[i+1]){
-				swap = array[i];
-				array[i] = array[i+1];
-				array[i+1] = swap;
-				flagOrdeno = 1;
+			if (esLetra
+					&& ((frase[i] >= 'a' && frase[i] <= 'z')
+							|| (frase[i] >= 'A' && frase[i] <= 'Z'))) {
+				continue;
 			}
+			if (esNumero
+					&& ((frase[i] >= '0' && frase[i] <= '9') )) {
+				continue;
+			}
+			flagEncontro = 0;
+			for(j = 0; i<strlen(letras); j++){
+				if(frase[i] == letras[i])
+				{
+					flagEncontro = 1;
+					break;
+				}
+			}
+			if(flagEncontro){
+				continue;
+			}
+			flagCumple = 0;
+		}
+	}
+	return flagCumple;
+}
+
+void burbuja(int array[], int limite) {
+int i;
+int flagOrdeno = 1;
+int swap;
+
+while (flagOrdeno == 1) {
+	flagOrdeno = 0;
+	for (i = 0; i < limite - 1; i++) {
+		if (array[i] > array[i + 1]) {
+			swap = array[i];
+			array[i] = array[i + 1];
+			array[i + 1] = swap;
+			flagOrdeno = 1;
 		}
 	}
 }
+}
 
-void insercion(int array[], int limite){
-	int i;
-	int j;
-	int flagOrdeno;
-	int swap;
+void insercion(int array[], int limite) {
+int i;
+int j;
+int flagOrdeno;
+int swap;
 
+for (i = 1; i < limite; i++) {
+	j = i;
+	flagOrdeno = 1;
+	while (flagOrdeno != 0 && j != 0) {
+		flagOrdeno = 0;
 
-	for(i=1; i<limite; i++){
-		j=i;
-		flagOrdeno = 1;
-		while(flagOrdeno != 0 && j!=0){
-			flagOrdeno = 0;
-
-			if(array[j-1] > array[j]){
-				swap = array[j-1];
-				array[j-1] = array[j];
-				array[j] = swap;
-				flagOrdeno = 1;
-			}
-			j--;
+		if (array[j - 1] > array[j]) {
+			swap = array[j - 1];
+			array[j - 1] = array[j];
+			array[j] = swap;
+			flagOrdeno = 1;
 		}
+		j--;
 	}
+}
 }
