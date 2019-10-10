@@ -49,7 +49,6 @@ int Informes_MusicosConMasDe30( Musico *list, int len,Orquesta *list2, int len2,
 
 	int retorno = -1;
 	int i;
-	int j;
 	Orquesta bOrquesta;
 	Instrumento bInstrumento;
 	if(list != NULL && len > 0 && list2 != NULL && len2 > 0 && list3 != NULL && len3 > 0){
@@ -70,3 +69,29 @@ int Informes_MusicosConMasDe30( Musico *list, int len,Orquesta *list2, int len2,
 	return retorno;
 }
 
+int Informes_OrquestaDeLugar(Orquesta *list, int len){
+
+	int retorno = -1;
+	int i;
+	Orquesta bOrquesta;
+	if(list != NULL && len > 0){
+
+		if (getString(bOrquesta.lugar, "Ingrese el lugar\n",
+				"Error", 1, QTY_CARACTERES-1, 2) == -1) {
+			printf("Error al ingresar el lugar\n");
+		}
+		else
+		{
+			retorno = 0;
+			printf("Musicos de mas de 30 anios\n");
+			printf("Id  --  Nombre   --    Lugar   --   Tipo\n");
+			for(i=0;i<len;i++){
+				if(list[i].isEmpty == FALSE && strncmp(list[i].lugar, bOrquesta.lugar,QTY_CARACTERES) == 0){
+					printf("%d -- %s -- %s -- %d\n",list[i].id, list[i].nombre, list[i].lugar,list[i].tipo);
+
+				}
+			}
+		}
+	}
+	return retorno;
+}

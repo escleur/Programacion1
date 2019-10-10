@@ -80,7 +80,7 @@ int main(void) {
 		case 10:
 			printf( "a. Listado orquestas con mas de 5 musicos\n"
 					"b. Listado de musicos con mas de 30 anios\n"
-					"c. \n"
+					"c. Listado de orquestas de sierto lugar\n"
 					"d. \n"
 					"e. \n"
 					"f. \n"
@@ -96,6 +96,8 @@ int main(void) {
 			case 'b':
 				Informes_MusicosConMasDe30( aMusicos,QTY_MUSICOS,aOrquestas, QTY_ORQUESTAS,aInstrumentos, QTY_INSTRUMENTOS);
 				break;
+			case 'c':
+				Informes_OrquestaDeLugar(aOrquestas, QTY_ORQUESTAS);
 			}
 			break;
 		}

@@ -156,6 +156,14 @@ int getString(char *pResultado, char *pMensaje, char *pMensajeError, int minimo,
 	return retorno;
 }
 
+/**
+ * \brief Chequea que la frase contenga solo los caracteres pedidos
+ * \param char *frase Texto a chequear
+ * \param int esLetra [1] si debe contener letras [0] si no debe contener letras
+ * \param int esNumero [1] si debe contener los numeros [0] si no debe contenerlos
+ * \param char *letras cadena de caracteres con los caracteres que debe contener
+ * \return int 1 si cumple los requisitos 0 si no los cumple
+ */
 int chequear(char *frase, int esLetra, int esNumero, char *letras) {
 	int i;
 	int j;
