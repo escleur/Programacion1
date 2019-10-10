@@ -1,29 +1,60 @@
-01:43:33 **** Build of configuration Debug for project parcial2 ****
+02:33:42 **** Incremental Build of configuration Debug for project parcial2 ****
 make all 
-Building file: ../src/UI.c
+Building file: ../src/informes.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/UI.d" -MT"src/UI.d" -o "src/UI.o" "../src/UI.c"
-Finished building: ../src/UI.c
- 
-Building file: ../src/utn.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.d" -o "src/utn.o" "../src/utn.c"
-Finished building: ../src/utn.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/informes.d" -MT"src/informes.d" -o "src/informes.o" "../src/informes.c"
+Finished building: ../src/informes.c
  
 Building target: parcial2
 Invoking: GCC C Linker
 gcc  -o "parcial2"  ./src/Instrumento.o ./src/Musico.o ./src/Orquesta.o ./src/UI.o ./src/informes.o ./src/parcial2.o ./src/utn.o   
 Finished building target: parcial2
  
-01:43:45 **** Incremental Build of configuration Debug for project parcial2 ****
+02:33:49 **** Incremental Build of configuration Debug for project parcial2 ****
+make all 
+Building file: ../src/informes.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/informes.d" -MT"src/informes.d" -o "src/informes.o" "../src/informes.c"
+Finished building: ../src/informes.c
+ 
+Building target: parcial2
+Invoking: GCC C Linker
+gcc  -o "parcial2"  ./src/Instrumento.o ./src/Musico.o ./src/Orquesta.o ./src/UI.o ./src/informes.o ./src/parcial2.o ./src/utn.o   
+Finished building target: parcial2
+ 
+02:35:31 **** Incremental Build of configuration Debug for project parcial2 ****
 make all 
 make: Nothing to be done for `all'.
-01:46:00 **** Incremental Build of configuration Debug for project parcial2 ****
+02:43:33 **** Incremental Build of configuration Debug for project parcial2 ****
 make all 
-Building file: ../src/UI.c
+Building file: ../src/informes.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/UI.d" -MT"src/UI.d" -o "src/UI.o" "../src/UI.c"
-Finished building: ../src/UI.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/informes.d" -MT"src/informes.d" -o "src/informes.o" "../src/informes.c"
+Finished building: ../src/informes.c
+ 
+Building target: parcial2
+Invoking: GCC C Linker
+gcc  -o "parcial2"  ./src/Instrumento.o ./src/Musico.o ./src/Orquesta.o ./src/UI.o ./src/informes.o ./src/parcial2.o ./src/utn.o   
+Finished building target: parcial2
+ 
+02:44:21 **** Incremental Build of configuration Debug for project parcial2 ****
+make all 
+Building file: ../src/parcial2.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/parcial2.d" -MT"src/parcial2.d" -o "src/parcial2.o" "../src/parcial2.c"
+Finished building: ../src/parcial2.c
+ 
+Building target: parcial2
+Invoking: GCC C Linker
+gcc  -o "parcial2"  ./src/Instrumento.o ./src/Musico.o ./src/Orquesta.o ./src/UI.o ./src/informes.o ./src/parcial2.o ./src/utn.o   
+Finished building target: parcial2
+ 
+02:45:40 **** Incremental Build of configuration Debug for project parcial2 ****
+make all 
+Building file: ../src/informes.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/informes.d" -MT"src/informes.d" -o "src/informes.o" "../src/informes.c"
+Finished building: ../src/informes.c
  
 Building target: parcial2
 Invoking: GCC C Linker

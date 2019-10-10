@@ -17,6 +17,7 @@
 #include "Musico.h"
 #include "Instrumento.h"
 #include "UI.h"
+#include "informes.h"
 
 void orquestaCargaForzada(Orquesta *list, int len);
 void instrumentoCargaForzada(Instrumento *list, int len);
@@ -78,7 +79,7 @@ int main(void) {
 			break;
 		case 10:
 			printf( "a. Listado orquestas con mas de 5 musicos\n"
-					"b. \n"
+					"b. Listado de musicos con mas de 30 anios\n"
 					"c. \n"
 					"d. \n"
 					"e. \n"
@@ -90,7 +91,10 @@ int main(void) {
 			switch(opcion2)
 			{
 			case 'a':
-
+				Informes_OrquestaConMasDe5Musicos(aOrquestas, QTY_ORQUESTAS, aMusicos,QTY_MUSICOS);
+				break;
+			case 'b':
+				Informes_MusicosConMasDe30( aMusicos,QTY_MUSICOS,aOrquestas, QTY_ORQUESTAS,aInstrumentos, QTY_INSTRUMENTOS);
 				break;
 			}
 			break;
@@ -118,11 +122,11 @@ void orquestaCargaForzada(Orquesta *list, int len)
 }
 void instrumentoCargaForzada(Instrumento *list, int len)
 {
-	char aNombre[][QTY_CARACTERES]={"Harpa","Tambor","Flauta","Trombon","Violin"};
-	int aTipo[]={1,4,2,3,1};
+	char aNombre[][QTY_CARACTERES]={"Harpa","Tambor","Flauta","Trombon","Violin","Bandoleon"};
+	int aTipo[]={1,4,2,3,1,2};
 	Instrumento buffer;
 	int i;
-	for(i=0;i<5;i++){
+	for(i=0;i<6;i++){
 		strncpy(buffer.nombre,aNombre[i],QTY_CARACTERES);
 		buffer.tipo = aTipo[i];
 		instrumentoAltaPorId(list, len, buffer);
@@ -131,14 +135,14 @@ void instrumentoCargaForzada(Instrumento *list, int len)
 }
 void musicoCargaForzada(Musico *list, int len)
 {
-	char aNombre[][QTY_CARACTERES]={"Vanessa","Pepe","Julian","Emilia","Alejandro"};
-	char aApellido[][QTY_CARACTERES]={"Mae","Luna","Straus","Sala","Batuta"};
-	int aEdad[]={35,65,25,32,43};
-	int aIdOrquesta[]={1,1,2,3,2};
-	int aIdInstrumento[]={5,1,3,3,4};
+	char aNombre[][QTY_CARACTERES]={"Vanessa","Pepe","Julian","Emilia","Alejandro","Astor","Ricardo","Dadam"};
+	char aApellido[][QTY_CARACTERES]={"Mae","Luna","Straus","Sala","Batuta","Piasola","Andino","Braile"};
+	int aEdad[]={35,65,25,32,43,90,39,74};
+	int aIdOrquesta[]={1,1,2,3,2,2,2,2};
+	int aIdInstrumento[]={5,1,3,3,4,6,3,1};
 	Musico buffer;
 	int i;
-	for(i=0;i<5;i++){
+	for(i=0;i<8;i++){
 		strncpy(buffer.nombre,aNombre[i],QTY_CARACTERES);
 		strncpy(buffer.apellido,aApellido[i],QTY_CARACTERES);
 		buffer.edad = aEdad[i];
