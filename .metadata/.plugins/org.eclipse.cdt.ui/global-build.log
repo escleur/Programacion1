@@ -1,62 +1,17 @@
-15:51:31 **** Incremental Build of configuration Debug for project parcial2 ****
+21:40:33 **** Incremental Build of configuration Debug for project parcial2019b ****
 make all 
-Building file: ../src/informes.c
+Building file: ../src/UI.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/informes.d" -MT"src/informes.d" -o "src/informes.o" "../src/informes.c"
-Finished building: ../src/informes.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/UI.d" -MT"src/UI.o" -o "src/UI.o" "../src/UI.c"
+Finished building: ../src/UI.c
  
-Building target: parcial2
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: parcial2019b
 Invoking: GCC C Linker
-gcc  -o "parcial2"  ./src/Instrumento.o ./src/Musico.o ./src/Orquesta.o ./src/UI.o ./src/informes.o ./src/parcial2.o ./src/utn.o   
-Finished building target: parcial2
- 
-15:53:08 **** Incremental Build of configuration Debug for project parcial2 ****
-make all 
-make: Nothing to be done for `all'.
-16:31:13 **** Incremental Build of configuration Debug for project parcial2 ****
-make all 
-Building file: ../src/informes.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/informes.d" -MT"src/informes.d" -o "src/informes.o" "../src/informes.c"
-../src/informes.c: In function ‘Informes_OrquestaDeLugar’:
-../src/informes.c:89:5: warning: implicit declaration of function ‘strncpm’ [-Wimplicit-function-declaration]
-     if(list[i].isEmpty == FALSE && strncpm(list[i].lugar, bOrquesta.lugar,QTY_CARACTERES) == 0){
-     ^
-Finished building: ../src/informes.c
- 
-Building target: parcial2
-Invoking: GCC C Linker
-gcc  -o "parcial2"  ./src/Instrumento.o ./src/Musico.o ./src/Orquesta.o ./src/UI.o ./src/informes.o ./src/parcial2.o ./src/utn.o   
-./src/informes.o: In function `Informes_OrquestaDeLugar':
-/home/gabriel/programacion1clases/Programacion1/parcial2/Debug/../src/informes.c:89: undefined reference to `strncpm'
-collect2: error: ld returned 1 exit status
-make: *** [parcial2] Error 1
-16:32:05 **** Incremental Build of configuration Debug for project parcial2 ****
-make all 
-Building file: ../src/informes.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/informes.d" -MT"src/informes.d" -o "src/informes.o" "../src/informes.c"
-Finished building: ../src/informes.c
- 
-Building target: parcial2
-Invoking: GCC C Linker
-gcc  -o "parcial2"  ./src/Instrumento.o ./src/Musico.o ./src/Orquesta.o ./src/UI.o ./src/informes.o ./src/parcial2.o ./src/utn.o   
-Finished building target: parcial2
- 
-16:34:18 **** Incremental Build of configuration Debug for project parcial2 ****
-make all 
-Building file: ../src/informes.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/informes.d" -MT"src/informes.d" -o "src/informes.o" "../src/informes.c"
-Finished building: ../src/informes.c
- 
-Building file: ../src/parcial2.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/parcial2.d" -MT"src/parcial2.d" -o "src/parcial2.o" "../src/parcial2.c"
-Finished building: ../src/parcial2.c
- 
-Building target: parcial2
-Invoking: GCC C Linker
-gcc  -o "parcial2"  ./src/Instrumento.o ./src/Musico.o ./src/Orquesta.o ./src/UI.o ./src/informes.o ./src/parcial2.o ./src/utn.o   
-Finished building target: parcial2
+gcc  -o "parcial2019b"  ./src/Cliente.o ./src/Pedido.o ./src/UI.o ./src/main.o ./src/utn.o   
+Finished building target: parcial2019b
  
