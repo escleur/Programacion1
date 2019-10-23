@@ -1,17 +1,12 @@
-21:40:33 **** Incremental Build of configuration Debug for project parcial2019b ****
+21:55:17 **** Incremental Build of configuration Debug for project oop ****
 make all 
-Building file: ../src/UI.c
+Building file: ../src/Clientes.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/UI.d" -MT"src/UI.o" -o "src/UI.o" "../src/UI.c"
-Finished building: ../src/UI.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Clientes.d" -MT"src/Clientes.o" -o "src/Clientes.o" "../src/Clientes.c"
+Finished building: ../src/Clientes.c
  
-Building file: ../src/main.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-Finished building: ../src/main.c
- 
-Building target: parcial2019b
+Building target: oop
 Invoking: GCC C Linker
-gcc  -o "parcial2019b"  ./src/Cliente.o ./src/Pedido.o ./src/UI.o ./src/main.o ./src/utn.o   
-Finished building target: parcial2019b
+gcc  -o "oop"  ./src/Clientes.o ./src/oop.o   
+Finished building target: oop
  
