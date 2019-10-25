@@ -12,6 +12,10 @@
 #include <stdlib.h>
 
 int main(void) {
-	puts("!!!Hello World!!!"); /* prints !!!Hello World!!! */
+	FILE *fp;
+	fp = fopen("prueba.txt","r");
+	if(fp != NULL){
+
+	}
 	return EXIT_SUCCESS;
 }
