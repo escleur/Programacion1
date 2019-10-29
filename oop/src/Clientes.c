@@ -13,12 +13,14 @@ Cliente* cli_new(void) {
 	return malloc(sizeof(Cliente));
 }
 
-Cliente* cli_newParametros(char* nombre, char* direccion, char* cuit, char* localidad) {
+Cliente* cli_newParametros(char* id, char* nombre, char* direccion, char* cuit, char* localidad) {
 	Cliente* this;
 	Cliente* retorno = NULL;
 	this = cli_new();
 	if(this != NULL){
-		if(	cli_setNombre(this, nombre) == 0 &&
+		if(
+			cli_setId(this, id) == 0 &&
+			cli_setNombre(this, nombre) == 0 &&
 			cli_setDireccion(this, direccion) == 0 &&
 			cli_setCuit(this, cuit) == 0 &&
 			cli_setLocalidad(this, localidad) == 0){
@@ -33,7 +35,27 @@ Cliente* cli_newParametros(char* nombre, char* direccion, char* cuit, char* loca
 void cli_delete(Cliente *this) {
 	free(this);
 }
+int cli_setId(Cliente *this, char *id) {
+	int retorno = -1;
+	if (this != NULL && isValidId(id)) {
+		this->idCliente = atoi(id);
+		retorno = 0;
+	}
+	return retorno;
+}
 
+int cli_getId(Cliente *this, char *id) {
+	int retorno = -1;
+	if (this != NULL && id != NULL) {
+		id = this->idCliente;
+		retorno = 0;
+	}
+	return retorno;
+
+}
+static int isValidId(char *id) {
+	return 1;
+}
 int cli_setNombre(Cliente *this, char *nombre) {
 	int retorno = -1;
 	if (this != NULL && isValidNombre(nombre)) {
